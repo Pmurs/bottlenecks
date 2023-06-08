@@ -1,6 +1,4 @@
-<template>
-  <svg class="chart"></svg>
-</template>
+<template><div id="chart"></div></template>
 
 <script setup>
 import * as d3 from "d3";
@@ -174,7 +172,7 @@ onMounted(() => {
       width: 1152,
     }
   );
-  document.body.appendChild(chart);
+  document.getElementById("chart").append(chart);
 });
 </script>
 
