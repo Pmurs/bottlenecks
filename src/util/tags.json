@@ -1,0 +1,1217 @@
+{
+  "bottlenecks": [
+    {
+      "tag": "[P]",
+      "Q2 Bottleneck": "[P] Public",
+      "# (bottlenecks only)": "72",
+      "# all a": "78",
+      "Bottleneck Description": "Social bottlenecks from outside the longevity community"
+    },
+    {
+      "tag": "[P1]",
+      "Q2 Bottleneck": "[P1] Poorly Informed",
+      "# (bottlenecks only)": "21",
+      "# all a": "21",
+      "Bottleneck Description": "General public is generally unaware of or misonfirmed about the science, tech and future possibilities."
+    },
+    {
+      "tag": "[P2]",
+      "Q2 Bottleneck": "[P2] Individual Disease Focus",
+      "# (bottlenecks only)": "17",
+      "# all a": "20",
+      "Bottleneck Description": "Focus on age-related diseases rather than their root cause (aging)."
+    },
+    {
+      "tag": "[P3]",
+      "Q2 Bottleneck": "[P3] Lack of Credibility",
+      "# (bottlenecks only)": "9",
+      "# all a": "10",
+      "Bottleneck Description": "Public skepticism with good cause, history of charlatanism, snake oil, ineffective \"anti-aging\" treatments."
+    },
+    {
+      "tag": "[P4]",
+      "Q2 Bottleneck": "[P4] Unaligned Institutions",
+      "# (bottlenecks only)": "10",
+      "# all a": "10",
+      "Bottleneck Description": "Lack of mandate, interest and even obstruction by gov agencies, academia, media, healthcare orgs, etc."
+    },
+    {
+      "tag": "[P5]",
+      "Q2 Bottleneck": "[P5] Geroscience Aversion",
+      "# (bottlenecks only)": "6",
+      "# all a": "8",
+      "Bottleneck Description": "Stigma, \"pro-aging trance\", naturalistic fallacy, culture of dystopianism / tech skepticism."
+    },
+    {
+      "tag": "[P6]",
+      "Q2 Bottleneck": "[P6] Indifference",
+      "# (bottlenecks only)": "7",
+      "# all a": "7",
+      "Bottleneck Description": "Apathy, laziness, or bystander effect (failure to take responsibility / thinking someone else will solve it)."
+    },
+    {
+      "tag": "[P7]",
+      "Q2 Bottleneck": "[P7] Media Negativity",
+      "# (bottlenecks only)": "2",
+      "# all a": "2",
+      "Bottleneck Description": "Preferencial amplification of negative sentiments, which become the default public opinion by osmosis."
+    },
+    {
+      "tag": "[C]",
+      "Q2 Bottleneck": "[C] Community",
+      "# (bottlenecks only)": "151",
+      "# all a": "165",
+      "Bottleneck Description": "How we dysfunction as a community"
+    },
+    {
+      "tag": "[C1]",
+      "Q2 Bottleneck": "[C1] Lack of Big Data Mindset",
+      "# (bottlenecks only)": "10",
+      "# all a": "11",
+      "Bottleneck Description": "More focus on empirical data collection: Multio-omics, images, phenotypes, medical, longititual, clinical, etc."
+    },
+    {
+      "tag": "[C2]",
+      "Q2 Bottleneck": "[C2] Ad-hoc Data / Protocols",
+      "# (bottlenecks only)": "15",
+      "# all a": "20",
+      "Bottleneck Description": "Ad-hoc data/protocols (not reproducible or comparable) prevents integration and building on prior results."
+    },
+    {
+      "tag": "[C3]",
+      "Q2 Bottleneck": "[C3] Networking",
+      "# (bottlenecks only)": "11",
+      "# all a": "11",
+      "Bottleneck Description": " Isolated people/projects/subdisciplines, need for more networking and connection."
+    },
+    {
+      "tag": "[C4]",
+      "Q2 Bottleneck": "[C4] Lack of Collective Action",
+      "# (bottlenecks only)": "9",
+      "# all a": "10",
+      "Bottleneck Description": "Lack of collective actions such as consensus building, validation, data sharing, standards, roadmapping, etc."
+    },
+    {
+      "tag": "[C5]",
+      "Q2 Bottleneck": "[C5] Consensus Aging Definitions",
+      "# (bottlenecks only)": "11",
+      "# all a": "12",
+      "Bottleneck Description": "Lack of a consensus definition of aging."
+    },
+    {
+      "tag": "[C6]",
+      "Q2 Bottleneck": "[C6] Hype Cycles",
+      "# (bottlenecks only)": "11",
+      "# all a": "11",
+      "Bottleneck Description": "Hype cycles + herd mentality = inefficient distro of resources, short term booms and busts of interest/funding."
+    },
+    {
+      "tag": "[C7]",
+      "Q2 Bottleneck": "[C7] Regional Concentration",
+      "# (bottlenecks only)": "8",
+      "# all a": "10",
+      "Bottleneck Description": "Activity is heavily concentrated in a small number of extremely expensive places."
+    },
+    {
+      "tag": "[C8]",
+      "Q2 Bottleneck": "[C8] Reproducibility Crisis",
+      "# (bottlenecks only)": "12",
+      "# all a": "12",
+      "Bottleneck Description": "System incentivizes sloppy research and doesn't penalize poor quality."
+    },
+    {
+      "tag": "[C9]",
+      "Q2 Bottleneck": "[C9] Insularity",
+      "# (bottlenecks only)": "13",
+      "# all a": "14",
+      "Bottleneck Description": "Aging/longevity has been an insulated backwater - need to emerge, mature and engage with other fields."
+    },
+    {
+      "tag": "[C10]",
+      "Q2 Bottleneck": "[C10] Siloing / Secrecy",
+      "# (bottlenecks only)": "13",
+      "# all a": "14",
+      "Bottleneck Description": "Academic grant, IP, and publication systems can over-incentivize competition/secrecy over collaboration."
+    },
+    {
+      "tag": "[C11]",
+      "Q2 Bottleneck": "[C11] Conservatism",
+      "# (bottlenecks only)": "8",
+      "# all a": "8",
+      "Bottleneck Description": "Sticking to worn out hypotheses / following authority after they are past their prime (ex. beta amyloid)"
+    },
+    {
+      "tag": "[C12]",
+      "Q2 Bottleneck": "[C12] Lack of Negative Results",
+      "# (bottlenecks only)": "6",
+      "# all a": "7",
+      "Bottleneck Description": "System dis-incentivize negative result reporting. Results in duplicated efforts, and rewards hype."
+    },
+    {
+      "tag": "[C13]",
+      "Q2 Bottleneck": "[C13] Entry Barriers/Orientation",
+      "# (bottlenecks only)": "6",
+      "# all a": "7",
+      "Bottleneck Description": "Hard learn / track of all the activity, regulations, systems at R&D, translation, clinical and healthcare levels."
+    },
+    {
+      "tag": "[C14]",
+      "Q2 Bottleneck": "[C14] Piecemeal Studies",
+      "# (bottlenecks only)": "7",
+      "# all a": "7",
+      "Bottleneck Description": "Narrow/reductionist \"piecemeal\" studies fail to address the complexity of aging."
+    },
+    {
+      "tag": "[C15]",
+      "Q2 Bottleneck": "[C15] Admin Overhead",
+      "# (bottlenecks only)": "4",
+      "# all a": "4",
+      "Bottleneck Description": "Bright scienetific minds are frequently being wasted on administrative burdens instead of doing science."
+    },
+    {
+      "tag": "[C16]",
+      "Q2 Bottleneck": "[C16] Journal Paywalls",
+      "# (bottlenecks only)": "2",
+      "# all a": "2",
+      "Bottleneck Description": "Obvious and unnecessary barrier to the spread of scientific information."
+    },
+    {
+      "tag": "[C17]",
+      "Q2 Bottleneck": "[C17] Short-termism",
+      "# (bottlenecks only)": "2",
+      "# all a": "2",
+      "Bottleneck Description": "Over-focus on \"low hanging fruit\" that is also low-impact. Starves high impact projects of resources."
+    },
+    {
+      "tag": "[C18]",
+      "Q2 Bottleneck": "[C18] Misc Community Issues",
+      "# (bottlenecks only)": "3",
+      "# all a": "3",
+      "Bottleneck Description": ""
+    },
+    {
+      "tag": "[S]",
+      "Q2 Bottleneck": "[S] Science",
+      "# (bottlenecks only)": "130",
+      "# all a": "140",
+      "Bottleneck Description": "Areas that need more basic scientific research."
+    },
+    {
+      "tag": "[S1]",
+      "Q2 Bottleneck": "[S1] Validated Biomarkers",
+      "# (bottlenecks only)": "40",
+      "# all a": "44",
+      "Bottleneck Description": "Lack of a validated way to measure biological age independent of chronological age / lifespan."
+    },
+    {
+      "tag": "[S1.1]",
+      "Q2 Bottleneck": "[S1.1] ???",
+      "# (bottlenecks only)": "40",
+      "# all a": "44",
+      "Bottleneck Description": "What's going on here?"
+    },
+    {
+      "tag": "[S2]",
+      "Q2 Bottleneck": "[S2] Aging Characterization",
+      "# (bottlenecks only)": "20",
+      "# all a": "22",
+      "Bottleneck Description": "Characterization of what changes with age at the molecular/cellular/tissue/physiology levels."
+    },
+    {
+      "tag": "[S3]",
+      "Q2 Bottleneck": "[S3] Longitudinal Data/Samples",
+      "# (bottlenecks only)": "14",
+      "# all a": "17",
+      "Bottleneck Description": "Lack of longitudinal data and samples (clinical records, biomarkers, multi-omics, biobanks)."
+    },
+    {
+      "tag": "[S4]",
+      "Q2 Bottleneck": "[S4] Aging Complexity",
+      "# (bottlenecks only)": "12",
+      "# all a": "12",
+      "Bottleneck Description": "Complexity of aging is too much for traditional tools and institutional structures to grapple with effectively."
+    },
+    {
+      "tag": "[S5]",
+      "Q2 Bottleneck": "[S5] Variation Mapping",
+      "# (bottlenecks only)": "12",
+      "# all a": "13",
+      "Bottleneck Description": "Need for more studies on intra & inter-species longevity variability and intervention responses."
+    },
+    {
+      "tag": "[S6]",
+      "Q2 Bottleneck": "[S6] Misc",
+      "# (bottlenecks only)": "8",
+      "# all a": "8",
+      "Bottleneck Description": "Assorted other science bottlenecks / under-appreciated areas"
+    },
+    {
+      "tag": "[S7]",
+      "Q2 Bottleneck": "[S7] Systems Bio of Aging",
+      "# (bottlenecks only)": "9",
+      "# all a": "9",
+      "Bottleneck Description": "Need for more systems/network approach studyies of aging."
+    },
+    {
+      "tag": "[S8]",
+      "Q2 Bottleneck": "[S8] Brain Aging",
+      "# (bottlenecks only)": "4",
+      "# all a": "4",
+      "Bottleneck Description": "Every other part could potentially be replaced, therefore brain aging is critical to understand."
+    },
+    {
+      "tag": "[S9]",
+      "Q2 Bottleneck": "[S9] Aging Mechanisms",
+      "# (bottlenecks only)": "11",
+      "# all a": "11",
+      "Bottleneck Description": "Belief that we don't yet understand what aging is, need to determine the fundamental mechanisms."
+    },
+    {
+      "tag": "[S10]",
+      "Q2 Bottleneck": "[S10] Replacement",
+      "# (bottlenecks only)": "2",
+      "# all a": "2",
+      "Bottleneck Description": "Learn how to grow and replace any/all biological parts"
+    },
+    {
+      "tag": "[F]",
+      "Q2 Bottleneck": "[F] Funding",
+      "# (bottlenecks only)": "119",
+      "# all a": "131",
+      "Bottleneck Description": ""
+    },
+    {
+      "tag": "[F0]",
+      "Q2 Bottleneck": "[F0] Overall Lack of Funding",
+      "# (bottlenecks only)": "40",
+      "# all a": "44",
+      "Bottleneck Description": "We need Apollo program levels of funding - measured in % of GDP not in $Bs"
+    },
+    {
+      "tag": "[F1]",
+      "Q2 Bottleneck": "[F1] Too Conservative",
+      "# (bottlenecks only)": "22",
+      "# all a": "26",
+      "Bottleneck Description": "Difficult to get new/ambitious ideas funded, institutional culture of risk-aversion and incrementalism."
+    },
+    {
+      "tag": "[F2]",
+      "Q2 Bottleneck": "[F2] for Basic Research",
+      "# (bottlenecks only)": "18",
+      "# all a": "19",
+      "Bottleneck Description": "Longevity/aging is only 0.5% of NIH budget, even smaller elsewhere."
+    },
+    {
+      "tag": "[F3]",
+      "Q2 Bottleneck": "[F3] Too Short-term",
+      "# (bottlenecks only)": "10",
+      "# all a": "12",
+      "Bottleneck Description": "Lifespan studies in the most relevant models take longer than standard grant cycles."
+    },
+    {
+      "tag": "[F4]",
+      "Q2 Bottleneck": "[F4] for Startups",
+      "# (bottlenecks only)": "9",
+      "# all a": "9",
+      "Bottleneck Description": "Longevity Biotech is only 1% of total Biotech Market Cap, huge room for growth."
+    },
+    {
+      "tag": "[F5]",
+      "Q2 Bottleneck": "[F5] Gated",
+      "# (bottlenecks only)": "6",
+      "# all a": "7",
+      "Bottleneck Description": "Hard to get funds if you're not from a top institution / company"
+    },
+    {
+      "tag": "[F6]",
+      "Q2 Bottleneck": "[F6] for Translation",
+      "# (bottlenecks only)": "6",
+      "# all a": "6",
+      "Bottleneck Description": "Not enough funding for translating basic research results to real world applications."
+    },
+    {
+      "tag": "[F7]",
+      "Q2 Bottleneck": "[F7] Inflexible",
+      "# (bottlenecks only)": "2",
+      "# all a": "2",
+      "Bottleneck Description": "Easier to get grants for continued work vs new directions. Incentives to stay the course even if not promising."
+    },
+    {
+      "tag": "[F8]",
+      "Q2 Bottleneck": "[F8] for Outreach",
+      "# (bottlenecks only)": "2",
+      "# all a": "2",
+      "Bottleneck Description": "Funding for media and outreach to engage, educate, and attract the public and other communities."
+    },
+    {
+      "tag": "[F9]",
+      "Q2 Bottleneck": "[F9] for Clinical/Longitudinal",
+      "# (bottlenecks only)": "2",
+      "# all a": "2",
+      "Bottleneck Description": "Clinical and longitudinal studies are bureaucratically difficult, expensive, and hard to get funded."
+    },
+    {
+      "tag": "[F10]",
+      "Q2 Bottleneck": "[F10] Bureaucratic/Slow",
+      "# (bottlenecks only)": "2",
+      "# all a": "2",
+      "Bottleneck Description": "High bureaucracy doesn’t improve decision making, it just wastes people’s time."
+    },
+    {
+      "tag": "[H]",
+      "Q2 Bottleneck": "[H] People",
+      "# (bottlenecks only)": "99",
+      "# all a": "102",
+      "Bottleneck Description": ""
+    },
+    {
+      "tag": "[H0]",
+      "Q2 Bottleneck": "[H0] Lack of People",
+      "# (bottlenecks only)": "15",
+      "# all a": "15",
+      "Bottleneck Description": "Not enough people working in or entering the field."
+    },
+    {
+      "tag": "[H1]",
+      "Q2 Bottleneck": "[H1] Career & Edu Paths",
+      "# (bottlenecks only)": "17",
+      "# all a": "17",
+      "Bottleneck Description": "Lack of education and career paths by existing institutions."
+    },
+    {
+      "tag": "[H2]",
+      "Q2 Bottleneck": "[H2] Low Pay",
+      "# (bottlenecks only)": "6",
+      "# all a": "8",
+      "Bottleneck Description": "Need to pay people more to make careers in our field sustainable, and to compete for top talent."
+    },
+    {
+      "tag": "[H3]",
+      "Q2 Bottleneck": "[H3] Quantitative",
+      "# (bottlenecks only)": "7",
+      "# all a": "7",
+      "Bottleneck Description": "Biology has been a \"soft/artisinal\" science - need to grow up, accelerate the shift to quantitative approaches."
+    },
+    {
+      "tag": "[H4]",
+      "Q2 Bottleneck": "[H4] Top/Skilled Talent",
+      "# (bottlenecks only)": "22",
+      "# all a": "22",
+      "Bottleneck Description": "Top talent can have outsized effects, and is currently not focused on longevity."
+    },
+    {
+      "tag": "[H6]",
+      "Q2 Bottleneck": "[H6] Immigration/Borders",
+      "# (bottlenecks only)": "4",
+      "# all a": "5",
+      "Bottleneck Description": "Immigration/border restrictions are hampering efficient allocaiton of human resources."
+    },
+    {
+      "tag": "[H7]",
+      "Q2 Bottleneck": "[H7] Hiring",
+      "# (bottlenecks only)": "4",
+      "# all a": "4",
+      "Bottleneck Description": "Hiring people is time consuming and error-prone."
+    },
+    {
+      "tag": "[H8]",
+      "Q2 Bottleneck": "[H8] Interdisciplinary",
+      "# (bottlenecks only)": "6",
+      "# all a": "6",
+      "Bottleneck Description": "Need more interdisciplinary overlaps for fresh perspective."
+    },
+    {
+      "tag": "[H9]",
+      "Q2 Bottleneck": "[H9] Personal/Misc",
+      "# (bottlenecks only)": "18",
+      "# all a": "18",
+      "Bottleneck Description": ""
+    },
+    {
+      "tag": "[X]",
+      "Q2 Bottleneck": "[X] Tools",
+      "# (bottlenecks only)": "173",
+      "# all a": "196",
+      "Bottleneck Description": ""
+    },
+    {
+      "tag": "[X0]",
+      "Q2 Bottleneck": "[X0] Lack of Misc Tools/Tech",
+      "# (bottlenecks only)": "4",
+      "# all a": "5",
+      "Bottleneck Description": "Not enough Tools and Technology development in general."
+    },
+    {
+      "tag": "[X1.1]",
+      "Q2 Bottleneck": "[X1.1] Lack of Predictive Models",
+      "# (bottlenecks only)": "32",
+      "# all a": "33",
+      "Bottleneck Description": "Current molel organisms are poorly predictive of results in humans."
+    },
+    {
+      "tag": "[X1.2]",
+      "Q2 Bottleneck": "[X1.2] Slow & Expensive Models",
+      "# (bottlenecks only)": "36",
+      "# all a": "36",
+      "Bottleneck Description": "Animal model studies are slow and expensive."
+    },
+    {
+      "tag": "[X1.3]",
+      "Q2 Bottleneck": "[X1.3] Lack of In Silico/Systems Aging Models",
+      "# (bottlenecks only)": "10",
+      "# all a": "10",
+      "Bottleneck Description": "More complex/comprehensive computer models describing or predicting the processes of aging."
+    },
+    {
+      "tag": "[X2]",
+      "Q2 Bottleneck": "[X2] Public Datasets",
+      "# (bottlenecks only)": "27",
+      "# all a": "35",
+      "Bottleneck Description": "Lack of accessible and comprehensive data sets."
+    },
+    {
+      "tag": "[X3]",
+      "Q2 Bottleneck": "[X3] Human Samples",
+      "# (bottlenecks only)": "11",
+      "# all a": "13",
+      "Bottleneck Description": "Access to human samples (healthy, aged, diseased, with good sample info) is difficult, slow and expensive."
+    },
+    {
+      "tag": "[X4]",
+      "Q2 Bottleneck": "[X4] Aged Animals/Tissues",
+      "# (bottlenecks only)": "11",
+      "# all a": "14",
+      "Bottleneck Description": "Access aged animals and their tissues/cells is difficult, slow and expensive."
+    },
+    {
+      "tag": "[X5]",
+      "Q2 Bottleneck": "[X5] Instrumentation/Lab Tech",
+      "# (bottlenecks only)": "10",
+      "# all a": "14",
+      "Bottleneck Description": "Lab tech is expensive, difficult to use, often unreliable. Better/cheaper/new HW enables progress."
+    },
+    {
+      "tag": "[X6]",
+      "Q2 Bottleneck": "[X6] Lab Automation",
+      "# (bottlenecks only)": "8",
+      "# all a": "8",
+      "Bottleneck Description": "Lab automation is expensive and not user friendly - better tech would improve research throughput & quality"
+    },
+    {
+      "tag": "[X7]",
+      "Q2 Bottleneck": "[X7] CS / Software",
+      "# (bottlenecks only)": "4",
+      "# all a": "7",
+      "Bottleneck Description": "Research software is expensive, proprietary, buggy and not user friendly."
+    },
+    {
+      "tag": "[X8]",
+      "Q2 Bottleneck": "[X8] Gene Delivery",
+      "# (bottlenecks only)": "5",
+      "# all a": "5",
+      "Bottleneck Description": "Need improvements in toxicity, biodistribution, payload size, immunogenicity, transfection efficiency & more."
+    },
+    {
+      "tag": "[X9]",
+      "Q2 Bottleneck": "[X9] Research Infrastructure",
+      "# (bottlenecks only)": "4",
+      "# all a": "4",
+      "Bottleneck Description": "Lab space is expensive, scarce, difficult to access."
+    },
+    {
+      "tag": "[X10]",
+      "Q2 Bottleneck": "[X10] AI Tools",
+      "# (bottlenecks only)": "3",
+      "# all a": "4",
+      "Bottleneck Description": "Maybe humans can't parse bio, need AI to accelerate progress"
+    },
+    {
+      "tag": "[X11]",
+      "Q2 Bottleneck": "[X11] Personal Health Sensors",
+      "# (bottlenecks only)": "3",
+      "# all a": "3",
+      "Bottleneck Description": "Cars have hundreds of sensors. Most people have none. They need to be cheaper, non-invasive, easier to use."
+    },
+    {
+      "tag": "[X12]",
+      "Q2 Bottleneck": "[X12] Personal Health Data Sharing",
+      "# (bottlenecks only)": "3",
+      "# all a": "3",
+      "Bottleneck Description": "Current options are expensive, siloed, difficult to use, disconnected from research."
+    },
+    {
+      "tag": "[X13]",
+      "Q2 Bottleneck": "[X13] Computing Power",
+      "# (bottlenecks only)": "2",
+      "# all a": "2",
+      "Bottleneck Description": "More compute power unlocks new research capabilities. Also needs to be accessible."
+    },
+    {
+      "tag": "[X14]",
+      "Q2 Bottleneck": "[X14] Information Overload",
+      "# (bottlenecks only)": "1",
+      "# all a": "2",
+      "Bottleneck Description": "Too many papers for a human to read/parse even if you spend all day every day."
+    },
+    {
+      "tag": "[T]",
+      "Q2 Bottleneck": "[T] Translation",
+      "# (bottlenecks only)": "95",
+      "# all a": "104",
+      "Bottleneck Description": ""
+    },
+    {
+      "tag": "[T1]",
+      "Q2 Bottleneck": "[T1] Lack of Regulatory Path",
+      "# (bottlenecks only)": "30",
+      "# all a": "38",
+      "Bottleneck Description": "No current regulatory path for aging interventions / longevity medicine."
+    },
+    {
+      "tag": "[T2]",
+      "Q2 Bottleneck": "[T2] Translation Gap",
+      "# (bottlenecks only)": "27",
+      "# all a": "27",
+      "Bottleneck Description": "Lack of translation of basic research results into actual therapies."
+    },
+    {
+      "tag": "[T3]",
+      "Q2 Bottleneck": "[T3] Slow/Expensive Trials",
+      "# (bottlenecks only)": "10",
+      "# all a": "10",
+      "Bottleneck Description": "Clinical trials (as currently practiced) are slow and expensive."
+    },
+    {
+      "tag": "[T4]",
+      "Q2 Bottleneck": "[T4] Misguided \"Bioethics\"",
+      "# (bottlenecks only)": "9",
+      "# all a": "10",
+      "Bottleneck Description": "Risk aversion / harmful action reduction mindset ignores the harm of inaction / slowed progress."
+    },
+    {
+      "tag": "[T5]",
+      "Q2 Bottleneck": "[T5] Market Failure",
+      "# (bottlenecks only)": "11",
+      "# all a": "11",
+      "Bottleneck Description": "\"Sick-care\" system maximizes money spent not health/lifespan outcomes, needs structural redesign."
+    },
+    {
+      "tag": "[T6]",
+      "Q2 Bottleneck": "[T6] Participant Recruitment",
+      "# (bottlenecks only)": "5",
+      "# all a": "5",
+      "Bottleneck Description": "Recruit participants to trials and clinical studies is slow, expensive, bureaocratic."
+    },
+    {
+      "tag": "[T7]",
+      "Q2 Bottleneck": "[T7] Unregulated Claims",
+      "# (bottlenecks only)": "3",
+      "# all a": "3",
+      "Bottleneck Description": "Pervasive hyped therapies with little to no evidence (NAD, MSCs, diets, hot/cold therapy, light therapy, etc.)"
+    }
+  ],
+  "solutions": [
+    {
+      "tag": "[+P]",
+      "Q3 Solution": "[+P] Public",
+      "# solutions only": "30",
+      "# all b": "48",
+      "Solution Description": "Social projects aimed outside of the longevity community"
+    },
+    {
+      "tag": "[+P1.1]",
+      "Q3 Solution": "[+P1.1] Outreach to Public",
+      "# solutions only": "11",
+      "# all b": "15",
+      "Solution Description": "Shift public sentiment towards pro-longevity. Cascading benefits (policy, funding, market, career choice...)"
+    },
+    {
+      "tag": "[+P1.2]",
+      "Q3 Solution": "[+P1.2] Outreach to Other Fields",
+      "# solutions only": "2",
+      "# all b": "6",
+      "Solution Description": "Bring fresh persepctives and skillsets into the longevity movement."
+    },
+    {
+      "tag": "[+P1.3]",
+      "Q3 Solution": "[+P1.3] Outreach to Biotech/Pharma",
+      "# solutions only": "1",
+      "# all b": "3",
+      "Solution Description": "Only 1% of Biotech/Pharma is longevity/aging oriented, lots of room for growth."
+    },
+    {
+      "tag": "[+P1.4]",
+      "Q3 Solution": "[+P1.4] Outreach to Students",
+      "# solutions only": "0",
+      "# all b": "1",
+      "Solution Description": "Deflect career paths at the highest leverage point."
+    },
+    {
+      "tag": "[+P1.5]",
+      "Q3 Solution": "[+P1.5] Outreach to Gov/Institutions",
+      "# solutions only": "3",
+      "# all b": "4",
+      "Solution Description": "Engage/infiltrate to improve alignment. They have the power to break many bottlenecks if aligned."
+    },
+    {
+      "tag": "[+P2]",
+      "Q3 Solution": "[+P2] Culture",
+      "# solutions only": "10",
+      "# all b": "11",
+      "Solution Description": "A widespread pro-longevity cultural movement."
+    },
+    {
+      "tag": "[+P3]",
+      "Q3 Solution": "[+P3] Incentives",
+      "# solutions only": "2",
+      "# all b": "5",
+      "Solution Description": "Regulations/policies to incentivize longevity practices/industry growth - works for climate why not longevity?"
+    },
+    {
+      "tag": "[+P4]",
+      "Q3 Solution": "[+P4] Comms Training",
+      "# solutions only": "1",
+      "# all b": "3",
+      "Solution Description": "For scientists, engineers, operators in longevity - training to communicate clearly and effectively to the public."
+    },
+    {
+      "tag": "[+C]",
+      "Q3 Solution": "[+C] Community",
+      "# solutions only": "73",
+      "# all b": "107",
+      "Solution Description": "How we could improve functioning of the community"
+    },
+    {
+      "tag": "[+C1]",
+      "Q3 Solution": "[+C1] Big Data Mindset",
+      "# solutions only": "2",
+      "# all b": "5",
+      "Solution Description": "More focus on empirical data collection: Multio-omics, images, phenotypes, medical, longititual, clinical, etc."
+    },
+    {
+      "tag": "[+C2]",
+      "Q3 Solution": "[+C2] Data/Protocol Standards",
+      "# solutions only": "11",
+      "# all b": "18",
+      "Solution Description": "Set and update standards for data and protocols, incentivize their use."
+    },
+    {
+      "tag": "[+C3]",
+      "Q3 Solution": "[+C3] Networking",
+      "# solutions only": "13",
+      "# all b": "16",
+      "Solution Description": "Mechanism to connect employers, entrepreneurs, investors, volunteers, etc."
+    },
+    {
+      "tag": "[+C4]",
+      "Q3 Solution": "[+C4] Large Collaborative Projects",
+      "# solutions only": "8",
+      "# all b": "13",
+      "Solution Description": "Large collaborative projects and rather than ego/grant/publication driven competition."
+    },
+    {
+      "tag": "[+C5]",
+      "Q3 Solution": "[+C5] Collective Action",
+      "# solutions only": "8",
+      "# all b": "11",
+      "Solution Description": "Organize to facilitate consensus building, validation, data sharing, standards, roadmapping, etc."
+    },
+    {
+      "tag": "[+C6]",
+      "Q3 Solution": "[+C6] Consensus Aging Definition",
+      "# solutions only": "6",
+      "# all b": "12",
+      "Solution Description": "Reach a consensus theory/definition of aging"
+    },
+    {
+      "tag": "[+C7]",
+      "Q3 Solution": "[+C7] New Research Centers",
+      "# solutions only": "6",
+      "# all b": "8",
+      "Solution Description": "More dedicated aging/longevity research centers. Diverse locations. Varied specialties. Facilitate large projects."
+    },
+    {
+      "tag": "[+C8]",
+      "Q3 Solution": "[+C8] Reproduce Key Results",
+      "# solutions only": "3",
+      "# all b": "6",
+      "Solution Description": "Funded centers dedicated to reproducing / testing the robustness of key results."
+    },
+    {
+      "tag": "[+C9]",
+      "Q3 Solution": "[+C9] Field-Wide Status Dashboard",
+      "# solutions only": "7",
+      "# all b": "7",
+      "Solution Description": "Overview of all proposals, projects, pathways, targets, pre and in-clinic pipelines. Linked to data."
+    },
+    {
+      "tag": "[+C10]",
+      "Q3 Solution": "[+C10] Outsourcing Services",
+      "# solutions only": "4",
+      "# all b": "6",
+      "Solution Description": "Longevity CROs/Cores - make outsourcing research easier such as lifespan studies, multi-omic analysis."
+    },
+    {
+      "tag": "[+C11]",
+      "Q3 Solution": "[+C11] Neg Results Incentives",
+      "# solutions only": "3",
+      "# all b": "4",
+      "Solution Description": "Mechanism to incentivize/enable reporting negative results. Pre-results publication approvals for example."
+    },
+    {
+      "tag": "[+C12]",
+      "Q3 Solution": "[+C12] Open Science",
+      "# solutions only": "1",
+      "# all b": "2",
+      "Solution Description": "Make data, samples, results open and available by default."
+    },
+    {
+      "tag": "[+C13]",
+      "Q3 Solution": "[+C13] Long-termism",
+      "# solutions only": "1",
+      "# all b": "2",
+      "Solution Description": "More focus on long term research and technology paths with higher-impact potential (vs \"low hanging fruit\")"
+    },
+    {
+      "tag": "[+C14]",
+      "Q3 Solution": "[+C14] Protected Time",
+      "# solutions only": "1",
+      "# all b": "1",
+      "Solution Description": "Reduce/limit the amount of time spent on non-research activities (admin, grants, etc.)"
+    },
+    {
+      "tag": "[+C15]",
+      "Q3 Solution": "[+C15] Leadership",
+      "# solutions only": "1",
+      "# all b": "1",
+      "Solution Description": "Bold and ambitious, yet free of ego/hype and relatable. Leadership is lacking but necessary to build a movement."
+    },
+    {
+      "tag": "[+S]",
+      "Q3 Solution": "[+S] Science",
+      "# solutions only": "35",
+      "# all b": "80",
+      "Solution Description": "Research goals, that if achieved would unlock progress."
+    },
+    {
+      "tag": "[+S1]",
+      "Q3 Solution": "[+S1] Validated Biomarkers",
+      "# solutions only": "13",
+      "# all b": "41",
+      "Solution Description": "Validated way to measure biological age independent of chronological age / lifespan."
+    },
+    {
+      "tag": "[+S2]",
+      "Q3 Solution": "[+S2] Aging Fully Characterized",
+      "# solutions only": "10",
+      "# all b": "15",
+      "Solution Description": "Comprehensive characterization of aging at the molecular/cellular/tissue/physiology levels."
+    },
+    {
+      "tag": "[+S3]",
+      "Q3 Solution": "[+S3] Longitudinal Data/Samples",
+      "# solutions only": "8",
+      "# all b": "16",
+      "Solution Description": "Unlock or generate more longitudinal data and samples (clinical records, biomarkers, multi-omics, biobanks)"
+    },
+    {
+      "tag": "[+S4]",
+      "Q3 Solution": "[+S4] Aging Variation Mapped",
+      "# solutions only": "3",
+      "# all b": "4",
+      "Solution Description": "Comprehensive map of Intra and inter species aging variation (omics, physiology, phenotype, etc.)"
+    },
+    {
+      "tag": "[+S10]",
+      "Q3 Solution": "[+S10] Brain Rejuvenation/Replacement",
+      "# solutions only": "1",
+      "# all b": "4",
+      "Solution Description": "Ambitious and broad range of R&D on brain rejuvenation/replacement."
+    },
+    {
+      "tag": "[+S11]",
+      "Q3 Solution": "[+S11] Comprehensive Replacement",
+      "# solutions only": "0",
+      "# all b": "2",
+      "Solution Description": "Methods to grow and replace any/all biological parts"
+    },
+    {
+      "tag": "[+F]",
+      "Q3 Solution": "[+F] Funding",
+      "# solutions only": "47",
+      "# all b": "124",
+      "Solution Description": ""
+    },
+    {
+      "tag": "[+F0]",
+      "Q3 Solution": "[+F0] Overall More Funding",
+      "# solutions only": "18",
+      "# all b": "44",
+      "Solution Description": "We need Apollo program levels of funding - measured in % of GDP not in $Bs"
+    },
+    {
+      "tag": "[+F1]",
+      "Q3 Solution": "[+F1] Ambitious/Exploratory",
+      "# solutions only": "11",
+      "# all b": "21",
+      "Solution Description": "More ambitious/exploratory projects are needed to accelerate progress."
+    },
+    {
+      "tag": "[+F2]",
+      "Q3 Solution": "[+F2] for Basic Research",
+      "# solutions only": "5",
+      "# all b": "20",
+      "Solution Description": "Longevity/aging is only 0.5% of NIH budget, even smaller elsewhere."
+    },
+    {
+      "tag": "[+F3]",
+      "Q3 Solution": "[+F3] Longer-term",
+      "# solutions only": "6",
+      "# all b": "13",
+      "Solution Description": "Longer bets on people and projects are necessary for many aging research directions."
+    },
+    {
+      "tag": "[+F4]",
+      "Q3 Solution": "[+F4] for Startups",
+      "# solutions only": "3",
+      "# all b": "7",
+      "Solution Description": "Longevity Biotech is only 1% of total Biotech Market Cap, huge room for growth."
+    },
+    {
+      "tag": "[+F5]",
+      "Q3 Solution": "[+F5] for Outsiders",
+      "# solutions only": "1",
+      "# all b": "6",
+      "Solution Description": "Take more bets on system outsiders (non-academic / non-ivy league)."
+    },
+    {
+      "tag": "[+F6]",
+      "Q3 Solution": "[+F6] for Translation",
+      "# solutions only": "1",
+      "# all b": "4",
+      "Solution Description": "Not enough funding for translating basic research results to real world applications."
+    },
+    {
+      "tag": "[+F7]",
+      "Q3 Solution": "[+F7] Flexible",
+      "# solutions only": "1",
+      "# all b": "3",
+      "Solution Description": "Grants for promising people to transition from other fields/areas."
+    },
+    {
+      "tag": "[+F8]",
+      "Q3 Solution": "[+F8] for Outreach",
+      "# solutions only": "0",
+      "# all b": "2",
+      "Solution Description": "Funding for media and outreach to engage, educate, and attract the public and other communities."
+    },
+    {
+      "tag": "[+F9]",
+      "Q3 Solution": "[+F9] for Clinical/Longitudinal",
+      "# solutions only": "0",
+      "# all b": "2",
+      "Solution Description": "Clinical and longitudinal studies are bureaucratically difficult, expensive, and hard to get funded."
+    },
+    {
+      "tag": "[+F10]",
+      "Q3 Solution": "[+F10] Faster Grants",
+      "# solutions only": "1",
+      "# all b": "2",
+      "Solution Description": "High bureaucracy doesn’t improve decision making, it just wastes people’s time."
+    },
+    {
+      "tag": "[+H]",
+      "Q3 Solution": "[+H] People",
+      "# solutions only": "18",
+      "# all b": "46",
+      "Solution Description": ""
+    },
+    {
+      "tag": "[+H0]",
+      "Q3 Solution": "[+H0] More People",
+      "# solutions only": "2",
+      "# all b": "14",
+      "Solution Description": "Not enough people working in or entering the field."
+    },
+    {
+      "tag": "[+H1]",
+      "Q3 Solution": "[+H1] Quantitative",
+      "# solutions only": "1",
+      "# all b": "8",
+      "Solution Description": "Need to recruit or train more people in quantitative skills (math, physics, statistics, ml, comp/systems bio)"
+    },
+    {
+      "tag": "[+H2]",
+      "Q3 Solution": "[+H2] Higher Pay",
+      "# solutions only": "3",
+      "# all b": "7",
+      "Solution Description": "Need to pay people more to make careers in our field sustainable, and to compete for top talent."
+    },
+    {
+      "tag": "[+H3]",
+      "Q3 Solution": "[+H3] Longevity Training",
+      "# solutions only": "2",
+      "# all b": "5",
+      "Solution Description": "We need edu/career paths for people to start or shift careers in longevity biotech."
+    },
+    {
+      "tag": "[+H4]",
+      "Q3 Solution": "[+H4] Skills Assessment",
+      "# solutions only": "2",
+      "# all b": "2",
+      "Solution Description": "Better alternatives to degrees/resumes/interviews? Get people to work faster and more efficiently."
+    },
+    {
+      "tag": "[+H5]",
+      "Q3 Solution": "[+H5] Interdisciplinary",
+      "# solutions only": "1",
+      "# all b": "3",
+      "Solution Description": "Need more interdisciplinary overlaps for fresh perspective."
+    },
+    {
+      "tag": "[+H6]",
+      "Q3 Solution": "[+H6] More/Flexible Visas",
+      "# solutions only": "1",
+      "# all b": "1",
+      "Solution Description": "Immigration/border restrictions are hampering efficient allocaiton of human resources."
+    },
+    {
+      "tag": "[+H10]",
+      "Q3 Solution": "[+H10] Personal/Misc",
+      "# solutions only": "4",
+      "# all b": "4",
+      "Solution Description": "Misc personal solutions"
+    },
+    {
+      "tag": "[+H9]",
+      "Q3 Solution": "[+H9] Top/Skilled Talent",
+      "# solutions only": "2",
+      "# all b": "2",
+      "Solution Description": "Top talent can have outsized effects, and is currently not focused on longevity."
+    },
+    {
+      "tag": "[+X]",
+      "Q3 Solution": "[+X] Tools",
+      "# solutions only": "79",
+      "# all b": "161",
+      "Solution Description": ""
+    },
+    {
+      "tag": "[+X0]",
+      "Q3 Solution": "[+X0] Unspecified Tools/Tech",
+      "# solutions only": "1",
+      "# all b": "4",
+      "Solution Description": "More Tools and Technology development in general."
+    },
+    {
+      "tag": "[+X1.1]",
+      "Q3 Solution": "[+X1.1] In Silico/Systems Aging Models",
+      "# solutions only": "4",
+      "# all b": "15",
+      "Solution Description": "Computational/Systems Bio Modeling. Make predictions in silico to save time and cost in meatspace."
+    },
+    {
+      "tag": "[+X1.2]",
+      "Q3 Solution": "[+X1.2] Ex vivo Models",
+      "# solutions only": "2",
+      "# all b": "9",
+      "Solution Description": "Cell/tissue/organ based aging models that are predicitive, affordable and accessible."
+    },
+    {
+      "tag": "[+X1.3]",
+      "Q3 Solution": "[+X1.3] Multiple/Diverse Models",
+      "# solutions only": "3",
+      "# all b": "7",
+      "Solution Description": "Improve robustnest of results by using multiple models."
+    },
+    {
+      "tag": "[+X1.4]",
+      "Q3 Solution": "[+X1.4] Unspecified/Misc Models",
+      "# solutions only": "3",
+      "# all b": "9",
+      "Solution Description": "Better model systems for aging (unspecified how)"
+    },
+    {
+      "tag": "[+X1.5]",
+      "Q3 Solution": "[+X1.5] Longer Lived Models",
+      "# solutions only": "2",
+      "# all b": "4",
+      "Solution Description": "Develop longer lived animal models - more likely to be more translatable to human biology."
+    },
+    {
+      "tag": "[+X1.6]",
+      "Q3 Solution": "[+X1.6] Human Models",
+      "# solutions only": "2",
+      "# all b": "5",
+      "Solution Description": "Skip animals and their problems - develop human model systems (cell, tissue, organ, body, in vivo)"
+    },
+    {
+      "tag": "[+X1.7]",
+      "Q3 Solution": "[+X1.7] Accelerated Aging Models",
+      "# solutions only": "1",
+      "# all b": "1",
+      "Solution Description": "Accelerated aging models could speed progress... if they are representative of normal aging."
+    },
+    {
+      "tag": "[+X2]",
+      "Q3 Solution": "[+X2] Public Datasets",
+      "# solutions only": "22",
+      "# all b": "33",
+      "Solution Description": "Accessible and comprehensive data sets can lift all boats, accelerate progress."
+    },
+    {
+      "tag": "[+X3]",
+      "Q3 Solution": "[+X3] Instrumentation/Lab Tech",
+      "# solutions only": "8",
+      "# all b": "15",
+      "Solution Description": "Cheaper/better/new tools to measure biology/health/age would enable more and new studies."
+    },
+    {
+      "tag": "[+X4]",
+      "Q3 Solution": "[+X4] Human Cell/Tissue Bank",
+      "# solutions only": "6",
+      "# all b": "12",
+      "Solution Description": "Easy, inexpensive, and well documented samples."
+    },
+    {
+      "tag": "[+X5]",
+      "Q3 Solution": "[+X5] Aged Animals/Tissue Bank",
+      "# solutions only": "5",
+      "# all b": "12",
+      "Solution Description": "Easy, inexpensive, and well documented aged animals and samples. "
+    },
+    {
+      "tag": "[+X5]",
+      "Q3 Solution": "[+X5] Lab Automation",
+      "# solutions only": "4",
+      "# all b": "10",
+      "Solution Description": "Better/easier lab automation would enable increased throughput, higher quality, standards, collaboration."
+    },
+    {
+      "tag": "[+X6]",
+      "Q3 Solution": "[+X6] CS / Software",
+      "# solutions only": "5",
+      "# all b": "7",
+      "Solution Description": "Better/easier research software would enable increased throughput, higher quality, standards, collaborations."
+    },
+    {
+      "tag": "[+X7]",
+      "Q3 Solution": "[+X7] Gene Delivery",
+      "# solutions only": "1",
+      "# all b": "5",
+      "Solution Description": "Better delivery and gene editing tools"
+    },
+    {
+      "tag": "[+X8]",
+      "Q3 Solution": "[+X8] AI Tools",
+      "# solutions only": "4",
+      "# all b": "5",
+      "Solution Description": "Overcome the limits of human intelligence by building better/specialized AI systems."
+    },
+    {
+      "tag": "[+X9]",
+      "Q3 Solution": "[+X9] Personal Health Sensors",
+      "# solutions only": "2",
+      "# all b": "2",
+      "Solution Description": "Cars have hundreds of sensors. Most people have none. They need to be cheaper, non-invasive, easier to use."
+    },
+    {
+      "tag": "[+X10]",
+      "Q3 Solution": "[+X10] Syn Bio",
+      "# solutions only": "0",
+      "# all b": "1",
+      "Solution Description": "Tools to engineer cells, tissues, organs to meet our specifications."
+    },
+    {
+      "tag": "[+X11]",
+      "Q3 Solution": "[+X11] Computing Power",
+      "# solutions only": "1",
+      "# all b": "2",
+      "Solution Description": "More compute power unlocks new research capabilities. Also needs to be accessible."
+    },
+    {
+      "tag": "[+X12]",
+      "Q3 Solution": "[+X12] Health Data Platform",
+      "# solutions only": "3",
+      "# all b": "3",
+      "Solution Description": "Platform for individuals to easily analyze and share health and medical data for advancing research."
+    },
+    {
+      "tag": "[+T]",
+      "Q3 Solution": "[+T] Translation",
+      "# solutions only": "33",
+      "# all b": "68",
+      "Solution Description": ""
+    },
+    {
+      "tag": "[+T1]",
+      "Q3 Solution": "[+T1] Regulatory Path",
+      "# solutions only": "19",
+      "# all b": "37",
+      "Solution Description": "A regulatory path for aging interventions / longevity medicine."
+    },
+    {
+      "tag": "[+T2]",
+      "Q3 Solution": "[+T2] Participant Database",
+      "# solutions only": "4",
+      "# all b": "6",
+      "Solution Description": "Database/marketplace to streamline sourcing clinical research participants."
+    },
+    {
+      "tag": "[+T3]",
+      "Q3 Solution": "[+T3] Regulatory Opt-Out",
+      "# solutions only": "5",
+      "# all b": "7",
+      "Solution Description": "Allow people to opt-out of medical regulations. A healthcare socioeconomic free zone."
+    },
+    {
+      "tag": "[+T4]",
+      "Q3 Solution": "[+T4] Intervention Testing",
+      "# solutions only": "0",
+      "# all b": "5",
+      "Solution Description": "More intervention testing, including combination therapies."
+    },
+    {
+      "tag": "[+T5]",
+      "Q3 Solution": "[+T5] Translation Bridges",
+      "# solutions only": "2",
+      "# all b": "2",
+      "Solution Description": "Innovation centers and funding to close the translation gap."
+    },
+    {
+      "tag": "[+T6]",
+      "Q3 Solution": "[+T6] Regulate Claims",
+      "# solutions only": "1",
+      "# all b": "2",
+      "Solution Description": "Require trials to make health claims in supplements, lifestyle, etc. Opportunity to design/test lower cost trials?"
+    },
+    {
+      "tag": "[+T7]",
+      "Q3 Solution": "[+T7] Public Trials",
+      "# solutions only": "0",
+      "# all b": "2",
+      "Solution Description": "No current mechanism to test interventions when a therapy isn't IP protectable / highly profitable"
+    },
+    {
+      "tag": "[+T8]",
+      "Q3 Solution": "[+T8] Rethink Trials",
+      "# solutions only": "1",
+      "# all b": "6",
+      "Solution Description": "How can we make them bigger/better/cheaper and longevity oriented."
+    },
+    {
+      "tag": "[+T8]",
+      "Q3 Solution": "[+T8] Data Unlocking",
+      "# solutions only": "1",
+      "# all b": "1",
+      "Solution Description": "Change policies to unlock siloed health/medical data. Require accessibility, standards and interoperability."
+    },
+    {
+      "tag": "[+T9]",
+      "Q3 Solution": "[+T9] Longevity Standard of Care",
+      "# solutions only": "0",
+      "# all b": "0",
+      "Solution Description": "Alternative to \"sick-care\" standards, to help create a market for longevity medicine."
+    }
+  ]
+}
