@@ -173,6 +173,47 @@ onMounted(() => {
     }
   );
   document.getElementById("chart").append(chart);
+
+  const solutions = analysis.solutions;
+  const sTags = tags.solutions;
+  const sTagCategories = sTags
+    .filter((tag) => tag.tag.match(/\[\+[A-Z]]/))
+    .map((item) => ({
+      ...item,
+      children: sTags
+        .filter(
+          (tag) =>
+            tag.tag.match(/\[\+[A-Z][0-9].*]/) &&
+            tag.tag.substring(0, 2) === item.tag.substring(0, 2)
+        )
+        .map((subItem) => ({ ...subItem, size: 0 })),
+    }));
+
+  console.log(sTagCategories);
+
+  solutions.forEach((item) => {
+    const solutionTags = item.tags.filter((tag) => tag.match(/\[\+[A-Z]/));
+    if (!solutionTags.length) {
+      return;
+    }
+    const childTag = solutionTags[0];
+    const parentTag = solutionTags[0].match(/\[\+[A-Z]/) + "]";
+    const parent = sTagCategories.find((item) => item.tag === parentTag);
+    const child = parent.children.find((item) => item.tag === childTag);
+    child.size++;
+  });
+
+  const chart2 = Pack(
+    { name: "solutions", children: sTagCategories },
+    {
+      name: (d) => d.investment,
+      value: (d) => d.size,
+      label: (d) => d["Q3 Solution"].match(/(\[\+[A-Z][0-9].*])(.+)/)[2],
+      title: (d) => d["Solution Description"],
+      width: 1152,
+    }
+  );
+  document.getElementById("chart").append(chart2);
 });
 </script>
 
