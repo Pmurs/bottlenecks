@@ -2,6 +2,7 @@
   "bottlenecks": [
     {
       "tag": "[P]",
+      "color": "#a4c2f4",
       "Q2 Bottleneck": "[P] Public",
       "# (bottlenecks only)": "72",
       "# all a": "78",
@@ -9,6 +10,7 @@
     },
     {
       "tag": "[P1]",
+      "color": "#c9daf8",
       "Q2 Bottleneck": "[P1] Poorly Informed",
       "# (bottlenecks only)": "21",
       "# all a": "21",
@@ -16,6 +18,7 @@
     },
     {
       "tag": "[P2]",
+      "color": "#c9daf8",
       "Q2 Bottleneck": "[P2] Individual Disease Focus",
       "# (bottlenecks only)": "17",
       "# all a": "20",
@@ -23,6 +26,7 @@
     },
     {
       "tag": "[P3]",
+      "color": "#c9daf8",
       "Q2 Bottleneck": "[P3] Lack of Credibility",
       "# (bottlenecks only)": "9",
       "# all a": "10",
@@ -30,6 +34,7 @@
     },
     {
       "tag": "[P4]",
+      "color": "#c9daf8",
       "Q2 Bottleneck": "[P4] Unaligned Institutions",
       "# (bottlenecks only)": "10",
       "# all a": "10",
@@ -37,6 +42,7 @@
     },
     {
       "tag": "[P5]",
+      "color": "#c9daf8",
       "Q2 Bottleneck": "[P5] Geroscience Aversion",
       "# (bottlenecks only)": "6",
       "# all a": "8",
@@ -44,6 +50,7 @@
     },
     {
       "tag": "[P6]",
+      "color": "#c9daf8",
       "Q2 Bottleneck": "[P6] Indifference",
       "# (bottlenecks only)": "7",
       "# all a": "7",
@@ -51,6 +58,7 @@
     },
     {
       "tag": "[P7]",
+      "color": "#c9daf8",
       "Q2 Bottleneck": "[P7] Media Negativity",
       "# (bottlenecks only)": "2",
       "# all a": "2",
@@ -58,6 +66,7 @@
     },
     {
       "tag": "[C]",
+      "color": "#b6d7a8",
       "Q2 Bottleneck": "[C] Community",
       "# (bottlenecks only)": "151",
       "# all a": "165",
@@ -65,6 +74,7 @@
     },
     {
       "tag": "[C1]",
+      "color": "#d9ead3",
       "Q2 Bottleneck": "[C1] Lack of Big Data Mindset",
       "# (bottlenecks only)": "10",
       "# all a": "11",
@@ -72,6 +82,7 @@
     },
     {
       "tag": "[C2]",
+      "color": "#d9ead3",
       "Q2 Bottleneck": "[C2] Ad-hoc Data / Protocols",
       "# (bottlenecks only)": "15",
       "# all a": "20",
@@ -79,6 +90,7 @@
     },
     {
       "tag": "[C3]",
+      "color": "#d9ead3",
       "Q2 Bottleneck": "[C3] Networking",
       "# (bottlenecks only)": "11",
       "# all a": "11",
@@ -86,6 +98,7 @@
     },
     {
       "tag": "[C4]",
+      "color": "#d9ead3",
       "Q2 Bottleneck": "[C4] Lack of Collective Action",
       "# (bottlenecks only)": "9",
       "# all a": "10",
@@ -93,6 +106,7 @@
     },
     {
       "tag": "[C5]",
+      "color": "#d9ead3",
       "Q2 Bottleneck": "[C5] Consensus Aging Definitions",
       "# (bottlenecks only)": "11",
       "# all a": "12",
@@ -100,6 +114,7 @@
     },
     {
       "tag": "[C6]",
+      "color": "#d9ead3",
       "Q2 Bottleneck": "[C6] Hype Cycles",
       "# (bottlenecks only)": "11",
       "# all a": "11",
@@ -107,6 +122,7 @@
     },
     {
       "tag": "[C7]",
+      "color": "#d9ead3",
       "Q2 Bottleneck": "[C7] Regional Concentration",
       "# (bottlenecks only)": "8",
       "# all a": "10",
@@ -114,6 +130,7 @@
     },
     {
       "tag": "[C8]",
+      "color": "#d9ead3",
       "Q2 Bottleneck": "[C8] Reproducibility Crisis",
       "# (bottlenecks only)": "12",
       "# all a": "12",
@@ -121,6 +138,7 @@
     },
     {
       "tag": "[C9]",
+      "color": "#d9ead3",
       "Q2 Bottleneck": "[C9] Insularity",
       "# (bottlenecks only)": "13",
       "# all a": "14",
@@ -128,6 +146,7 @@
     },
     {
       "tag": "[C10]",
+      "color": "#d9ead3",
       "Q2 Bottleneck": "[C10] Siloing / Secrecy",
       "# (bottlenecks only)": "13",
       "# all a": "14",
@@ -135,6 +154,7 @@
     },
     {
       "tag": "[C11]",
+      "color": "#d9ead3",
       "Q2 Bottleneck": "[C11] Conservatism",
       "# (bottlenecks only)": "8",
       "# all a": "8",
@@ -142,6 +162,7 @@
     },
     {
       "tag": "[C12]",
+      "color": "#d9ead3",
       "Q2 Bottleneck": "[C12] Lack of Negative Results",
       "# (bottlenecks only)": "6",
       "# all a": "7",
@@ -149,6 +170,7 @@
     },
     {
       "tag": "[C13]",
+      "color": "#d9ead3",
       "Q2 Bottleneck": "[C13] Entry Barriers/Orientation",
       "# (bottlenecks only)": "6",
       "# all a": "7",
@@ -156,6 +178,7 @@
     },
     {
       "tag": "[C14]",
+      "color": "#d9ead3",
       "Q2 Bottleneck": "[C14] Piecemeal Studies",
       "# (bottlenecks only)": "7",
       "# all a": "7",
@@ -163,6 +186,7 @@
     },
     {
       "tag": "[C15]",
+      "color": "#d9ead3",
       "Q2 Bottleneck": "[C15] Admin Overhead",
       "# (bottlenecks only)": "4",
       "# all a": "4",
@@ -170,6 +194,7 @@
     },
     {
       "tag": "[C16]",
+      "color": "#d9ead3",
       "Q2 Bottleneck": "[C16] Journal Paywalls",
       "# (bottlenecks only)": "2",
       "# all a": "2",
@@ -177,6 +202,7 @@
     },
     {
       "tag": "[C17]",
+      "color": "#d9ead3",
       "Q2 Bottleneck": "[C17] Short-termism",
       "# (bottlenecks only)": "2",
       "# all a": "2",
@@ -184,6 +210,7 @@
     },
     {
       "tag": "[C18]",
+      "color": "#d9ead3",
       "Q2 Bottleneck": "[C18] Misc Community Issues",
       "# (bottlenecks only)": "3",
       "# all a": "3",
@@ -191,6 +218,7 @@
     },
     {
       "tag": "[S]",
+      "color": "#ffe599",
       "Q2 Bottleneck": "[S] Science",
       "# (bottlenecks only)": "130",
       "# all a": "140",
@@ -198,6 +226,7 @@
     },
     {
       "tag": "[S1]",
+      "color": "#fff2cc",
       "Q2 Bottleneck": "[S1] Validated Biomarkers",
       "# (bottlenecks only)": "40",
       "# all a": "44",
@@ -212,6 +241,7 @@
     },
     {
       "tag": "[S2]",
+      "color": "#fff2cc",
       "Q2 Bottleneck": "[S2] Aging Characterization",
       "# (bottlenecks only)": "20",
       "# all a": "22",
@@ -219,6 +249,7 @@
     },
     {
       "tag": "[S3]",
+      "color": "#fff2cc",
       "Q2 Bottleneck": "[S3] Longitudinal Data/Samples",
       "# (bottlenecks only)": "14",
       "# all a": "17",
@@ -226,6 +257,7 @@
     },
     {
       "tag": "[S4]",
+      "color": "#fff2cc",
       "Q2 Bottleneck": "[S4] Aging Complexity",
       "# (bottlenecks only)": "12",
       "# all a": "12",
@@ -233,6 +265,7 @@
     },
     {
       "tag": "[S5]",
+      "color": "#fff2cc",
       "Q2 Bottleneck": "[S5] Variation Mapping",
       "# (bottlenecks only)": "12",
       "# all a": "13",
@@ -240,6 +273,7 @@
     },
     {
       "tag": "[S6]",
+      "color": "#fff2cc",
       "Q2 Bottleneck": "[S6] Misc",
       "# (bottlenecks only)": "8",
       "# all a": "8",
@@ -247,6 +281,7 @@
     },
     {
       "tag": "[S7]",
+      "color": "#fff2cc",
       "Q2 Bottleneck": "[S7] Systems Bio of Aging",
       "# (bottlenecks only)": "9",
       "# all a": "9",
@@ -254,6 +289,7 @@
     },
     {
       "tag": "[S8]",
+      "color": "#fff2cc",
       "Q2 Bottleneck": "[S8] Brain Aging",
       "# (bottlenecks only)": "4",
       "# all a": "4",
@@ -261,6 +297,7 @@
     },
     {
       "tag": "[S9]",
+      "color": "#fff2cc",
       "Q2 Bottleneck": "[S9] Aging Mechanisms",
       "# (bottlenecks only)": "11",
       "# all a": "11",
@@ -268,6 +305,7 @@
     },
     {
       "tag": "[S10]",
+      "color": "#fff2cc",
       "Q2 Bottleneck": "[S10] Replacement",
       "# (bottlenecks only)": "2",
       "# all a": "2",
@@ -275,6 +313,7 @@
     },
     {
       "tag": "[F]",
+      "color": "#d5a6bd",
       "Q2 Bottleneck": "[F] Funding",
       "# (bottlenecks only)": "119",
       "# all a": "131",
@@ -282,6 +321,7 @@
     },
     {
       "tag": "[F0]",
+      "color": "#ead1dc",
       "Q2 Bottleneck": "[F0] Overall Lack of Funding",
       "# (bottlenecks only)": "40",
       "# all a": "44",
@@ -289,6 +329,7 @@
     },
     {
       "tag": "[F1]",
+      "color": "#ead1dc",
       "Q2 Bottleneck": "[F1] Too Conservative",
       "# (bottlenecks only)": "22",
       "# all a": "26",
@@ -296,6 +337,7 @@
     },
     {
       "tag": "[F2]",
+      "color": "#ead1dc",
       "Q2 Bottleneck": "[F2] for Basic Research",
       "# (bottlenecks only)": "18",
       "# all a": "19",
@@ -303,6 +345,7 @@
     },
     {
       "tag": "[F3]",
+      "color": "#ead1dc",
       "Q2 Bottleneck": "[F3] Too Short-term",
       "# (bottlenecks only)": "10",
       "# all a": "12",
@@ -310,6 +353,7 @@
     },
     {
       "tag": "[F4]",
+      "color": "#ead1dc",
       "Q2 Bottleneck": "[F4] for Startups",
       "# (bottlenecks only)": "9",
       "# all a": "9",
@@ -317,6 +361,7 @@
     },
     {
       "tag": "[F5]",
+      "color": "#ead1dc",
       "Q2 Bottleneck": "[F5] Gated",
       "# (bottlenecks only)": "6",
       "# all a": "7",
@@ -324,6 +369,7 @@
     },
     {
       "tag": "[F6]",
+      "color": "#ead1dc",
       "Q2 Bottleneck": "[F6] for Translation",
       "# (bottlenecks only)": "6",
       "# all a": "6",
@@ -331,6 +377,7 @@
     },
     {
       "tag": "[F7]",
+      "color": "#ead1dc",
       "Q2 Bottleneck": "[F7] Inflexible",
       "# (bottlenecks only)": "2",
       "# all a": "2",
@@ -338,6 +385,7 @@
     },
     {
       "tag": "[F8]",
+      "color": "#ead1dc",
       "Q2 Bottleneck": "[F8] for Outreach",
       "# (bottlenecks only)": "2",
       "# all a": "2",
@@ -345,6 +393,7 @@
     },
     {
       "tag": "[F9]",
+      "color": "#ead1dc",
       "Q2 Bottleneck": "[F9] for Clinical/Longitudinal",
       "# (bottlenecks only)": "2",
       "# all a": "2",
@@ -352,6 +401,7 @@
     },
     {
       "tag": "[F10]",
+      "color": "#ead1dc",
       "Q2 Bottleneck": "[F10] Bureaucratic/Slow",
       "# (bottlenecks only)": "2",
       "# all a": "2",
@@ -359,6 +409,7 @@
     },
     {
       "tag": "[H]",
+      "color": "#f9cb9c",
       "Q2 Bottleneck": "[H] People",
       "# (bottlenecks only)": "99",
       "# all a": "102",
@@ -366,6 +417,7 @@
     },
     {
       "tag": "[H0]",
+      "color": "#fce5cd",
       "Q2 Bottleneck": "[H0] Lack of People",
       "# (bottlenecks only)": "15",
       "# all a": "15",
@@ -373,6 +425,7 @@
     },
     {
       "tag": "[H1]",
+      "color": "#fce5cd",
       "Q2 Bottleneck": "[H1] Career & Edu Paths",
       "# (bottlenecks only)": "17",
       "# all a": "17",
@@ -380,6 +433,7 @@
     },
     {
       "tag": "[H2]",
+      "color": "#fce5cd",
       "Q2 Bottleneck": "[H2] Low Pay",
       "# (bottlenecks only)": "6",
       "# all a": "8",
@@ -387,6 +441,7 @@
     },
     {
       "tag": "[H3]",
+      "color": "#fce5cd",
       "Q2 Bottleneck": "[H3] Quantitative",
       "# (bottlenecks only)": "7",
       "# all a": "7",
@@ -394,6 +449,7 @@
     },
     {
       "tag": "[H4]",
+      "color": "#fce5cd",
       "Q2 Bottleneck": "[H4] Top/Skilled Talent",
       "# (bottlenecks only)": "22",
       "# all a": "22",
@@ -401,6 +457,7 @@
     },
     {
       "tag": "[H6]",
+      "color": "#fce5cd",
       "Q2 Bottleneck": "[H6] Immigration/Borders",
       "# (bottlenecks only)": "4",
       "# all a": "5",
@@ -408,6 +465,7 @@
     },
     {
       "tag": "[H7]",
+      "color": "#fce5cd",
       "Q2 Bottleneck": "[H7] Hiring",
       "# (bottlenecks only)": "4",
       "# all a": "4",
@@ -415,6 +473,7 @@
     },
     {
       "tag": "[H8]",
+      "color": "#fce5cd",
       "Q2 Bottleneck": "[H8] Interdisciplinary",
       "# (bottlenecks only)": "6",
       "# all a": "6",
@@ -422,6 +481,7 @@
     },
     {
       "tag": "[H9]",
+      "color": "#fce5cd",
       "Q2 Bottleneck": "[H9] Personal/Misc",
       "# (bottlenecks only)": "18",
       "# all a": "18",
@@ -429,6 +489,7 @@
     },
     {
       "tag": "[X]",
+      "color": "#a2c4c9",
       "Q2 Bottleneck": "[X] Tools",
       "# (bottlenecks only)": "173",
       "# all a": "196",
@@ -436,6 +497,7 @@
     },
     {
       "tag": "[X0]",
+      "color": "#d0e0e3",
       "Q2 Bottleneck": "[X0] Lack of Misc Tools/Tech",
       "# (bottlenecks only)": "4",
       "# all a": "5",
@@ -443,6 +505,7 @@
     },
     {
       "tag": "[X1.1]",
+      "color": "#d0e0e3",
       "Q2 Bottleneck": "[X1.1] Lack of Predictive Models",
       "# (bottlenecks only)": "32",
       "# all a": "33",
@@ -450,6 +513,7 @@
     },
     {
       "tag": "[X1.2]",
+      "color": "#d0e0e3",
       "Q2 Bottleneck": "[X1.2] Slow & Expensive Models",
       "# (bottlenecks only)": "36",
       "# all a": "36",
@@ -457,6 +521,7 @@
     },
     {
       "tag": "[X1.3]",
+      "color": "#d0e0e3",
       "Q2 Bottleneck": "[X1.3] Lack of In Silico/Systems Aging Models",
       "# (bottlenecks only)": "10",
       "# all a": "10",
@@ -464,6 +529,7 @@
     },
     {
       "tag": "[X2]",
+      "color": "#d0e0e3",
       "Q2 Bottleneck": "[X2] Public Datasets",
       "# (bottlenecks only)": "27",
       "# all a": "35",
@@ -471,6 +537,7 @@
     },
     {
       "tag": "[X3]",
+      "color": "#d0e0e3",
       "Q2 Bottleneck": "[X3] Human Samples",
       "# (bottlenecks only)": "11",
       "# all a": "13",
@@ -478,6 +545,7 @@
     },
     {
       "tag": "[X4]",
+      "color": "#d0e0e3",
       "Q2 Bottleneck": "[X4] Aged Animals/Tissues",
       "# (bottlenecks only)": "11",
       "# all a": "14",
@@ -485,6 +553,7 @@
     },
     {
       "tag": "[X5]",
+      "color": "#d0e0e3",
       "Q2 Bottleneck": "[X5] Instrumentation/Lab Tech",
       "# (bottlenecks only)": "10",
       "# all a": "14",
@@ -492,6 +561,7 @@
     },
     {
       "tag": "[X6]",
+      "color": "#d0e0e3",
       "Q2 Bottleneck": "[X6] Lab Automation",
       "# (bottlenecks only)": "8",
       "# all a": "8",
@@ -499,6 +569,7 @@
     },
     {
       "tag": "[X7]",
+      "color": "#d0e0e3",
       "Q2 Bottleneck": "[X7] CS / Software",
       "# (bottlenecks only)": "4",
       "# all a": "7",
@@ -506,6 +577,7 @@
     },
     {
       "tag": "[X8]",
+      "color": "#d0e0e3",
       "Q2 Bottleneck": "[X8] Gene Delivery",
       "# (bottlenecks only)": "5",
       "# all a": "5",
@@ -513,6 +585,7 @@
     },
     {
       "tag": "[X9]",
+      "color": "#d0e0e3",
       "Q2 Bottleneck": "[X9] Research Infrastructure",
       "# (bottlenecks only)": "4",
       "# all a": "4",
@@ -520,6 +593,7 @@
     },
     {
       "tag": "[X10]",
+      "color": "#d0e0e3",
       "Q2 Bottleneck": "[X10] AI Tools",
       "# (bottlenecks only)": "3",
       "# all a": "4",
@@ -527,6 +601,7 @@
     },
     {
       "tag": "[X11]",
+      "color": "#d0e0e3",
       "Q2 Bottleneck": "[X11] Personal Health Sensors",
       "# (bottlenecks only)": "3",
       "# all a": "3",
@@ -534,6 +609,7 @@
     },
     {
       "tag": "[X12]",
+      "color": "#d0e0e3",
       "Q2 Bottleneck": "[X12] Personal Health Data Sharing",
       "# (bottlenecks only)": "3",
       "# all a": "3",
@@ -541,6 +617,7 @@
     },
     {
       "tag": "[X13]",
+      "color": "#d0e0e3",
       "Q2 Bottleneck": "[X13] Computing Power",
       "# (bottlenecks only)": "2",
       "# all a": "2",
@@ -548,6 +625,7 @@
     },
     {
       "tag": "[X14]",
+      "color": "#d0e0e3",
       "Q2 Bottleneck": "[X14] Information Overload",
       "# (bottlenecks only)": "1",
       "# all a": "2",
@@ -555,6 +633,7 @@
     },
     {
       "tag": "[T]",
+      "color": "#b4a7d6",
       "Q2 Bottleneck": "[T] Translation",
       "# (bottlenecks only)": "95",
       "# all a": "104",
@@ -562,6 +641,7 @@
     },
     {
       "tag": "[T1]",
+      "color": "#d9d2e9",
       "Q2 Bottleneck": "[T1] Lack of Regulatory Path",
       "# (bottlenecks only)": "30",
       "# all a": "38",
@@ -569,6 +649,7 @@
     },
     {
       "tag": "[T2]",
+      "color": "#d9d2e9",
       "Q2 Bottleneck": "[T2] Translation Gap",
       "# (bottlenecks only)": "27",
       "# all a": "27",
@@ -576,6 +657,7 @@
     },
     {
       "tag": "[T3]",
+      "color": "#d9d2e9",
       "Q2 Bottleneck": "[T3] Slow/Expensive Trials",
       "# (bottlenecks only)": "10",
       "# all a": "10",
@@ -583,6 +665,7 @@
     },
     {
       "tag": "[T4]",
+      "color": "#d9d2e9",
       "Q2 Bottleneck": "[T4] Misguided \"Bioethics\"",
       "# (bottlenecks only)": "9",
       "# all a": "10",
@@ -590,6 +673,7 @@
     },
     {
       "tag": "[T5]",
+      "color": "#d9d2e9",
       "Q2 Bottleneck": "[T5] Market Failure",
       "# (bottlenecks only)": "11",
       "# all a": "11",
@@ -597,6 +681,7 @@
     },
     {
       "tag": "[T6]",
+      "color": "#d9d2e9",
       "Q2 Bottleneck": "[T6] Participant Recruitment",
       "# (bottlenecks only)": "5",
       "# all a": "5",
@@ -604,6 +689,7 @@
     },
     {
       "tag": "[T7]",
+      "color": "#d9d2e9",
       "Q2 Bottleneck": "[T7] Unregulated Claims",
       "# (bottlenecks only)": "3",
       "# all a": "3",
@@ -613,6 +699,7 @@
   "solutions": [
     {
       "tag": "[+P]",
+      "color": "#a4c2f4",
       "Q3 Solution": "[+P] Public",
       "# solutions only": "30",
       "# all b": "48",
@@ -620,6 +707,7 @@
     },
     {
       "tag": "[+P1.1]",
+      "color": "#c9daf8",
       "Q3 Solution": "[+P1.1] Outreach to Public",
       "# solutions only": "11",
       "# all b": "15",
@@ -627,6 +715,7 @@
     },
     {
       "tag": "[+P1.2]",
+      "color": "#c9daf8",
       "Q3 Solution": "[+P1.2] Outreach to Other Fields",
       "# solutions only": "2",
       "# all b": "6",
@@ -634,6 +723,7 @@
     },
     {
       "tag": "[+P1.3]",
+      "color": "#c9daf8",
       "Q3 Solution": "[+P1.3] Outreach to Biotech/Pharma",
       "# solutions only": "1",
       "# all b": "3",
@@ -641,6 +731,7 @@
     },
     {
       "tag": "[+P1.4]",
+      "color": "#c9daf8",
       "Q3 Solution": "[+P1.4] Outreach to Students",
       "# solutions only": "0",
       "# all b": "1",
@@ -648,6 +739,7 @@
     },
     {
       "tag": "[+P1.5]",
+      "color": "#c9daf8",
       "Q3 Solution": "[+P1.5] Outreach to Gov/Institutions",
       "# solutions only": "3",
       "# all b": "4",
@@ -655,6 +747,7 @@
     },
     {
       "tag": "[+P2]",
+      "color": "#c9daf8",
       "Q3 Solution": "[+P2] Culture",
       "# solutions only": "10",
       "# all b": "11",
@@ -662,6 +755,7 @@
     },
     {
       "tag": "[+P3]",
+      "color": "#c9daf8",
       "Q3 Solution": "[+P3] Incentives",
       "# solutions only": "2",
       "# all b": "5",
@@ -669,6 +763,7 @@
     },
     {
       "tag": "[+P4]",
+      "color": "#c9daf8",
       "Q3 Solution": "[+P4] Comms Training",
       "# solutions only": "1",
       "# all b": "3",
@@ -676,6 +771,7 @@
     },
     {
       "tag": "[+C]",
+      "color": "#b6d7a8",
       "Q3 Solution": "[+C] Community",
       "# solutions only": "73",
       "# all b": "107",
@@ -683,6 +779,7 @@
     },
     {
       "tag": "[+C1]",
+      "color": "#d9ead3",
       "Q3 Solution": "[+C1] Big Data Mindset",
       "# solutions only": "2",
       "# all b": "5",
@@ -690,6 +787,7 @@
     },
     {
       "tag": "[+C2]",
+      "color": "#d9ead3",
       "Q3 Solution": "[+C2] Data/Protocol Standards",
       "# solutions only": "11",
       "# all b": "18",
@@ -697,6 +795,7 @@
     },
     {
       "tag": "[+C3]",
+      "color": "#d9ead3",
       "Q3 Solution": "[+C3] Networking",
       "# solutions only": "13",
       "# all b": "16",
@@ -704,6 +803,7 @@
     },
     {
       "tag": "[+C4]",
+      "color": "#d9ead3",
       "Q3 Solution": "[+C4] Large Collaborative Projects",
       "# solutions only": "8",
       "# all b": "13",
@@ -711,6 +811,7 @@
     },
     {
       "tag": "[+C5]",
+      "color": "#d9ead3",
       "Q3 Solution": "[+C5] Collective Action",
       "# solutions only": "8",
       "# all b": "11",
@@ -718,6 +819,7 @@
     },
     {
       "tag": "[+C6]",
+      "color": "#d9ead3",
       "Q3 Solution": "[+C6] Consensus Aging Definition",
       "# solutions only": "6",
       "# all b": "12",
@@ -725,6 +827,7 @@
     },
     {
       "tag": "[+C7]",
+      "color": "#d9ead3",
       "Q3 Solution": "[+C7] New Research Centers",
       "# solutions only": "6",
       "# all b": "8",
@@ -732,6 +835,7 @@
     },
     {
       "tag": "[+C8]",
+      "color": "#d9ead3",
       "Q3 Solution": "[+C8] Reproduce Key Results",
       "# solutions only": "3",
       "# all b": "6",
@@ -739,6 +843,7 @@
     },
     {
       "tag": "[+C9]",
+      "color": "#d9ead3",
       "Q3 Solution": "[+C9] Field-Wide Status Dashboard",
       "# solutions only": "7",
       "# all b": "7",
@@ -746,6 +851,7 @@
     },
     {
       "tag": "[+C10]",
+      "color": "#d9ead3",
       "Q3 Solution": "[+C10] Outsourcing Services",
       "# solutions only": "4",
       "# all b": "6",
@@ -753,6 +859,7 @@
     },
     {
       "tag": "[+C11]",
+      "color": "#d9ead3",
       "Q3 Solution": "[+C11] Neg Results Incentives",
       "# solutions only": "3",
       "# all b": "4",
@@ -760,6 +867,7 @@
     },
     {
       "tag": "[+C12]",
+      "color": "#d9ead3",
       "Q3 Solution": "[+C12] Open Science",
       "# solutions only": "1",
       "# all b": "2",
@@ -767,6 +875,7 @@
     },
     {
       "tag": "[+C13]",
+      "color": "#d9ead3",
       "Q3 Solution": "[+C13] Long-termism",
       "# solutions only": "1",
       "# all b": "2",
@@ -774,6 +883,7 @@
     },
     {
       "tag": "[+C14]",
+      "color": "#d9ead3",
       "Q3 Solution": "[+C14] Protected Time",
       "# solutions only": "1",
       "# all b": "1",
@@ -781,6 +891,7 @@
     },
     {
       "tag": "[+C15]",
+      "color": "#d9ead3",
       "Q3 Solution": "[+C15] Leadership",
       "# solutions only": "1",
       "# all b": "1",
@@ -788,6 +899,7 @@
     },
     {
       "tag": "[+S]",
+      "color": "#ffe599",
       "Q3 Solution": "[+S] Science",
       "# solutions only": "35",
       "# all b": "80",
@@ -795,6 +907,7 @@
     },
     {
       "tag": "[+S1]",
+      "color": "#fff2cc",
       "Q3 Solution": "[+S1] Validated Biomarkers",
       "# solutions only": "13",
       "# all b": "41",
@@ -802,6 +915,7 @@
     },
     {
       "tag": "[+S2]",
+      "color": "#fff2cc",
       "Q3 Solution": "[+S2] Aging Fully Characterized",
       "# solutions only": "10",
       "# all b": "15",
@@ -809,6 +923,7 @@
     },
     {
       "tag": "[+S3]",
+      "color": "#fff2cc",
       "Q3 Solution": "[+S3] Longitudinal Data/Samples",
       "# solutions only": "8",
       "# all b": "16",
@@ -816,6 +931,7 @@
     },
     {
       "tag": "[+S4]",
+      "color": "#fff2cc",
       "Q3 Solution": "[+S4] Aging Variation Mapped",
       "# solutions only": "3",
       "# all b": "4",
@@ -823,6 +939,7 @@
     },
     {
       "tag": "[+S10]",
+      "color": "#fff2cc",
       "Q3 Solution": "[+S10] Brain Rejuvenation/Replacement",
       "# solutions only": "1",
       "# all b": "4",
@@ -830,6 +947,7 @@
     },
     {
       "tag": "[+S11]",
+      "color": "#fff2cc",
       "Q3 Solution": "[+S11] Comprehensive Replacement",
       "# solutions only": "0",
       "# all b": "2",
@@ -837,6 +955,7 @@
     },
     {
       "tag": "[+F]",
+      "color": "#d5a6bd",
       "Q3 Solution": "[+F] Funding",
       "# solutions only": "47",
       "# all b": "124",
@@ -844,6 +963,7 @@
     },
     {
       "tag": "[+F0]",
+      "color": "#ead1dc",
       "Q3 Solution": "[+F0] Overall More Funding",
       "# solutions only": "18",
       "# all b": "44",
@@ -851,6 +971,7 @@
     },
     {
       "tag": "[+F1]",
+      "color": "#ead1dc",
       "Q3 Solution": "[+F1] Ambitious/Exploratory",
       "# solutions only": "11",
       "# all b": "21",
@@ -858,6 +979,7 @@
     },
     {
       "tag": "[+F2]",
+      "color": "#ead1dc",
       "Q3 Solution": "[+F2] for Basic Research",
       "# solutions only": "5",
       "# all b": "20",
@@ -865,6 +987,7 @@
     },
     {
       "tag": "[+F3]",
+      "color": "#ead1dc",
       "Q3 Solution": "[+F3] Longer-term",
       "# solutions only": "6",
       "# all b": "13",
@@ -872,6 +995,7 @@
     },
     {
       "tag": "[+F4]",
+      "color": "#ead1dc",
       "Q3 Solution": "[+F4] for Startups",
       "# solutions only": "3",
       "# all b": "7",
@@ -879,6 +1003,7 @@
     },
     {
       "tag": "[+F5]",
+      "color": "#ead1dc",
       "Q3 Solution": "[+F5] for Outsiders",
       "# solutions only": "1",
       "# all b": "6",
@@ -886,6 +1011,7 @@
     },
     {
       "tag": "[+F6]",
+      "color": "#ead1dc",
       "Q3 Solution": "[+F6] for Translation",
       "# solutions only": "1",
       "# all b": "4",
@@ -893,6 +1019,7 @@
     },
     {
       "tag": "[+F7]",
+      "color": "#ead1dc",
       "Q3 Solution": "[+F7] Flexible",
       "# solutions only": "1",
       "# all b": "3",
@@ -900,6 +1027,7 @@
     },
     {
       "tag": "[+F8]",
+      "color": "#ead1dc",
       "Q3 Solution": "[+F8] for Outreach",
       "# solutions only": "0",
       "# all b": "2",
@@ -907,6 +1035,7 @@
     },
     {
       "tag": "[+F9]",
+      "color": "#ead1dc",
       "Q3 Solution": "[+F9] for Clinical/Longitudinal",
       "# solutions only": "0",
       "# all b": "2",
@@ -914,6 +1043,7 @@
     },
     {
       "tag": "[+F10]",
+      "color": "#ead1dc",
       "Q3 Solution": "[+F10] Faster Grants",
       "# solutions only": "1",
       "# all b": "2",
@@ -921,6 +1051,7 @@
     },
     {
       "tag": "[+H]",
+      "color": "#f9cb9c",
       "Q3 Solution": "[+H] People",
       "# solutions only": "18",
       "# all b": "46",
@@ -928,6 +1059,7 @@
     },
     {
       "tag": "[+H0]",
+      "color": "#fce5cd",
       "Q3 Solution": "[+H0] More People",
       "# solutions only": "2",
       "# all b": "14",
@@ -935,6 +1067,7 @@
     },
     {
       "tag": "[+H1]",
+      "color": "#fce5cd",
       "Q3 Solution": "[+H1] Quantitative",
       "# solutions only": "1",
       "# all b": "8",
@@ -942,6 +1075,7 @@
     },
     {
       "tag": "[+H2]",
+      "color": "#fce5cd",
       "Q3 Solution": "[+H2] Higher Pay",
       "# solutions only": "3",
       "# all b": "7",
@@ -949,6 +1083,7 @@
     },
     {
       "tag": "[+H3]",
+      "color": "#fce5cd",
       "Q3 Solution": "[+H3] Longevity Training",
       "# solutions only": "2",
       "# all b": "5",
@@ -956,6 +1091,7 @@
     },
     {
       "tag": "[+H4]",
+      "color": "#fce5cd",
       "Q3 Solution": "[+H4] Skills Assessment",
       "# solutions only": "2",
       "# all b": "2",
@@ -963,6 +1099,7 @@
     },
     {
       "tag": "[+H5]",
+      "color": "#fce5cd",
       "Q3 Solution": "[+H5] Interdisciplinary",
       "# solutions only": "1",
       "# all b": "3",
@@ -970,6 +1107,7 @@
     },
     {
       "tag": "[+H6]",
+      "color": "#fce5cd",
       "Q3 Solution": "[+H6] More/Flexible Visas",
       "# solutions only": "1",
       "# all b": "1",
@@ -977,6 +1115,7 @@
     },
     {
       "tag": "[+H10]",
+      "color": "#fce5cd",
       "Q3 Solution": "[+H10] Personal/Misc",
       "# solutions only": "4",
       "# all b": "4",
@@ -984,6 +1123,7 @@
     },
     {
       "tag": "[+H9]",
+      "color": "#fce5cd",
       "Q3 Solution": "[+H9] Top/Skilled Talent",
       "# solutions only": "2",
       "# all b": "2",
@@ -991,6 +1131,7 @@
     },
     {
       "tag": "[+X]",
+      "color": "#a2c4c9",
       "Q3 Solution": "[+X] Tools",
       "# solutions only": "79",
       "# all b": "161",
@@ -998,6 +1139,7 @@
     },
     {
       "tag": "[+X0]",
+      "color": "#d0e0e3",
       "Q3 Solution": "[+X0] Unspecified Tools/Tech",
       "# solutions only": "1",
       "# all b": "4",
@@ -1005,6 +1147,7 @@
     },
     {
       "tag": "[+X1.1]",
+      "color": "#d0e0e3",
       "Q3 Solution": "[+X1.1] In Silico/Systems Aging Models",
       "# solutions only": "4",
       "# all b": "15",
@@ -1012,6 +1155,7 @@
     },
     {
       "tag": "[+X1.2]",
+      "color": "#d0e0e3",
       "Q3 Solution": "[+X1.2] Ex vivo Models",
       "# solutions only": "2",
       "# all b": "9",
@@ -1019,6 +1163,7 @@
     },
     {
       "tag": "[+X1.3]",
+      "color": "#d0e0e3",
       "Q3 Solution": "[+X1.3] Multiple/Diverse Models",
       "# solutions only": "3",
       "# all b": "7",
@@ -1026,6 +1171,7 @@
     },
     {
       "tag": "[+X1.4]",
+      "color": "#d0e0e3",
       "Q3 Solution": "[+X1.4] Unspecified/Misc Models",
       "# solutions only": "3",
       "# all b": "9",
@@ -1033,6 +1179,7 @@
     },
     {
       "tag": "[+X1.5]",
+      "color": "#d0e0e3",
       "Q3 Solution": "[+X1.5] Longer Lived Models",
       "# solutions only": "2",
       "# all b": "4",
@@ -1040,6 +1187,7 @@
     },
     {
       "tag": "[+X1.6]",
+      "color": "#d0e0e3",
       "Q3 Solution": "[+X1.6] Human Models",
       "# solutions only": "2",
       "# all b": "5",
@@ -1047,6 +1195,7 @@
     },
     {
       "tag": "[+X1.7]",
+      "color": "#d0e0e3",
       "Q3 Solution": "[+X1.7] Accelerated Aging Models",
       "# solutions only": "1",
       "# all b": "1",
@@ -1054,6 +1203,7 @@
     },
     {
       "tag": "[+X2]",
+      "color": "#d0e0e3",
       "Q3 Solution": "[+X2] Public Datasets",
       "# solutions only": "22",
       "# all b": "33",
@@ -1061,6 +1211,7 @@
     },
     {
       "tag": "[+X3]",
+      "color": "#d0e0e3",
       "Q3 Solution": "[+X3] Instrumentation/Lab Tech",
       "# solutions only": "8",
       "# all b": "15",
@@ -1068,6 +1219,7 @@
     },
     {
       "tag": "[+X4]",
+      "color": "#d0e0e3",
       "Q3 Solution": "[+X4] Human Cell/Tissue Bank",
       "# solutions only": "6",
       "# all b": "12",
@@ -1075,6 +1227,7 @@
     },
     {
       "tag": "[+X5]",
+      "color": "#d0e0e3",
       "Q3 Solution": "[+X5] Aged Animals/Tissue Bank",
       "# solutions only": "5",
       "# all b": "12",
@@ -1082,6 +1235,7 @@
     },
     {
       "tag": "[+X5]",
+      "color": "#d0e0e3",
       "Q3 Solution": "[+X5] Lab Automation",
       "# solutions only": "4",
       "# all b": "10",
@@ -1089,6 +1243,7 @@
     },
     {
       "tag": "[+X6]",
+      "color": "#d0e0e3",
       "Q3 Solution": "[+X6] CS / Software",
       "# solutions only": "5",
       "# all b": "7",
@@ -1096,6 +1251,7 @@
     },
     {
       "tag": "[+X7]",
+      "color": "#d0e0e3",
       "Q3 Solution": "[+X7] Gene Delivery",
       "# solutions only": "1",
       "# all b": "5",
@@ -1103,6 +1259,7 @@
     },
     {
       "tag": "[+X8]",
+      "color": "#d0e0e3",
       "Q3 Solution": "[+X8] AI Tools",
       "# solutions only": "4",
       "# all b": "5",
@@ -1110,6 +1267,7 @@
     },
     {
       "tag": "[+X9]",
+      "color": "#d0e0e3",
       "Q3 Solution": "[+X9] Personal Health Sensors",
       "# solutions only": "2",
       "# all b": "2",
@@ -1117,6 +1275,7 @@
     },
     {
       "tag": "[+X10]",
+      "color": "#d0e0e3",
       "Q3 Solution": "[+X10] Syn Bio",
       "# solutions only": "0",
       "# all b": "1",
@@ -1124,6 +1283,7 @@
     },
     {
       "tag": "[+X11]",
+      "color": "#d0e0e3",
       "Q3 Solution": "[+X11] Computing Power",
       "# solutions only": "1",
       "# all b": "2",
@@ -1131,6 +1291,7 @@
     },
     {
       "tag": "[+X12]",
+      "color": "#d0e0e3",
       "Q3 Solution": "[+X12] Health Data Platform",
       "# solutions only": "3",
       "# all b": "3",
@@ -1138,6 +1299,7 @@
     },
     {
       "tag": "[+T]",
+      "color": "#b4a7d6",
       "Q3 Solution": "[+T] Translation",
       "# solutions only": "33",
       "# all b": "68",
@@ -1145,6 +1307,7 @@
     },
     {
       "tag": "[+T1]",
+      "color": "#d9d2e9",
       "Q3 Solution": "[+T1] Regulatory Path",
       "# solutions only": "19",
       "# all b": "37",
@@ -1152,6 +1315,7 @@
     },
     {
       "tag": "[+T2]",
+      "color": "#d9d2e9",
       "Q3 Solution": "[+T2] Participant Database",
       "# solutions only": "4",
       "# all b": "6",
@@ -1159,6 +1323,7 @@
     },
     {
       "tag": "[+T3]",
+      "color": "#d9d2e9",
       "Q3 Solution": "[+T3] Regulatory Opt-Out",
       "# solutions only": "5",
       "# all b": "7",
@@ -1166,6 +1331,7 @@
     },
     {
       "tag": "[+T4]",
+      "color": "#d9d2e9",
       "Q3 Solution": "[+T4] Intervention Testing",
       "# solutions only": "0",
       "# all b": "5",
@@ -1173,6 +1339,7 @@
     },
     {
       "tag": "[+T5]",
+      "color": "#d9d2e9",
       "Q3 Solution": "[+T5] Translation Bridges",
       "# solutions only": "2",
       "# all b": "2",
@@ -1180,6 +1347,7 @@
     },
     {
       "tag": "[+T6]",
+      "color": "#d9d2e9",
       "Q3 Solution": "[+T6] Regulate Claims",
       "# solutions only": "1",
       "# all b": "2",
@@ -1187,6 +1355,7 @@
     },
     {
       "tag": "[+T7]",
+      "color": "#d9d2e9",
       "Q3 Solution": "[+T7] Public Trials",
       "# solutions only": "0",
       "# all b": "2",
@@ -1194,6 +1363,7 @@
     },
     {
       "tag": "[+T8]",
+      "color": "#d9d2e9",
       "Q3 Solution": "[+T8] Rethink Trials",
       "# solutions only": "1",
       "# all b": "6",
@@ -1201,6 +1371,7 @@
     },
     {
       "tag": "[+T8]",
+      "color": "#d9d2e9",
       "Q3 Solution": "[+T8] Data Unlocking",
       "# solutions only": "1",
       "# all b": "1",
@@ -1208,6 +1379,7 @@
     },
     {
       "tag": "[+T9]",
+      "color": "#d9d2e9",
       "Q3 Solution": "[+T9] Longevity Standard of Care",
       "# solutions only": "0",
       "# all b": "0",

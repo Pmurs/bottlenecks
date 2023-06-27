@@ -1,13 +1,19 @@
-<template><div id="chart"></div></template>
+<template>
+  <div id="chart">
+    <BottleneckDetails :data="moreInfo" />
+  </div>
+</template>
 
 <script setup>
 import * as d3 from "d3";
 import { bottleneckStore } from "@/stores/bottleneckStore";
-import { onMounted } from "vue";
+import { onMounted, ref } from "vue";
+import BottleneckDetails from "@/components/BottleneckDetails.vue";
 
 const store = bottleneckStore();
 const analysis = store.analysis;
 const tags = store.tags;
+const moreInfo = ref([]);
 
 // Copyright 2021 Observable, Inc.
 // Released under the ISC license.
@@ -21,6 +27,7 @@ function Pack(
     parentId = Array.isArray(data) ? (d) => d.parentId : null, // if tabular data, given a node d, returns its parent’s identifier
     children, // if hierarchical data, given a d in data, returns its children
     value, // given a node d, returns a quantitative value (for area encoding; null for count)
+    clickData, // given a node d, returns the data that should be shown when that node is clicked on
     sort = (a, b) => d3.descending(a.value, b.value), // how to sort nodes prior to layout
     label, // given a leaf node d, returns the display name
     title, // given a node d, returns its hover text
@@ -34,7 +41,7 @@ function Pack(
     marginBottom = margin, // bottom margin, in pixels
     marginLeft = margin, // left margin, in pixels
     padding = 0, // separation between circles
-    fill = "#ddd", // fill for leaf circles
+    fill, // fill for leaf circles
     fillOpacity, // fill opacity for leaf circles
     stroke = "#bbb", // stroke for internal circles
     strokeWidth, // stroke width for internal circles
@@ -58,7 +65,10 @@ function Pack(
   // Compute labels and titles.
   const descendants = root.descendants();
   const leaves = descendants.filter((d) => !d.children);
+  const parents = descendants.filter((d) => d.children && d.data.tag);
+  parents.forEach((d, i) => (d.index = i));
   leaves.forEach((d, i) => (d.index = i));
+  const PL = label == null ? null : parents.map((d) => label(d.data, d));
   const L = label == null ? null : leaves.map((d) => label(d.data, d));
   const T = title == null ? null : descendants.map((d) => title(d.data, d));
 
@@ -91,14 +101,39 @@ function Pack(
 
   node
     .append("circle")
-    .attr("fill", (d) => (d.children ? "#fff" : fill))
+    .attr("fill", (d) => fill(d.data) || "#eee")
     .attr("fill-opacity", (d) => (d.children ? null : fillOpacity))
     .attr("stroke", (d) => (d.children ? stroke : null))
     .attr("stroke-width", (d) => (d.children ? strokeWidth : null))
     .attr("stroke-opacity", (d) => (d.children ? strokeOpacity : null))
-    .attr("r", (d) => d.r);
+    .attr("r", (d) => d.r)
+    .style("cursor", "pointer")
+    .on("click", (event, d) => {
+      if (!d.children) {
+        moreInfo.value = clickData(d.data);
+      }
+    });
 
   if (T) node.append("title").text((d, i) => T[i]);
+
+  if (PL) {
+    // A unique identifier for clip paths (to avoid conflicts).
+    const uid = `O-${Math.random().toString(16).slice(2)}`;
+
+    const leaf = node.filter(
+      (d) => d.children && d.r > 10 && PL[d.index] != null
+    );
+
+    leaf
+      .append("text")
+      .selectAll("tspan")
+      .data((d) => `${PL[d.index]}`.split(/\n/g))
+      .join("tspan")
+      .attr("x", 0)
+      .attr("y", (d, i, D) => `${i - D.length / 2 + 0.85}em`)
+      .attr("fill-opacity", (d, i, D) => (i === D.length - 1 ? 0.7 : null))
+      .text((d) => d);
+  }
 
   if (L) {
     // A unique identifier for clip paths (to avoid conflicts).
@@ -108,11 +143,11 @@ function Pack(
       (d) => !d.children && d.r > 10 && L[d.index] != null
     );
 
-    leaf
-      .append("clipPath")
-      .attr("id", (d) => `${uid}-clip-${d.index}`)
-      .append("circle")
-      .attr("r", (d) => d.r);
+    // leaf
+    //   .append("clipPath")
+    //   .attr("id", (d) => `${uid}-clip-${d.index}`)
+    //   .append("circle")
+    //   .attr("r", (d) => d.r);
 
     leaf
       .append("text")
@@ -145,10 +180,8 @@ onMounted(() => {
             tag.tag.match(/\[[A-Z][0-9].*]/) &&
             tag.tag.substring(0, 2) === item.tag.substring(0, 2)
         )
-        .map((subItem) => ({ ...subItem, size: 0 })),
+        .map((subItem) => ({ ...subItem, size: 0, bottlenecks: [] })),
     }));
-
-  console.log(bTagCategories);
 
   bottlenecks.forEach((item) => {
     const bottleneckTags = item.tags.filter((tag) => tag.match(/\[[A-Z]/));
@@ -159,16 +192,18 @@ onMounted(() => {
     const parentTag = bottleneckTags[0].match(/\[[A-Z]/) + "]";
     const parent = bTagCategories.find((item) => item.tag === parentTag);
     const child = parent.children.find((item) => item.tag === childTag);
-    child.size++;
+    child.bottlenecks.push(item);
   });
 
   const chart = Pack(
     { name: "bottlenecks", children: bTagCategories },
     {
       name: (d) => d.bottleneck,
-      value: (d) => d.size,
-      label: (d) => d["Q2 Bottleneck"].match(/(\[[A-Z][0-9].*])(.+)/)[2],
-      title: (d) => d["Bottleneck Description"],
+      value: (d) => d.bottlenecks?.length,
+      label: (d) => d["Q2 Bottleneck"].match(/(\[[A-Z][0-9]?.*])(.+)/)[2],
+      title: (d) => d["Q2 Bottleneck"] + ":\n" + d["Bottleneck Description"],
+      fill: (d) => d.color,
+      clickData: (d) => d.bottlenecks,
       width: 1152,
     }
   );
@@ -186,10 +221,8 @@ onMounted(() => {
             tag.tag.match(/\[\+[A-Z][0-9].*]/) &&
             tag.tag.substring(0, 2) === item.tag.substring(0, 2)
         )
-        .map((subItem) => ({ ...subItem, size: 0 })),
+        .map((subItem) => ({ ...subItem, solutions: [] })),
     }));
-
-  console.log(sTagCategories);
 
   solutions.forEach((item) => {
     const solutionTags = item.tags.filter((tag) => tag.match(/\[\+[A-Z]/));
@@ -200,16 +233,20 @@ onMounted(() => {
     const parentTag = solutionTags[0].match(/\[\+[A-Z]/) + "]";
     const parent = sTagCategories.find((item) => item.tag === parentTag);
     const child = parent.children.find((item) => item.tag === childTag);
-    child.size++;
+    child.solutions.push(item);
   });
 
   const chart2 = Pack(
     { name: "solutions", children: sTagCategories },
     {
       name: (d) => d.investment,
-      value: (d) => d.size,
-      label: (d) => d["Q3 Solution"].match(/(\[\+[A-Z][0-9].*])(.+)/)[2],
-      title: (d) => d["Solution Description"],
+      value: (d) => d.solutions?.length,
+      label: (d) => {
+        return d["Q3 Solution"].match(/(\[\+[A-Z][0-9]?.*])(.+)/)[2];
+      },
+      title: (d) => d["Q3 Solution"] + ":\n" + d["Solution Description"],
+      fill: (d) => d.color,
+      clickData: (d) => d.solutions,
       width: 1152,
     }
   );
