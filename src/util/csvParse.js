@@ -52,9 +52,8 @@ async function parseCSVs() {
       let bottlenecks = [],
         solutions = [];
 
-      //console.log(rawAnalysis);
-
       rawAnalysis.forEach((item) => {
+        console.log(item)
         bottlenecks.push({
           title: item["Q2-Bottleneck1-Title"],
           description: item["Q2-Bottleneck1-Why"],
@@ -70,11 +69,12 @@ async function parseCSVs() {
         bottlenecks.push({
           title: item["Q2-Bottleneck3-Title"],
           description: item["Q2-Bottleneck3-Why"],
+          bottleneck: item["Q2.3-Bottleneck"],
           tags: item["Q2.3 Tags"].match(/(\[.+\])/g),
         });
         solutions.push({
           title: item["Q3-Solution"],
-          tags: item["Q2.3 Tags"].match(/(\[.+\])/g),
+          tags: item["Q3 Tags"].match(/(\[.+\])/g),
           investment: item["Investment"],
         });
       });
@@ -84,7 +84,7 @@ async function parseCSVs() {
       analysis.bottlenecks = bottlenecks;
       analysis.solutions = solutions;
 
-      //await fs.writeFile("analysis.json", JSON.stringify(analysis), () => {});
+      await fs.writeFile("analysis.json", JSON.stringify(analysis), () => {});
     });
 
   await fs
