@@ -1,5 +1,16 @@
 <template>
-  <div id="chart">
+  <div id="chart"></div>
+  <div class="urlContainer">
+    Full data
+    <strong>
+      <a
+        href="https://docs.google.com/spreadsheets/d/1aomCkAlaHNbNBEPjLeDbwLr3TazAxhU4f9idJQvbL2s/edit?usp=sharing"
+        target="_blank"
+        >here</a
+      >
+    </strong>
+  </div>
+  <div>
     <BottleneckDetails :data="moreInfo" />
   </div>
 </template>
@@ -13,7 +24,12 @@ import BottleneckDetails from "@/components/BottleneckDetails.vue";
 const store = bottleneckStore();
 const analysis = store.analysis;
 const tags = store.tags;
-const moreInfo = ref([]);
+const moreInfo = ref({
+  title: "",
+  description: "",
+  items: [],
+  isBottleneck: false,
+});
 
 // Copyright 2021 Observable, Inc.
 // Released under the ISC license.
@@ -33,6 +49,7 @@ function Pack(
     title, // given a node d, returns its hover text
     link, // given a node d, its link (if any)
     linkTarget = "_blank", // the target attribute for links, if any
+    chartTitle, // the title of the chart
     width = 1000, // outer width, in pixels
     height = 1000, // outer height, in pixels
     margin = 0, // shorthand for margins
@@ -88,8 +105,16 @@ function Pack(
     .attr("height", height)
     .attr("style", "max-width: 100%; height: auto; height: intrinsic;")
     .attr("font-family", "sans-serif")
-    .attr("font-size", 10)
+    .attr("font-size", "1em")
     .attr("text-anchor", "middle");
+
+  svg
+    .append("text")
+    .attr("x", width / 2)
+    .attr("y", 0 - marginTop / 2)
+    .attr("text-anchor", "middle")
+    .style("font-size", "2em")
+    .text(chartTitle);
 
   const node = svg
     .selectAll("a")
@@ -108,7 +133,14 @@ function Pack(
     .attr("stroke-opacity", (d) => (d.children ? strokeOpacity : null))
     .attr("r", (d) => d.r)
     .style("cursor", "pointer")
+    .on("mouseover", function () {
+      d3.select(this).attr("stroke", "#000");
+    })
+    .on("mouseout", function () {
+      d3.select(this).attr("stroke", null);
+    })
     .on("click", (event, d) => {
+      console.log(d);
       if (!d.children) {
         moreInfo.value = clickData(d.data);
       }
@@ -161,6 +193,24 @@ function Pack(
       .attr("x", 0)
       .attr("y", (d, i, D) => `${i - D.length / 2 + 0.85}em`)
       .attr("fill-opacity", (d, i, D) => (i === D.length - 1 ? 0.7 : null))
+      .style("cursor", "pointer")
+      .on("mouseover", function () {
+        d3.select(this.parentNode.parentNode)
+          .selectAll("circle")
+          .attr("stroke", "#000");
+      })
+      .on("mouseout", function () {
+        d3.select(this.parentNode.parentNode)
+          .selectAll("circle")
+          .attr("stroke", null);
+      })
+      .on("click", (event, d) => {
+        console.log();
+        console.log(d, d3.select(this));
+        if (!d.children) {
+          moreInfo.value = clickData(d.data);
+        }
+      })
       .text((d) => d);
   }
 
@@ -184,27 +234,38 @@ onMounted(() => {
     }));
 
   bottlenecks.forEach((item) => {
+    console.log(item.tags);
     const bottleneckTags = item.tags.filter((tag) => tag.match(/\[[A-Z]/));
     if (!bottleneckTags.length) {
       return;
     }
-    const childTag = bottleneckTags[0];
-    const parentTag = bottleneckTags[0].match(/\[[A-Z]/) + "]";
-    const parent = bTagCategories.find((item) => item.tag === parentTag);
-    const child = parent.children.find((item) => item.tag === childTag);
-    child.bottlenecks.push(item);
+    console.log(bottleneckTags)
+    bottleneckTags.forEach(tag => {
+      console.log(tag);
+      const parentTag = tag.match(/\[[A-Z]/) + "]";
+      console.log(parentTag)
+      const parent = bTagCategories.find((item) => item.tag === parentTag);
+      const child = parent.children.find((item) => item.tag === tag);
+      child.bottlenecks.push(item);
+    })
   });
 
   const chart = Pack(
     { name: "bottlenecks", children: bTagCategories },
     {
       name: (d) => d.bottleneck,
-      value: (d) => d.bottlenecks?.length,
+      value: (d) => d["# (bottlenecks only)"],
       label: (d) => d["Q2 Bottleneck"].match(/(\[[A-Z][0-9]?.*])(.+)/)[2],
       title: (d) => d["Q2 Bottleneck"] + ":\n" + d["Bottleneck Description"],
       fill: (d) => d.color,
-      clickData: (d) => d.bottlenecks,
+      clickData: (d) => ({
+        title: d["Q2 Bottleneck"],
+        description: d["Bottleneck Description"],
+        items: d.bottlenecks,
+        isBottleneck: true,
+      }),
       width: 1152,
+      chartTitle: "Bottlenecks",
     }
   );
   document.getElementById("chart").append(chart);
@@ -229,11 +290,12 @@ onMounted(() => {
     if (!solutionTags.length) {
       return;
     }
-    const childTag = solutionTags[0];
-    const parentTag = solutionTags[0].match(/\[\+[A-Z]/) + "]";
-    const parent = sTagCategories.find((item) => item.tag === parentTag);
-    const child = parent.children.find((item) => item.tag === childTag);
-    child.solutions.push(item);
+    solutionTags.forEach(tag => {
+      const parentTag = tag.match(/\[\+[A-Z]/) + "]";
+      const parent = sTagCategories.find((item) => item.tag === parentTag);
+      const child = parent.children.find((item) => item.tag === tag);
+      child.solutions.push(item);
+    })
   });
 
   const chart2 = Pack(
@@ -246,12 +308,29 @@ onMounted(() => {
       },
       title: (d) => d["Q3 Solution"] + ":\n" + d["Solution Description"],
       fill: (d) => d.color,
-      clickData: (d) => d.solutions,
+      clickData: (d) => ({
+        title: d["Q3 Solution"],
+        description: d["Solution Description"],
+        items: d.solutions,
+        isBottleneck: false,
+      }),
       width: 1152,
+      chartTitle: "Solutions",
     }
   );
   document.getElementById("chart").append(chart2);
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+#chart {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+}
+
+.urlContainer {
+  text-align: center;
+  margin-bottom: 3em;
+}
+</style>

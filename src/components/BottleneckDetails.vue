@@ -1,29 +1,40 @@
-<script setup>
-import { computed } from "vue";
-
+<script setup lang="ts">
 const props = defineProps({
-  data: Array,
-});
-
-const isBottleneck = computed(() => {
-  return Object.hasOwn(props.data?.[0] || {}, "description"); // this is terrible, find a better way
+  data: {
+    title: String,
+    description: String,
+    items: Array,
+    isBottleneck: Boolean,
+  },
 });
 </script>
 
 <template>
-  <div v-if="isBottleneck">
-    <div v-for="(item, index) in data" v-bind:key="index">
-      <h2>{{ index + 1 }}: {{ item.title }}</h2>
-      <div>{{ item.description }}</div>
-      <div v-html="item.bottleneck"></div>
-    </div>
-  </div>
-  <div v-else>
-    <div v-for="(item, index) in data" v-bind:key="index">
-      <h2>{{ index + 1 }}: {{ item.title }}</h2>
-      <div v-html="item.investment"></div>
+  <div v-if="data?.items?.length">
+    <h1>{{ data.title.split("]")[1] }}</h1>
+    <h2>{{ data.description }}</h2>
+    <div>Count: {{ data.items.length }}</div>
+    <div class="answers">Answers:</div>
+    <div v-for="(item, index) in data.items" v-bind:key="index" class="answer">
+      <div v-if="data.isBottleneck">
+        <h3>{{ index + 1 }}: {{ item.title }}</h3>
+        <div>{{ item.description }}</div>
+        <div v-html="item.bottleneck"></div>
+      </div>
+      <div v-else>
+        <h3>{{ index + 1 }}: {{ item.title }}</h3>
+        <div v-html="item.investment"></div>
+      </div>
     </div>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.answers {
+  margin-bottom: 1em;
+}
+
+.answer {
+  margin-bottom: 1em;
+}
+</style>
