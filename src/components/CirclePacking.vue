@@ -108,14 +108,6 @@ function Pack(
     .attr("font-size", "1em")
     .attr("text-anchor", "middle");
 
-  svg
-    .append("text")
-    .attr("x", width / 2)
-    .attr("y", 0 - marginTop / 2)
-    .attr("text-anchor", "middle")
-    .style("font-size", "2em")
-    .text(chartTitle);
-
   const node = svg
     .selectAll("a")
     .data(descendants)
@@ -213,6 +205,15 @@ function Pack(
       })
       .text((d) => d);
   }
+
+  // Add title to chart. Do this last so it draws over the rest of the chart
+  svg
+      .append("text")
+      .attr("x", width / 2)
+      .attr("y", height / 12)
+      .attr("text-anchor", "middle")
+      .style("font-size", "3em")
+      .text(chartTitle);
 
   return svg.node();
 }
