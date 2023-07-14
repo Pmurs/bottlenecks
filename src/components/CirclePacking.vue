@@ -196,11 +196,11 @@ function Pack(
           .selectAll("circle")
           .attr("stroke", null);
       })
-      .on("click", (event, d) => {
-        console.log();
-        console.log(d, d3.select(this));
+      .on("click", function (event, d) {
         if (!d.children) {
-          moreInfo.value = clickData(d.data);
+          moreInfo.value = clickData(
+            d3.select(this.parentNode.parentNode).data()[0].data
+          );
         }
       })
       .text((d) => d);
@@ -208,12 +208,12 @@ function Pack(
 
   // Add title to chart. Do this last so it draws over the rest of the chart
   svg
-      .append("text")
-      .attr("x", width / 2)
-      .attr("y", height / 12)
-      .attr("text-anchor", "middle")
-      .style("font-size", "3em")
-      .text(chartTitle);
+    .append("text")
+    .attr("x", width / 2)
+    .attr("y", height / 12)
+    .attr("text-anchor", "middle")
+    .style("font-size", "3em")
+    .text(chartTitle);
 
   return svg.node();
 }
@@ -235,20 +235,16 @@ onMounted(() => {
     }));
 
   bottlenecks.forEach((item) => {
-    console.log(item.tags);
     const bottleneckTags = item.tags.filter((tag) => tag.match(/\[[A-Z]/));
     if (!bottleneckTags.length) {
       return;
     }
-    console.log(bottleneckTags)
-    bottleneckTags.forEach(tag => {
-      console.log(tag);
+    bottleneckTags.forEach((tag) => {
       const parentTag = tag.match(/\[[A-Z]/) + "]";
-      console.log(parentTag)
       const parent = bTagCategories.find((item) => item.tag === parentTag);
       const child = parent.children.find((item) => item.tag === tag);
       child.bottlenecks.push(item);
-    })
+    });
   });
 
   const chart = Pack(
@@ -291,12 +287,12 @@ onMounted(() => {
     if (!solutionTags.length) {
       return;
     }
-    solutionTags.forEach(tag => {
+    solutionTags.forEach((tag) => {
       const parentTag = tag.match(/\[\+[A-Z]/) + "]";
       const parent = sTagCategories.find((item) => item.tag === parentTag);
       const child = parent.children.find((item) => item.tag === tag);
       child.solutions.push(item);
-    })
+    });
   });
 
   const chart2 = Pack(
