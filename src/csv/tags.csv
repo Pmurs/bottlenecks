@@ -1,103 +1,103 @@
-Q2 Bottleneck,# (bottlenecks only),# all a,Bottleneck Description,,Q3 Solution,# solutions only,# all b,Solution Description
-[P] Public,72,78,Social bottlenecks from outside the longevity community,,[+P] Public,30,48,Social projects aimed outside of the longevity community
-[P1] Poorly Informed,21,21,"General public is generally unaware of or misonfirmed about the science, tech and future possibilities.",,[+P1.1] Outreach to Public,11,15,"Shift public sentiment towards pro-longevity. Cascading benefits (policy, funding, market, career choice...)"
-[P2] Individual Disease Focus,17,20,Focus on age-related diseases rather than their root cause (aging).,,[+P1.2] Outreach to Other Fields,2,6,Bring fresh persepctives and skillsets into the longevity movement.
-[P3] Lack of Credibility,9,10,"Public skepticism with good cause, history of charlatanism, snake oil, ineffective ""anti-aging"" treatments.",,[+P1.3] Outreach to Biotech/Pharma,1,3,"Only 1% of Biotech/Pharma is longevity/aging oriented, lots of room for growth."
-[P4] Unaligned Institutions,10,10,"Lack of mandate, interest and even obstruction by gov agencies, academia, media, healthcare orgs, etc.",,[+P1.4] Outreach to Students,0,1,Deflect career paths at the highest leverage point.
-[P5] Geroscience Aversion,6,8,"Stigma, ""pro-aging trance"", naturalistic fallacy, culture of dystopianism / tech skepticism.",,[+P1.5] Outreach to Gov/Institutions,3,4,Engage/infiltrate to improve alignment. They have the power to break many bottlenecks if aligned.
-[P6] Indifference,7,7,"Apathy, laziness, or bystander effect (failure to take responsibility / thinking someone else will solve it).",,[+P2] Culture,10,11,A widespread pro-longevity cultural movement.
-[P7] Media Negativity,2,2,"Preferencial amplification of negative sentiments, which become the default public opinion by osmosis.",,[+P3] Incentives,2,5,Regulations/policies to incentivize longevity practices/industry growth - works for climate why not longevity?
-,,,,,[+P4] Comms Training,1,3,"For scientists, engineers, operators in longevity - training to communicate clearly and effectively to the public."
-,,,,,,,,
-[C] Community,151,165,How we dysfunction as a community,,[+C] Community,73,107,How we could improve functioning of the community
-[C1] Lack of Big Data Mindset,10,11,"More focus on empirical data collection: Multio-omics, images, phenotypes, medical, longititual, clinical, etc.",,[+C1] Big Data Mindset,2,5,"More focus on empirical data collection: Multio-omics, images, phenotypes, medical, longititual, clinical, etc."
-[C2] Ad-hoc Data / Protocols,15,20,Ad-hoc data/protocols (not reproducible or comparable) prevents integration and building on prior results.,,[+C2] Data/Protocol Standards,11,18,"Set and update standards for data and protocols, incentivize their use."
-[C3] Networking,11,11," Isolated people/projects/subdisciplines, need for more networking and connection.",,[+C3] Networking,13,16,"Mechanism to connect employers, entrepreneurs, investors, volunteers, etc."
-[C4] Lack of Collective Action,9,10,"Lack of collective actions such as consensus building, validation, data sharing, standards, roadmapping, etc.",,[+C4] Large Collaborative Projects,8,13,Large collaborative projects and rather than ego/grant/publication driven competition.
-[C5] Consensus Aging Definitions,11,12,Lack of a consensus definition of aging.,,[+C5] Collective Action,8,11,"Organize to facilitate consensus building, validation, data sharing, standards, roadmapping, etc."
-[C6] Hype Cycles,11,11,"Hype cycles + herd mentality = inefficient distro of resources, short term booms and busts of interest/funding.",,[+C6] Consensus Aging Definition,6,12,Reach a consensus theory/definition of aging
-[C7] Regional Concentration,8,10,Activity is heavily concentrated in a small number of extremely expensive places.,,[+C7] New Research Centers,6,8,More dedicated aging/longevity research centers. Diverse locations. Varied specialties. Facilitate large projects.
-[C8] Reproducibility Crisis,12,12,System incentivizes sloppy research and doesn't penalize poor quality.,,[+C8] Reproduce Key Results,3,6,Funded centers dedicated to reproducing / testing the robustness of key results.
-[C9] Insularity,13,14,"Aging/longevity has been an insulated backwater - need to emerge, mature and engage with other fields.",,[+C9] Field-Wide Status Dashboard,7,7,"Overview of all proposals, projects, pathways, targets, pre and in-clinic pipelines. Linked to data."
-[C10] Siloing / Secrecy,13,14,"Academic grant, IP, and publication systems can over-incentivize competition/secrecy over collaboration.",,[+C10] Outsourcing Services,4,6,"Longevity CROs/Cores - make outsourcing research easier such as lifespan studies, multi-omic analysis."
-[C11] Conservatism,8,8,Sticking to worn out hypotheses / following authority after they are past their prime (ex. beta amyloid),,[+C11] Neg Results Incentives,3,4,Mechanism to incentivize/enable reporting negative results. Pre-results publication approvals for example.
-[C12] Lack of Negative Results,6,7,"System dis-incentivize negative result reporting. Results in duplicated efforts, and rewards hype.",,[+C12] Open Science,1,2,"Make data, samples, results open and available by default."
-[C13] Entry Barriers/Orientation,6,7,"Hard learn / track of all the activity, regulations, systems at R&D, translation, clinical and healthcare levels.",,[+C13] Long-termism,1,2,"More focus on long term research and technology paths with higher-impact potential (vs ""low hanging fruit"")"
-[C14] Piecemeal Studies,7,7,"Narrow/reductionist ""piecemeal"" studies fail to address the complexity of aging.",,[+C14] Protected Time,1,1,"Reduce/limit the amount of time spent on non-research activities (admin, grants, etc.)"
-[C15] Admin Overhead,4,4,Bright scienetific minds are frequently being wasted on administrative burdens instead of doing science.,,[+C15] Leadership,1,1,"Bold and ambitious, yet free of ego/hype and relatable. Leadership is lacking but necessary to build a movement."
-[C16] Journal Paywalls,2,2,Obvious and unnecessary barrier to the spread of scientific information.,,,,,
-[C17] Short-termism,2,2,"Over-focus on ""low hanging fruit"" that is also low-impact. Starves high impact projects of resources.",,,,,
-[C18] Misc Community Issues,3,3,,,,,,
-,,,,,,,,
-,,,,,,,,
-[S] Science,130,140,Areas that need more basic scientific research.,,[+S] Science,35,80,"Research goals, that if achieved would unlock progress."
-[S1] Validated Biomarkers,40,44,Lack of a validated way to measure biological age independent of chronological age / lifespan.,,[+S1] Validated Biomarkers,13,41,Validated way to measure biological age independent of chronological age / lifespan.
-[S2] Aging Characterization,20,22,Characterization of what changes with age at the molecular/cellular/tissue/physiology levels.,,[+S2] Aging Fully Characterized,10,15,Comprehensive characterization of aging at the molecular/cellular/tissue/physiology levels.
-[S3] Longitudinal Data/Samples,14,17,"Lack of longitudinal data and samples (clinical records, biomarkers, multi-omics, biobanks).",,[+S3] Longitudinal Data/Samples,8,16,"Unlock or generate more longitudinal data and samples (clinical records, biomarkers, multi-omics, biobanks)"
-[S4] Aging Complexity,12,12,Complexity of aging is too much for traditional tools and institutional structures to grapple with effectively.,,[+S4] Aging Variation Mapped,3,4,"Comprehensive map of Intra and inter species aging variation (omics, physiology, phenotype, etc.)"
-[S5] Variation Mapping,12,13,Need for more studies on intra & inter-species longevity variability and intervention responses.,,[+S10] Brain Rejuvenation/Replacement,1,4,Ambitious and broad range of R&D on brain rejuvenation/replacement.
-[S6] Misc,8,8,Assorted other science bottlenecks / under-appreciated areas,,[+S11] Comprehensive Replacement,0,2,Methods to grow and replace any/all biological parts
-[S7] Systems Bio of Aging,9,9,Need for more systems/network approach studyies of aging.,,,,,
-[S8] Brain Aging,4,4,"Every other part could potentially be replaced, therefore brain aging is critical to understand.",,,,,
-[S9] Aging Mechanisms,11,11,"Belief that we don't yet understand what aging is, need to determine the fundamental mechanisms.",,,,,
-[S10] Replacement,2,2,Learn how to grow and replace any/all biological parts,,,,,
-,,,,,,,,
-[F] Funding,119,131,,,[+F] Funding,47,124,
-[F0] Overall Lack of Funding,40,44,We need Apollo program levels of funding - measured in % of GDP not in $Bs,,[+F0] Overall More Funding,18,44,We need Apollo program levels of funding - measured in % of GDP not in $Bs
-[F1] Too Conservative,22,26,"Difficult to get new/ambitious ideas funded, institutional culture of risk-aversion and incrementalism.",,[+F1] Ambitious/Exploratory,11,21,More ambitious/exploratory projects are needed to accelerate progress.
-[F2] for Basic Research,18,19,"Longevity/aging is only 0.5% of NIH budget, even smaller elsewhere.",,[+F2] for Basic Research,5,20,"Longevity/aging is only 0.5% of NIH budget, even smaller elsewhere."
-[F3] Too Short-term,10,12,Lifespan studies in the most relevant models take longer than standard grant cycles.,,[+F3] Longer-term,6,13,Longer bets on people and projects are necessary for many aging research directions.
-[F4] for Startups,9,9,"Longevity Biotech is only 1% of total Biotech Market Cap, huge room for growth.",,[+F4] for Startups,3,7,"Longevity Biotech is only 1% of total Biotech Market Cap, huge room for growth."
-[F5] Gated,6,7,Hard to get funds if you're not from a top institution / company,,[+F5] for Outsiders,1,6,Take more bets on system outsiders (non-academic / non-ivy league).
-[F6] for Translation,6,6,Not enough funding for translating basic research results to real world applications.,,[+F6] for Translation,1,4,Not enough funding for translating basic research results to real world applications.
-[F7] Inflexible,2,2,Easier to get grants for continued work vs new directions. Incentives to stay the course even if not promising.,,[+F7] Flexible,1,3,Grants for promising people to transition from other fields/areas.
-[F8] for Outreach,2,2,"Funding for media and outreach to engage, educate, and attract the public and other communities.",,[+F8] for Outreach,0,2,"Funding for media and outreach to engage, educate, and attract the public and other communities."
-[F9] for Clinical/Longitudinal,2,2,"Clinical and longitudinal studies are bureaucratically difficult, expensive, and hard to get funded.",,[+F9] for Clinical/Longitudinal,0,2,"Clinical and longitudinal studies are bureaucratically difficult, expensive, and hard to get funded."
-[F10] Bureaucratic/Slow,2,2,"High bureaucracy doesn’t improve decision making, it just wastes people’s time.",,[+F10] Faster Grants,1,2,"High bureaucracy doesn’t improve decision making, it just wastes people’s time."
-,,,,,,,,
-[H] People,99,102,,,[+H] People,18,46,
-[H0] Lack of People,15,15,Not enough people working in or entering the field.,,[+H0] More People,2,14,Not enough people working in or entering the field.
-[H1] Career & Edu Paths,17,17,Lack of education and career paths by existing institutions.,,[+H1] Quantitative,1,8,"Need to recruit or train more people in quantitative skills (math, physics, statistics, ml, comp/systems bio)"
-[H2] Low Pay,6,8,"Need to pay people more to make careers in our field sustainable, and to compete for top talent.",,[+H2] Higher Pay,3,7,"Need to pay people more to make careers in our field sustainable, and to compete for top talent."
-[H3] Quantitative,7,7,"Biology has been a ""soft/artisinal"" science - need to grow up, accelerate the shift to quantitative approaches.",,[+H3] Longevity Training,2,5,We need edu/career paths for people to start or shift careers in longevity biotech.
-[H4] Top/Skilled Talent,22,22,"Top talent can have outsized effects, and is currently not focused on longevity.",,[+H4] Skills Assessment,2,2,Better alternatives to degrees/resumes/interviews? Get people to work faster and more efficiently.
-[H6] Immigration/Borders,4,5,Immigration/border restrictions are hampering efficient allocaiton of human resources.,,[+H5] Interdisciplinary,1,3,Need more interdisciplinary overlaps for fresh perspective.
-[H7] Hiring,4,4,Hiring people is time consuming and error-prone.,,[+H6] More/Flexible Visas,1,1,Immigration/border restrictions are hampering efficient allocaiton of human resources.
-[H8] Interdisciplinary,6,6,Need more interdisciplinary overlaps for fresh perspective.,,[+H10] Personal/Misc,4,4,Misc personal solutions
-[H9] Personal/Misc,18,18,,,[+H9] Top/Skilled Talent,2,2,"Top talent can have outsized effects, and is currently not focused on longevity."
-,,,,,,,,
-[X] Tools,173,196,,,[+X] Tools,79,161,
-[X0] Lack of Misc Tools/Tech,4,5,Not enough Tools and Technology development in general.,,[+X0] Unspecified Tools/Tech,1,4,More Tools and Technology development in general.
-[X1.1] Lack of Predictive Models,32,33,Current molel organisms are poorly predictive of results in humans.,,[+X1.1] In Silico/Systems Aging Models,4,15,Computational/Systems Bio Modeling. Make predictions in silico to save time and cost in meatspace.
-[X1.2] Slow & Expensive Models,36,36,Animal model studies are slow and expensive.,,[+X1.2] Ex vivo Models,2,9,"Cell/tissue/organ based aging models that are predicitive, affordable and accessible."
-[X1.3] Lack of In Silico/Systems Aging Models,10,10,More complex/comprehensive computer models describing or predicting the processes of aging.,,[+X1.3] Multiple/Diverse Models,3,7,Improve robustnest of results by using multiple models.
-[X2] Public Datasets,27,35,Lack of accessible and comprehensive data sets.,,[+X1.4] Unspecified/Misc Models,3,9,Better model systems for aging (unspecified how)
-[X3] Human Samples,11,13,"Access to human samples (healthy, aged, diseased, with good sample info) is difficult, slow and expensive.",,[+X1.5] Longer Lived Models,2,4,Develop longer lived animal models - more likely to be more translatable to human biology.
-[X4] Aged Animals/Tissues,11,14,"Access aged animals and their tissues/cells is difficult, slow and expensive.",,[+X1.6] Human Models,2,5,"Skip animals and their problems - develop human model systems (cell, tissue, organ, body, in vivo)"
-[X5] Instrumentation/Lab Tech,10,14,"Lab tech is expensive, difficult to use, often unreliable. Better/cheaper/new HW enables progress.",,[+X1.7] Accelerated Aging Models,1,1,Accelerated aging models could speed progress... if they are representative of normal aging.
-[X6] Lab Automation,8,8,Lab automation is expensive and not user friendly - better tech would improve research throughput & quality,,[+X2] Public Datasets,22,33,"Accessible and comprehensive data sets can lift all boats, accelerate progress."
-[X7] CS / Software,4,7,"Research software is expensive, proprietary, buggy and not user friendly.",,[+X3] Instrumentation/Lab Tech,8,15,Cheaper/better/new tools to measure biology/health/age would enable more and new studies.
-[X8] Gene Delivery,5,5,"Need improvements in toxicity, biodistribution, payload size, immunogenicity, transfection efficiency & more.",,[+X4] Human Cell/Tissue Bank,6,12,"Easy, inexpensive, and well documented samples."
-[X9] Research Infrastructure,4,4,"Lab space is expensive, scarce, difficult to access.",,[+X5] Aged Animals/Tissue Bank,5,12,"Easy, inexpensive, and well documented aged animals and samples. "
-[X10] AI Tools,3,4,"Maybe humans can't parse bio, need AI to accelerate progress",,[+X5] Lab Automation,4,10,"Better/easier lab automation would enable increased throughput, higher quality, standards, collaboration."
-[X11] Personal Health Sensors,3,3,"Cars have hundreds of sensors. Most people have none. They need to be cheaper, non-invasive, easier to use.",,[+X6] CS / Software,5,7,"Better/easier research software would enable increased throughput, higher quality, standards, collaborations."
-[X12] Personal Health Data Sharing,3,3,"Current options are expensive, siloed, difficult to use, disconnected from research.",,[+X7] Gene Delivery,1,5,Better delivery and gene editing tools
-[X13] Computing Power,2,2,More compute power unlocks new research capabilities. Also needs to be accessible.,,[+X8] AI Tools,4,5,Overcome the limits of human intelligence by building better/specialized AI systems.
-[X14] Information Overload,1,2,Too many papers for a human to read/parse even if you spend all day every day.,,[+X9] Personal Health Sensors,2,2,"Cars have hundreds of sensors. Most people have none. They need to be cheaper, non-invasive, easier to use."
-,,,,,[+X10] Syn Bio,0,1,"Tools to engineer cells, tissues, organs to meet our specifications."
-,,,,,[+X11] Computing Power,1,2,More compute power unlocks new research capabilities. Also needs to be accessible.
-,,,,,[+X12] Health Data Platform,3,3,Platform for individuals to easily analyze and share health and medical data for advancing research.
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-[T] Translation,95,104,,,[+T] Translation,33,68,
-[T1] Lack of Regulatory Path,30,38,No current regulatory path for aging interventions / longevity medicine.,,[+T1] Regulatory Path,19,37,A regulatory path for aging interventions / longevity medicine.
-[T2] Translation Gap,27,27,Lack of translation of basic research results into actual therapies.,,[+T2] Participant Database,4,6,Database/marketplace to streamline sourcing clinical research participants.
-[T3] Slow/Expensive Trials,10,10,Clinical trials (as currently practiced) are slow and expensive.,,[+T3] Regulatory Opt-Out,5,7,Allow people to opt-out of medical regulations. A healthcare socioeconomic free zone.
-"[T4] Misguided ""Bioethics""",9,10,Risk aversion / harmful action reduction mindset ignores the harm of inaction / slowed progress.,,[+T4] Intervention Testing,0,5,"More intervention testing, including combination therapies."
-[T5] Market Failure,11,11,"""Sick-care"" system maximizes money spent not health/lifespan outcomes, needs structural redesign.",,[+T5] Translation Bridges,2,2,Innovation centers and funding to close the translation gap.
-[T6] Participant Recruitment,5,5,"Recruit participants to trials and clinical studies is slow, expensive, bureaocratic.",,[+T6] Regulate Claims,1,2,"Require trials to make health claims in supplements, lifestyle, etc. Opportunity to design/test lower cost trials?"
-[T7] Unregulated Claims,3,3,"Pervasive hyped therapies with little to no evidence (NAD, MSCs, diets, hot/cold therapy, light therapy, etc.)",,[+T7] Public Trials,0,2,No current mechanism to test interventions when a therapy isn't IP protectable / highly profitable
-,,,,,[+T8] Rethink Trials,1,6,How can we make them bigger/better/cheaper and longevity oriented.
-,,,,,[+T8] Data Unlocking,1,1,"Change policies to unlock siloed health/medical data. Require accessibility, standards and interoperability."
-,,,,,[+T9] Longevity Standard of Care,0,0,"Alternative to ""sick-care"" standards, to help create a market for longevity medicine."
+Q2 Bottleneck,Number of responses,Bottleneck Description,Why? (optional),Q3 Solution,Number of responses,Solution Description
+[P] Public,72,Social bottlenecks from outside the longevity community,,[+P] Public,30,Social projects aimed outside of the longevity community
+[P1] Poorly Informed,21,"General public is generally unaware of or misonfirmed about the science, tech and future possibilities.",,[+P1.1] Outreach to Public,11,"Shift public sentiment towards pro-longevity. Cascading benefits (policy, funding, market, career choice...)"
+[P2] Individual Disease Focus,17,Focus on age-related diseases rather than their root cause (aging).,,[+P1.2] Outreach to Other Fields,2,Bring fresh persepctives and skillsets into the longevity movement.
+[P3] Lack of Credibility,9,"Public skepticism with good cause, history of charlatanism, snake oil, ineffective ""anti-aging"" treatments.",,[+P1.3] Outreach to Biotech/Pharma,1,"Only 1% of Biotech/Pharma is longevity/aging oriented, lots of room for growth."
+[P4] Unaligned Institutions,10,"Lack of mandate, interest and even obstruction by gov agencies, academia, media, healthcare orgs, etc.",,[+P1.4] Outreach to Students,0,Deflect career paths at the highest leverage point.
+[P5] Geroscience Aversion,6,"Stigma, ""pro-aging trance"", naturalistic fallacy, culture of dystopianism / tech skepticism.",,[+P1.5] Outreach to Gov/Institutions,3,Engage/infiltrate to improve alignment. They have the power to break many bottlenecks if aligned.
+[P6] Indifference,7,"Apathy, laziness, or bystander effect (failure to take responsibility / thinking someone else will solve it).",,[+P2] Culture,10,A widespread pro-longevity cultural movement.
+[P7] Media Negativity,2,"Preferencial amplification of negative sentiments, which become the default public opinion by osmosis.",,[+P3] Incentives,2,Regulations/policies to incentivize longevity practices/industry growth - works for climate why not longevity?
+,,,,[+P4] Comms Training,1,"For scientists, engineers, operators in longevity - training to communicate clearly and effectively to the public."
+,,,,,,
+[C] Community,151,How we dysfunction as a community,,[+C] Community,73,How we could improve functioning of the community
+[C1] Lack of Big Data Mindset,10,"More focus on empirical data collection: Multio-omics, images, phenotypes, medical, longititual, clinical, etc.",,[+C1] Big Data Mindset,2,"More focus on empirical data collection: Multio-omics, images, phenotypes, medical, longititual, clinical, etc."
+[C2] Ad-hoc Data / Protocols,15,Ad-hoc data/protocols (not reproducible or comparable) prevents integration and building on prior results.,,[+C2] Data/Protocol Standards,11,"Set and update standards for data and protocols, incentivize their use."
+[C3] Networking,11," Isolated people/projects/subdisciplines, need for more networking and connection.",,[+C3] Networking,13,"Mechanism to connect employers, entrepreneurs, investors, volunteers, etc."
+[C4] Lack of Collective Action,9,"Lack of collective actions such as consensus building, validation, data sharing, standards, roadmapping, etc.",,[+C4] Large Collaborative Projects,8,Large collaborative projects and rather than ego/grant/publication driven competition.
+[C5] Consensus Aging Definitions,11,Lack of a consensus definition of aging.,,[+C5] Collective Action,8,"Organize to facilitate consensus building, validation, data sharing, standards, roadmapping, etc."
+[C6] Hype Cycles,11,"Hype cycles + herd mentality = inefficient distro of resources, short term booms and busts of interest/funding.",,[+C6] Consensus Aging Definition,6,Reach a consensus theory/definition of aging
+[C7] Regional Concentration,8,Activity is heavily concentrated in a small number of extremely expensive places.,,[+C7] New Research Centers,6,More dedicated aging/longevity research centers. Diverse locations. Varied specialties. Facilitate large projects.
+[C8] Reproducibility Crisis,12,System incentivizes sloppy research and doesn't penalize poor quality.,,[+C8] Reproduce Key Results,3,Funded centers dedicated to reproducing / testing the robustness of key results.
+[C9] Insularity,13,"Aging/longevity has been an insulated backwater - need to emerge, mature and engage with other fields.",,[+C9] Field-Wide Status Dashboard,7,"Overview of all proposals, projects, pathways, targets, pre and in-clinic pipelines. Linked to data."
+[C10] Siloing / Secrecy,13,"Academic grant, IP, and publication systems can over-incentivize competition/secrecy over collaboration.",,[+C10] Outsourcing Services,4,"Longevity CROs/Cores - make outsourcing research easier such as lifespan studies, multi-omic analysis."
+[C11] Conservatism,8,Sticking to worn out hypotheses / following authority after they are past their prime (ex. beta amyloid),,[+C11] Neg Results Incentives,3,Mechanism to incentivize/enable reporting negative results. Pre-results publication approvals for example.
+[C12] Lack of Negative Results,6,"System dis-incentivize negative result reporting. Results in duplicated efforts, and rewards hype.",,[+C12] Open Science,1,"Make data, samples, results open and available by default."
+[C13] Entry Barriers/Orientation,6,"Hard learn / track of all the activity, regulations, systems at R&D, translation, clinical and healthcare levels.",,[+C13] Long-termism,1,"More focus on long term research and technology paths with higher-impact potential (vs ""low hanging fruit"")"
+[C14] Piecemeal Studies,7,"Narrow/reductionist ""piecemeal"" studies fail to address the complexity of aging.",,[+C14] Protected Time,1,"Reduce/limit the amount of time spent on non-research activities (admin, grants, etc.)"
+[C15] Admin Overhead,4,Bright scienetific minds are frequently being wasted on administrative burdens instead of doing science.,,[+C15] Leadership,1,"Bold and ambitious, yet free of ego/hype and relatable. Leadership is lacking but necessary to build a movement."
+[C16] Journal Paywalls,2,Obvious and unnecessary barrier to the spread of scientific information.,,,,
+[C17] Short-termism,2,"Over-focus on ""low hanging fruit"" that is also low-impact. Starves high impact projects of resources.",,,,
+[C18] Misc Community Issues,3,,,,,
+,,,,,,
+,,,,,,
+[S] Science,130,Areas that need more basic scientific research.,,[+S] Science,35,"Research goals, that if achieved would unlock progress."
+[S1] Validated Biomarkers,40,Lack of a validated way to measure biological age independent of chronological age / lifespan.,,[+S1] Validated Biomarkers,13,Validated way to measure biological age independent of chronological age / lifespan.
+[S2] Aging Characterization,20,Characterization of what changes with age at the molecular/cellular/tissue/physiology levels.,,[+S2] Aging Fully Characterized,10,Comprehensive characterization of aging at the molecular/cellular/tissue/physiology levels.
+[S3] Longitudinal Data/Samples,14,"Lack of longitudinal data and samples (clinical records, biomarkers, multi-omics, biobanks).",,[+S3] Longitudinal Data/Samples,8,"Unlock or generate more longitudinal data and samples (clinical records, biomarkers, multi-omics, biobanks)"
+[S4] Aging Complexity,12,Complexity of aging is too much for traditional tools and institutional structures to grapple with effectively.,,[+S4] Aging Variation Mapped,3,"Comprehensive map of Intra and inter species aging variation (omics, physiology, phenotype, etc.)"
+[S5] Variation Mapping,12,Need for more studies on intra & inter-species longevity variability and intervention responses.,,[+S10] Brain Rejuvenation/Replacement,1,Ambitious and broad range of R&D on brain rejuvenation/replacement.
+[S6] Misc,8,Assorted other science bottlenecks / under-appreciated areas,,[+S11] Comprehensive Replacement,0,Methods to grow and replace any/all biological parts
+[S7] Systems Bio of Aging,9,Need for more systems/network approach studyies of aging.,,,,
+[S8] Brain Aging,4,"Every other part could potentially be replaced, therefore brain aging is critical to understand.",,,,
+[S9] Aging Mechanisms,11,"Belief that we don't yet understand what aging is, need to determine the fundamental mechanisms.",,,,
+[S10] Replacement,2,Learn how to grow and replace any/all biological parts,,,,
+,,,,,,
+[F] Funding,119,,,[+F] Funding,47,
+[F0] Overall Lack of Funding,40,We need Apollo program levels of funding - measured in % of GDP not in $Bs,,[+F0] Overall More Funding,18,We need Apollo program levels of funding - measured in % of GDP not in $Bs
+[F1] Too Conservative,22,"Difficult to get new/ambitious ideas funded, institutional culture of risk-aversion and incrementalism.",,[+F1] Ambitious/Exploratory,11,More ambitious/exploratory projects are needed to accelerate progress.
+[F2] for Basic Research,18,"Longevity/aging is only 0.5% of NIH budget, even smaller elsewhere.",,[+F2] for Basic Research,5,"Longevity/aging is only 0.5% of NIH budget, even smaller elsewhere."
+[F3] Too Short-term,10,Lifespan studies in the most relevant models take longer than standard grant cycles.,,[+F3] Longer-term,6,Longer bets on people and projects are necessary for many aging research directions.
+[F4] for Startups,9,"Longevity Biotech is only 1% of total Biotech Market Cap, huge room for growth.",,[+F4] for Startups,3,"Longevity Biotech is only 1% of total Biotech Market Cap, huge room for growth."
+[F5] Gated,6,Hard to get funds if you're not from a top institution / company,,[+F5] for Outsiders,1,Take more bets on system outsiders (non-academic / non-ivy league).
+[F6] for Translation,6,Not enough funding for translating basic research results to real world applications.,,[+F6] for Translation,1,Not enough funding for translating basic research results to real world applications.
+[F7] Inflexible,2,Easier to get grants for continued work vs new directions. Incentives to stay the course even if not promising.,,[+F7] Flexible,1,Grants for promising people to transition from other fields/areas.
+[F8] for Outreach,2,"Funding for media and outreach to engage, educate, and attract the public and other communities.",,[+F8] for Outreach,0,"Funding for media and outreach to engage, educate, and attract the public and other communities."
+[F9] for Clinical/Longitudinal,2,"Clinical and longitudinal studies are bureaucratically difficult, expensive, and hard to get funded.",,[+F9] for Clinical/Longitudinal,0,"Clinical and longitudinal studies are bureaucratically difficult, expensive, and hard to get funded."
+[F10] Bureaucratic/Slow,2,"High bureaucracy doesn’t improve decision making, it just wastes people’s time.",,[+F10] Faster Grants,1,"High bureaucracy doesn’t improve decision making, it just wastes people’s time."
+,,,,,,
+[H] People,99,,,[+H] People,18,
+[H0] Lack of People,15,Not enough people working in or entering the field.,,[+H0] More People,2,Not enough people working in or entering the field.
+[H1] Career & Edu Paths,17,Lack of education and career paths by existing institutions.,,[+H1] Quantitative,1,"Need to recruit or train more people in quantitative skills (math, physics, statistics, ml, comp/systems bio)"
+[H2] Low Pay,6,"Need to pay people more to make careers in our field sustainable, and to compete for top talent.",,[+H2] Higher Pay,3,"Need to pay people more to make careers in our field sustainable, and to compete for top talent."
+[H3] Quantitative,7,"Biology has been a ""soft/artisinal"" science - need to grow up, accelerate the shift to quantitative approaches.",,[+H3] Longevity Training,2,We need edu/career paths for people to start or shift careers in longevity biotech.
+[H4] Top/Skilled Talent,22,"Top talent can have outsized effects, and is currently not focused on longevity.",,[+H4] Skills Assessment,2,Better alternatives to degrees/resumes/interviews? Get people to work faster and more efficiently.
+[H6] Immigration/Borders,4,Immigration/border restrictions are hampering efficient allocaiton of human resources.,,[+H5] Interdisciplinary,1,Need more interdisciplinary overlaps for fresh perspective.
+[H7] Hiring,4,Hiring people is time consuming and error-prone.,,[+H6] More/Flexible Visas,1,Immigration/border restrictions are hampering efficient allocaiton of human resources.
+[H8] Interdisciplinary,6,Need more interdisciplinary overlaps for fresh perspective.,,[+H10] Personal/Misc,4,Misc personal solutions
+[H9] Personal/Misc,18,,,[+H9] Top/Skilled Talent,2,"Top talent can have outsized effects, and is currently not focused on longevity."
+,,,,,,
+[X] Tools,173,,,[+X] Tools,79,
+[X0] Lack of Misc Tools/Tech,4,Not enough Tools and Technology development in general.,,[+X0] Unspecified Tools/Tech,1,More Tools and Technology development in general.
+[X1.1] Lack of Predictive Models,32,Current molel organisms are poorly predictive of results in humans.,,[+X1.1] In Silico/Systems Aging Models,4,Computational/Systems Bio Modeling. Make predictions in silico to save time and cost in meatspace.
+[X1.2] Slow & Expensive Models,36,Animal model studies are slow and expensive.,,[+X1.2] Ex vivo Models,2,"Cell/tissue/organ based aging models that are predicitive, affordable and accessible."
+[X1.3] Lack of In Silico/Systems Aging Models,10,More complex/comprehensive computer models describing or predicting the processes of aging.,,[+X1.3] Multiple/Diverse Models,3,Improve robustnest of results by using multiple models.
+[X2] Public Datasets,27,Lack of accessible and comprehensive data sets.,,[+X1.4] Unspecified/Misc Models,3,Better model systems for aging (unspecified how)
+[X3] Human Samples,11,"Access to human samples (healthy, aged, diseased, with good sample info) is difficult, slow and expensive.",,[+X1.5] Longer Lived Models,2,Develop longer lived animal models - more likely to be more translatable to human biology.
+[X4] Aged Animals/Tissues,11,"Access aged animals and their tissues/cells is difficult, slow and expensive.",,[+X1.6] Human Models,2,"Skip animals and their problems - develop human model systems (cell, tissue, organ, body, in vivo)"
+[X5] Instrumentation/Lab Tech,10,"Lab tech is expensive, difficult to use, often unreliable. Better/cheaper/new HW enables progress.",,[+X1.7] Accelerated Aging Models,1,Accelerated aging models could speed progress... if they are representative of normal aging.
+[X6] Lab Automation,8,Lab automation is expensive and not user friendly - better tech would improve research throughput & quality,,[+X2] Public Datasets,22,"Accessible and comprehensive data sets can lift all boats, accelerate progress."
+[X7] CS / Software,4,"Research software is expensive, proprietary, buggy and not user friendly.",,[+X3] Instrumentation/Lab Tech,8,Cheaper/better/new tools to measure biology/health/age would enable more and new studies.
+[X8] Gene Delivery,5,"Need improvements in toxicity, biodistribution, payload size, immunogenicity, transfection efficiency & more.",,[+X4] Human Cell/Tissue Bank,6,"Easy, inexpensive, and well documented samples."
+[X9] Research Infrastructure,4,"Lab space is expensive, scarce, difficult to access.",,[+X5] Aged Animals/Tissue Bank,5,"Easy, inexpensive, and well documented aged animals and samples. "
+[X10] AI Tools,3,"Maybe humans can't parse bio, need AI to accelerate progress",,[+X5] Lab Automation,4,"Better/easier lab automation would enable increased throughput, higher quality, standards, collaboration."
+[X11] Personal Health Sensors,3,"Cars have hundreds of sensors. Most people have none. They need to be cheaper, non-invasive, easier to use.",,[+X6] CS / Software,5,"Better/easier research software would enable increased throughput, higher quality, standards, collaborations."
+[X12] Personal Health Data Sharing,3,"Current options are expensive, siloed, difficult to use, disconnected from research.",,[+X7] Gene Delivery,1,Better delivery and gene editing tools
+[X13] Computing Power,2,More compute power unlocks new research capabilities. Also needs to be accessible.,,[+X8] AI Tools,4,Overcome the limits of human intelligence by building better/specialized AI systems.
+[X14] Information Overload,1,Too many papers for a human to read/parse even if you spend all day every day.,,[+X9] Personal Health Sensors,2,"Cars have hundreds of sensors. Most people have none. They need to be cheaper, non-invasive, easier to use."
+,,,,[+X10] Syn Bio,0,"Tools to engineer cells, tissues, organs to meet our specifications."
+,,,,[+X11] Computing Power,1,More compute power unlocks new research capabilities. Also needs to be accessible.
+,,,,[+X12] Health Data Platform,3,Platform for individuals to easily analyze and share health and medical data for advancing research.
+,,,,,,
+,,,,,,
+,,,,,,
+[T] Translation,95,,,[+T] Translation,33,
+[T1] Lack of Regulatory Path,30,No current regulatory path for aging interventions / longevity medicine.,,[+T1] Regulatory Path,19,A regulatory path for aging interventions / longevity medicine.
+[T2] Translation Gap,27,Lack of translation of basic research results into actual therapies.,,[+T2] Participant Database,4,Database/marketplace to streamline sourcing clinical research participants.
+[T3] Slow/Expensive Trials,10,Clinical trials (as currently practiced) are slow and expensive.,,[+T3] Regulatory Opt-Out,5,Allow people to opt-out of medical regulations. A healthcare socioeconomic free zone.
+"[T4] Misguided ""Bioethics""",9,Risk aversion / harmful action reduction mindset ignores the harm of inaction / slowed progress.,,[+T4] Intervention Testing,0,"More intervention testing, including combination therapies."
+[T5] Market Failure,11,"""Sick-care"" system maximizes money spent not health/lifespan outcomes, needs structural redesign.",,[+T5] Translation Bridges,2,Innovation centers and funding to close the translation gap.
+[T6] Participant Recruitment,5,"Recruit participants to trials and clinical studies is slow, expensive, bureaocratic.",,[+T6] Regulate Claims,1,"Require trials to make health claims in supplements, lifestyle, etc. Opportunity to design/test lower cost trials?"
+[T7] Unregulated Claims,3,"Pervasive hyped therapies with little to no evidence (NAD, MSCs, diets, hot/cold therapy, light therapy, etc.)",,[+T7] Public Trials,0,No current mechanism to test interventions when a therapy isn't IP protectable / highly profitable
+,,,,[+T8] Rethink Trials,1,How can we make them bigger/better/cheaper and longevity oriented.
+,,,,[+T8] Data Unlocking,1,"Change policies to unlock siloed health/medical data. Require accessibility, standards and interoperability."
+,,,,[+T9] Longevity Standard of Care,0,"Alternative to ""sick-care"" standards, to help create a market for longevity medicine."

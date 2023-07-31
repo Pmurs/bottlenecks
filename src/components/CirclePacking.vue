@@ -251,7 +251,7 @@ onMounted(() => {
     { name: "bottlenecks", children: bTagCategories },
     {
       name: (d) => d.bottleneck,
-      value: (d) => d["# (bottlenecks only)"],
+      value: (d) => d["Number of responses"],
       label: (d) => d["Q2 Bottleneck"].match(/(\[[A-Z][0-9]?.*])(.+)/)[2],
       title: (d) => d["Q2 Bottleneck"] + ":\n" + d["Bottleneck Description"],
       fill: (d) => d.color,
@@ -277,10 +277,12 @@ onMounted(() => {
         .filter(
           (tag) =>
             tag.tag.match(/\[\+[A-Z][0-9].*]/) &&
-            tag.tag.substring(0, 2) === item.tag.substring(0, 2)
+            tag.tag.substring(0, 3) === item.tag.substring(0, 3)
         )
         .map((subItem) => ({ ...subItem, solutions: [] })),
     }));
+
+  console.log(sTagCategories);
 
   solutions.forEach((item) => {
     const solutionTags = item.tags.filter((tag) => tag.match(/\[\+[A-Z]/));
@@ -291,6 +293,7 @@ onMounted(() => {
       const parentTag = tag.match(/\[\+[A-Z]/) + "]";
       const parent = sTagCategories.find((item) => item.tag === parentTag);
       const child = parent.children.find((item) => item.tag === tag);
+      console.log(parentTag, parent, child)
       child.solutions.push(item);
     });
   });
@@ -299,7 +302,7 @@ onMounted(() => {
     { name: "solutions", children: sTagCategories },
     {
       name: (d) => d.investment,
-      value: (d) => d.solutions?.length,
+      value: (d) => d['Number of responses'],
       label: (d) => {
         return d["Q3 Solution"].match(/(\[\+[A-Z][0-9]?.*])(.+)/)[2];
       },

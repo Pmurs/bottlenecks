@@ -116,8 +116,7 @@ async function parseCSVs() {
             ? tagColorOptions[bottleneckGroupIndex].normal
             : tagColorOptions[bottleneckGroupIndex].light,
           "Q2 Bottleneck": item["Q2 Bottleneck"],
-          "# (bottlenecks only)": item["# (bottlenecks only)"],
-          "# all a": item["# all a"],
+          "Number of responses": item["Number of responses"],
           "Bottleneck Description": item["Bottleneck Description"],
         });
 
@@ -127,8 +126,7 @@ async function parseCSVs() {
             ? tagColorOptions[solutionGroupIndex].normal
             : tagColorOptions[solutionGroupIndex].light,
           "Q3 Solution": item["Q3 Solution"],
-          "# solutions only": item["# solutions only"],
-          "# all b": item["# all b"],
+          "Number of responses": item["Number of responses"],
           "Solution Description": item["Solution Description"],
         });
 
