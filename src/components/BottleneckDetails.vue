@@ -18,12 +18,15 @@ const props = defineProps({
     <div v-for="(item, index) in data.items" v-bind:key="index" class="answer">
       <div v-if="data.isBottleneck">
         <h3>{{ index + 1 }}.</h3>
-        <div>{{'Bottleneck: ' + item.title}}</div>
-        <div>{{ 'Why: ' + item.description }}</div>
+        <div>{{ "Bottleneck: " + item.title }}</div>
+        <div>{{ "Why: " + item.description }}</div>
       </div>
       <div v-else>
-        <h3>{{ index + 1 }}: {{ item.title }}</h3>
-        <div v-html="item.investment"></div>
+        <h3>{{ index + 1 }}.</h3>
+        <div>{{ "Solution: " + item.title }}</div>
+        <div v-for="(investment, index2) in item.investment?.split(/(?<!scale),/)" v-bind:key="index2">
+          <div>{{ "Investment: " + investment }}</div>
+        </div>
       </div>
     </div>
   </div>
