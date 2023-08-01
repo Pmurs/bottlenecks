@@ -17,9 +17,9 @@ const props = defineProps({
     <div class="answers">Answers:</div>
     <div v-for="(item, index) in data.items" v-bind:key="index" class="answer">
       <div v-if="data.isBottleneck">
-        <h3>{{ index + 1 }}: {{ item.title }}</h3>
-        <div>{{ item.description }}</div>
-        <div v-html="item.bottleneck"></div>
+        <h3>{{ index + 1 }}.</h3>
+        <div>{{'Bottleneck: ' + item.title}}</div>
+        <div>{{ 'Why: ' + item.description }}</div>
       </div>
       <div v-else>
         <h3>{{ index + 1 }}: {{ item.title }}</h3>

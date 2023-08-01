@@ -282,8 +282,6 @@ onMounted(() => {
         .map((subItem) => ({ ...subItem, solutions: [] })),
     }));
 
-  console.log(sTagCategories);
-
   solutions.forEach((item) => {
     const solutionTags = item.tags.filter((tag) => tag.match(/\[\+[A-Z]/));
     if (!solutionTags.length) {
@@ -293,7 +291,6 @@ onMounted(() => {
       const parentTag = tag.match(/\[\+[A-Z]/) + "]";
       const parent = sTagCategories.find((item) => item.tag === parentTag);
       const child = parent.children.find((item) => item.tag === tag);
-      console.log(parentTag, parent, child)
       child.solutions.push(item);
     });
   });
