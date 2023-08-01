@@ -124,9 +124,11 @@ function Pack(
     .attr("stroke-width", (d) => (d.children ? strokeWidth : null))
     .attr("stroke-opacity", (d) => (d.children ? strokeOpacity : null))
     .attr("r", (d) => d.r)
-    .style("cursor", "pointer")
-    .on("mouseover", function () {
-      d3.select(this).attr("stroke", "#000");
+    .on("mouseover", function (event, d) {
+      if (!d.children) {
+        d3.select(this).attr("stroke", "#000");
+        d3.select(this).style("cursor", 'pointer')
+      }
     })
     .on("mouseout", function () {
       d3.select(this).attr("stroke", null);
@@ -299,7 +301,7 @@ onMounted(() => {
     { name: "solutions", children: sTagCategories },
     {
       name: (d) => d.investment,
-      value: (d) => d['Number of responses'],
+      value: (d) => d["Number of responses"],
       label: (d) => {
         return d["Q3 Solution"].match(/(\[\+[A-Z][0-9]?.*])(.+)/)[2];
       },
