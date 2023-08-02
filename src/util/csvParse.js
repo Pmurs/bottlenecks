@@ -126,7 +126,7 @@ async function parseCSVs() {
             ? tagColorOptions[solutionGroupIndex].normal
             : tagColorOptions[solutionGroupIndex].light,
           "Q3 Solution": item["Q3 Solution"],
-          "Number of responses": item["Number of responses"],
+          "Number of responses": item["Number of responses b"],
           "Solution Description": item["Solution Description"],
         });
 
