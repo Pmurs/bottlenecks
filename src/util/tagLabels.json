@@ -1,0 +1,512 @@
+{
+  "[P]": { "label": "Public", "x": 150, "y": -3.5 },
+  "[P1]": { "label": "Poorly \nInformed", "x": 0, "y": 0 },
+  "[P2]": {
+    "label": "Individual \nDisease Focus",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.9em"
+  },
+  "[P3]": {
+    "label": "Lack of \nCredibility",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.9em"
+  },
+  "[P4]": {
+    "label": "Unaligned \nInstitutions",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.75em"
+  },
+  "[P5]": {
+    "label": "Geroscience \nAversion",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.75em"
+  },
+  "[P6]": { "label": "Indifference", "x": 0, "y": 0, "fontSize": "0.9em" },
+  "[P7]": {
+    "label": "Media \nNegativity",
+    "x": 5,
+    "y": 0,
+    "fontSize": "0.6em"
+  },
+  "[C]": { "label": "Community", "x": 250, "y": 0 },
+  "[C1]": {
+    "label": "Lack of \nBig Data \nMindset",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.75em"
+  },
+  "[C2]": {
+    "label": "Ad-hoc Data\n / Protocols",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.95em"
+  },
+  "[C3]": { "label": "Networking", "x": 0, "y": 0, "fontSize": "0.85em" },
+  "[C4]": {
+    "label": "Lack of \nCollective \nAction",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.75em"
+  },
+  "[C5]": {
+    "label": "Consensus \nAging \nDefinitions",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.75em"
+  },
+  "[C6]": { "label": "Hype \nCycles", "x": 0, "y": 0 },
+  "[C7]": {
+    "label": "Regional \nConcentration",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.75em"
+  },
+  "[C8]": {
+    "label": "Reproducibility \nCrisis",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.75em"
+  },
+  "[C9]": { "label": "Insularity", "x": 0, "y": 0 },
+  "[C10]": { "label": "Siloing \n/ Secrecy", "x": 0, "y": 0 },
+  "[C11]": { "label": "Conservatism", "x": 0, "y": 0, "fontSize": "0.85em" },
+  "[C12]": {
+    "label": "Lack of \nNegative \nResults",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.75em"
+  },
+  "[C13]": {
+    "label": "Entry\n Barriers",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.75em"
+  },
+  "[C14]": {
+    "label": "Piecemeal \nStudies",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.75em"
+  },
+  "[C15]": {
+    "label": "Admin \nOverhead",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.65em"
+  },
+  "[C16]": {
+    "label": "Journal \nPaywalls",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.65em"
+  },
+  "[C17]": { "label": "Short-\ntermism", "x": 0, "y": 0, "fontSize": "0.65em" },
+  "[C18]": {
+    "label": "Misc \nCommunity \nIssues",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.65em"
+  },
+  "[S]": { "label": "Science", "x": -250, "y": 0 },
+  "[S1]": { "label": "Validated \nBiomarkers", "x": 0, "y": 0 },
+  "[S2]": { "label": "Aging \nCharacterization", "x": 0, "y": 0 },
+  "[S3]": {
+    "label": "Longitudinal \nData/Samples",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.75em"
+  },
+  "[S4]": { "label": "Aging \nComplexity", "x": 0, "y": 0 },
+  "[S5]": {
+    "label": "Variation \nMapping",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.9em"
+  },
+  "[S6]": { "label": "Misc", "x": 0, "y": 0 },
+  "[S7]": {
+    "label": "Systems Bio\n of Aging",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.9em"
+  },
+  "[S8]": { "label": "Brain Aging", "x": 0, "y": 0 },
+  "[S9]": { "label": "Aging Mechanisms", "x": 0, "y": 0, "fontSize": "0.75em" },
+  "[S10]": { "label": "Replacement", "x": 0, "y": 0, "fontSize": "0.9em" },
+  "[F]": { "label": "Funding", "x": 0, "y": -5.2 },
+  "[F0]": { "label": "Overall Lack\n of Funding", "x": 0, "y": 0 },
+  "[F1]": { "label": "Too \nConservative", "x": 0, "y": 0 },
+  "[F2]": { "label": "Funding for\nBasic\nResearch", "x": 0, "y": 0, "fontSize": "0.95em" },
+  "[F3]": { "label": "Too \nShort-term", "x": 0, "y": 0, "fontSize": "0.85em" },
+  "[F4]": { "label": "Funding for\nStartups", "x": 0, "y": 0, "fontSize": "0.75em" },
+  "[F5]": { "label": "Gated", "x": 0, "y": 0 },
+  "[F6]": {
+    "label": "Funding for\nTranslation",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.65em"
+  },
+  "[F7]": { "label": "Inflexible", "x": 0, "y": 0, "fontSize": "0.75em" },
+  "[F8]": { "label": "Funding for\nOutreach", "x": 0, "y": 0, "fontSize": "0.65em" },
+  "[F9]": {
+    "label": "Funding for\nClinical/\nLongitudinal",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.55em"
+  },
+  "[F10]": {
+    "label": "Bureaucratic\n/Slow",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.75em"
+  },
+  "[H]": { "label": "People", "x": -150, "y": 3 },
+  "[H0]": { "label": "Lack of\n People", "x": 0, "y": 0 },
+  "[H1]": { "label": "Career &\n Edu Paths", "x": 0, "y": 0 },
+  "[H2]": { "label": "Low Pay", "x": 0, "y": 0, "fontSize": "0.85em" },
+  "[H3]": { "label": "Quantitative", "x": 0, "y": 0, "fontSize": "0.75em" },
+  "[H4]": { "label": "Top/Skilled \nTalent", "x": 0, "y": 0 },
+  "[H6]": {
+    "label": "Immigration\n/Borders",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.75em"
+  },
+  "[H7]": { "label": "Hiring", "x": 0, "y": 0 },
+  "[H8]": {
+    "label": "Inter-\ndisciplinary",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.75em"
+  },
+  "[H9]": { "label": "Personal\n/Misc", "x": 0, "y": 0 },
+  "[X]": { "label": "Tools", "x": -250, "y": 0 },
+  "[X0]": {
+    "label": "Lack\n of Misc\n Tools/Tech",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.65em"
+  },
+  "[X1.1]": { "label": "Lack of \nPredictive Models", "x": 0, "y": 0 },
+  "[X1.2]": { "label": "Slow & \nExpensive Models", "x": 0, "y": 0 },
+  "[X1.3]": {
+    "label": "Lack of \nIn Silico/\nSystems Aging \nModels",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.65em"
+  },
+  "[X2]": { "label": "Public\n Datasets", "x": 0, "y": 0 },
+  "[X3]": { "label": "Human\n Samples", "x": 0, "y": 0 },
+  "[X4]": {
+    "label": "Aged Animals\n/Tissues",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.85em"
+  },
+  "[X5]": {
+    "label": "Instrumentation\n/Lab Tech",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.85em"
+  },
+  "[X6]": { "label": "Lab \nAutomation", "x": 0, "y": 0, "fontSize": "0.75em" },
+  "[X7]": { "label": "CS \n/Software", "x": 0, "y": 0, "fontSize": "0.6em" },
+  "[X8]": { "label": "Gene \nDelivery", "x": 0, "y": 0, "fontSize": "0.85em" },
+  "[X9]": {
+    "label": "Research \nInfrastructure",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.6em"
+  },
+  "[X10]": { "label": "AI Tools", "x": 0, "y": 0, "fontSize": "0.85em" },
+  "[X11]": {
+    "label": "Personal \nHealth Sensors",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.75em"
+  },
+  "[X12]": {
+    "label": "Personal Health\n Data Sharing",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.75em"
+  },
+  "[X13]": {
+    "label": "Computing \nPower",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.75em"
+  },
+  "[X14]": {
+    "label": "Information\n Overload",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.75em"
+  },
+  "[T]": { "label": "Translation", "x": 140, "y": 4.5 },
+  "[T1]": { "label": "Lack of \nRegulatory Path", "x": 0, "y": 0 },
+  "[T2]": { "label": "Translation \nGap", "x": 0, "y": 0 },
+  "[T3]": {
+    "label": "Slow\n/Expensive\n Trials",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.75em"
+  },
+  "[T4]": {
+    "label": "Misguided \n\"Bioethics\"",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.75em"
+  },
+  "[T5]": { "label": "Market \nFailure", "x": 0, "y": 0 },
+  "[T6]": {
+    "label": "Participant \nRecruitment",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.75em"
+  },
+  "[T7]": {
+    "label": "Unregulated\n Claims",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.75em"
+  },
+  "[+P]": { "label": "Public", "x": 140, "y": 3 },
+  "[+P1.1]": { "label": "Outreach to\nPublic", "x": 0, "y": 0 },
+  "[+P1.2]": {
+    "label": "Outreach to\nOther Fields",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.65em"
+  },
+  "[+P1.3]": {
+    "label": "Outreach to\nBiotech/Pharma",
+    "x": 15,
+    "y": 0,
+    "fontSize": "0.65em"
+  },
+  "[+P1.4]": { "label": "Outreach to\nStudents", "x": 0, "y": 0 },
+  "[+P1.5]": {
+    "label": "Outreach to\nGov/Institutions",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.65em"
+  },
+  "[+P2]": { "label": "Culture", "x": 0, "y": 0 },
+  "[+P3]": { "label": "Incentives", "x": 0, "y": 0, "fontSize": "0.85em" },
+  "[+P4]": { "label": "Comms\nTraining", "x": 0, "y": 0, "fontSize": "0.65em" },
+  "[+C]": { "label": "Community", "x": 275, "y": 0 },
+  "[+C1]": {
+    "label": "Big\nData\nMindset",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.75em"
+  },
+  "[+C2]": { "label": "Data/Protocol\nStandards", "x": 0, "y": 0 },
+  "[+C3]": { "label": "Networking", "x": 0, "y": 0 },
+  "[+C4]": { "label": "Large\nCollaborative\nProjects", "x": 0, "y": 0 },
+  "[+C5]": { "label": "Collective\nAction", "x": 0, "y": 0 },
+  "[+C6]": { "label": "Consensus\nAging\nDefinition", "x": 0, "y": 0 },
+  "[+C7]": { "label": "New\nResearch\nCenters", "x": 0, "y": 0 },
+  "[+C8]": {
+    "label": "Reproduce\nKey\nResults",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.8em"
+  },
+  "[+C9]": { "label": "Field-Wide\nStatus\nDashboard", "x": 0, "y": 0 },
+  "[+C10]": {
+    "label": "Outsourcing\nServices",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.85em"
+  },
+  "[+C11]": {
+    "label": "Neg\nResults\nIncentives",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.75em"
+  },
+  "[+C12]": { "label": "Open\nScience", "x": 0, "y": 0, "fontSize": "0.75em" },
+  "[+C13]": { "label": "Long-\ntermism", "x": 0, "y": 0, "fontSize": "0.75em" },
+  "[+C14]": {
+    "label": "Protected\nTime",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.75em"
+  },
+  "[+C15]": { "label": "Leadership", "x": 0, "y": 0, "fontSize": "0.65em" },
+  "[+S]": { "label": "Science", "x": 0, "y": -5 },
+  "[+S1]": { "label": "Validated \nBiomarkers", "x": 0, "y": 0 },
+  "[+S2]": { "label": "Aging Fully \nCharacterized", "x": 0, "y": 0 },
+  "[+S3]": { "label": "Longitudinal \nData/Samples", "x": 0, "y": 0 },
+  "[+S4]": {
+    "label": "Aging\nVariation\nMapped",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.75em"
+  },
+  "[+S10]": {
+    "label": "Brain\nRejuvenation\n/Replacement",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.55em"
+  },
+  "[+S11]": { "label": "Comprehensive Replacement", "x": 0, "y": 0 },
+  "[+F]": { "label": "Funding", "x": 230, "y": 0 },
+  "[+F0]": { "label": "Overall More Funding", "x": 0, "y": 0 },
+  "[+F1]": { "label": "Ambitious/\nExploratory", "x": 0, "y": 0 },
+  "[+F2]": {
+    "label": "Funding for\nBasic\nResearch",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.95em"
+  },
+  "[+F3]": { "label": "Longer-term", "x": 0, "y": 0, "fontSize": "0.95em" },
+  "[+F4]": { "label": "Funding for\nStartups", "x": 0, "y": 0, "fontSize": "0.75em" },
+  "[+F5]": { "label": "Funding for\nOutsiders", "x": 0, "y": 0, "fontSize": "0.50em" },
+  "[+F6]": {
+    "label": "Funding\nfor\nTrans-\nlation",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.55em"
+  },
+  "[+F7]": { "label": "Flexible", "x": 0, "y": 0, "fontSize": "0.75em" },
+  "[+F8]": { "label": "for Outreach", "x": 0, "y": 0 },
+  "[+F9]": { "label": "for Clinical/Longitudinal", "x": 0, "y": 0 },
+  "[+F10]": { "label": "Faster\nGrants", "x": 0, "y": 0, "fontSize": "0.65em" },
+  "[+H]": { "label": "People", "x": -120, "y": -3 },
+  "[+H0]": { "label": "More\nPeople", "x": 0, "y": 0, "fontSize": "0.85em" },
+  "[+H1]": { "label": "Quanti-\ntative", "x": 0, "y": 0, "fontSize": "0.65em" },
+  "[+H2]": { "label": "Higher\nPay", "x": 0, "y": 0 },
+  "[+H3]": {
+    "label": "Longevity\nTraining",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.65em"
+  },
+  "[+H4]": {
+    "label": "Skills\nAssessment",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.65em"
+  },
+  "[+H5]": {
+    "label": "Inter-\ndisciplinary",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.65em"
+  },
+  "[+H6]": {
+    "label": "More/\nFlexible\nVisas",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.75em"
+  },
+  "[+H10]": { "label": "Personal\n/Misc", "x": 0, "y": 0 },
+  "[+H9]": {
+    "label": "Top/Skilled \nTalent",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.75em"
+  },
+  "[+X]": { "label": "Tools", "x": -250, "y": 0 },
+  "[+X0]": {
+    "label": "Unspecified\nTools/Tech",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.55em"
+  },
+  "[+X1.1]": {
+    "label": "In Silico\n/Systems Aging\nModels",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.75em"
+  },
+  "[+X1.2]": {
+    "label": "Ex vivo\nModels",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.85em"
+  },
+  "[+X1.3]": {
+    "label": "Multiple\n/Diverse\nModels",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.85em"
+  },
+  "[+X1.4]": {
+    "label": "Unspecified\n/Misc\nModels",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.75em"
+  },
+  "[+X1.5]": {
+    "label": "Longer\nLived\nModels",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.75em"
+  },
+  "[+X1.6]": { "label": "Human\nModels", "x": 0, "y": 0, "fontSize": "0.75em" },
+  "[+X1.7]": {
+    "label": "Accelerated\nAging\nModels",
+    "x": 5,
+    "y": 0,
+    "fontSize": "0.55em"
+  },
+  "[+X2]": { "label": "Public Datasets", "x": 0, "y": 0 },
+  "[+X3]": {
+    "label": "Instrumentation\n/Lab Tech",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.95em"
+  },
+  "[+X4]": { "label": "Human\nCell/Tissue\nBank", "x": 0, "y": 0 },
+  "[+X5]": { "label": "Lab\nAutomation", "x": 0, "y": 0 },
+  "[+X6]": { "label": "CS /\nSoftware", "x": 0, "y": 0 },
+  "[+X7]": { "label": "Gene\nDelivery", "x": 0, "y": 0, "fontSize": "0.65em" },
+  "[+X8]": { "label": "AI Tools", "x": 0, "y": 0 },
+  "[+X9]": {
+    "label": "Personal\nHealth\nSensors",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.65em"
+  },
+  "[+X10]": { "label": "Syn Bio", "x": 0, "y": 0 },
+  "[+X11]": {
+    "label": "Computing\nPower",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.75em"
+  },
+  "[+X12]": { "label": "Health\nData\nPlatform", "x": 0, "y": 0, "fontSize": "0.75em" },
+  "[+T]": { "label": "Translation", "x": -145, "y": 4 },
+  "[+T1]": { "label": "Regulatory Path", "x": 0, "y": 0 },
+  "[+T2]": {
+    "label": "Participant\nDatabase",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.9em"
+  },
+  "[+T3]": { "label": "Regulatory\nOpt-Out", "x": 0, "y": 0 },
+  "[+T4]": { "label": "Intervention\nTesting", "x": 0, "y": 0 },
+  "[+T5]": {
+    "label": "Translation\nBridges",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.7em"
+  },
+  "[+T6]": {
+    "label": "Regulate\nClaims",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.6em"
+  },
+  "[+T7]": { "label": "Public\nTrials", "x": 0, "y": 0, "fontSize": "0.75em" },
+  "[+T8]": { "label": "Data\nUnlocking", "x": 0, "y": 0, "fontSize": "0.6em" },
+  "[+T9]": { "label": "Longevity Standard of Care", "x": 0, "y": 0 }
+}

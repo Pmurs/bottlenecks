@@ -20,6 +20,7 @@ import * as d3 from "d3";
 import { bottleneckStore } from "@/stores/bottleneckStore";
 import { onMounted, ref } from "vue";
 import BottleneckDetails from "@/components/BottleneckDetails.vue";
+import tagLabels from "@/util/tagLabels.json";
 
 const store = bottleneckStore();
 const analysis = store.analysis;
@@ -127,7 +128,7 @@ function Pack(
     .on("mouseover", function (event, d) {
       if (!d.children) {
         d3.select(this).attr("stroke", "#000");
-        d3.select(this).style("cursor", 'pointer')
+        d3.select(this).style("cursor", "pointer");
       }
     })
     .on("mouseout", function () {
@@ -142,6 +143,7 @@ function Pack(
 
   if (T) node.append("title").text((d, i) => T[i]);
 
+  // Append labels to the parent circles
   if (PL) {
     // A unique identifier for clip paths (to avoid conflicts).
     const uid = `O-${Math.random().toString(16).slice(2)}`;
@@ -155,12 +157,22 @@ function Pack(
       .selectAll("tspan")
       .data((d) => `${PL[d.index]}`.split(/\n/g))
       .join("tspan")
-      .attr("x", 0)
-      .attr("y", (d, i, D) => `${i - D.length / 2 + 0.85}em`)
-      .attr("fill-opacity", (d, i, D) => (i === D.length - 1 ? 0.7 : null))
+      .attr("x", (d, i, D) => {
+        const tag = d3.select(D[0].parentNode).data()[0].data.tag;
+        return tagLabels[tag].x;
+      })
+      .attr("y", (d, i, D) => {
+        //console.log(i, D);
+        const tag = d3.select(D[0].parentNode).data()[0].data.tag;
+        const y = tagLabels[tag].y;
+        return `${y + i - D.length / 2 + 0.85}em`;
+      })
+      .style("font-size", "2em")
+      //.attr("fill-opacity", (d, i, D) => (i === D.length - 1 ? 0.7 : null))
       .text((d) => d);
   }
 
+  // Append labels to the child circles
   if (L) {
     // A unique identifier for clip paths (to avoid conflicts).
     const uid = `O-${Math.random().toString(16).slice(2)}`;
@@ -169,6 +181,7 @@ function Pack(
       (d) => !d.children && d.r > 10 && L[d.index] != null
     );
 
+    // Make labels clip at the borders of their containing circles
     // leaf
     //   .append("clipPath")
     //   .attr("id", (d) => `${uid}-clip-${d.index}`)
@@ -184,9 +197,16 @@ function Pack(
       .selectAll("tspan")
       .data((d) => `${L[d.index]}`.split(/\n/g))
       .join("tspan")
-      .attr("x", 0)
+      .attr("x", (d, i, D) => {
+        const tag = d3.select(D[0].parentNode).data()[0].data.tag;
+        return tagLabels[tag].x;
+      })
       .attr("y", (d, i, D) => `${i - D.length / 2 + 0.85}em`)
-      .attr("fill-opacity", (d, i, D) => (i === D.length - 1 ? 0.7 : null))
+      //.attr("fill-opacity", (d, i, D) => (i === D.length - 1 ? 0.7 : null)) This makes subsequent label lines less dark than the top line
+      .style("font-size", (d, i, D) => {
+        const tag = d3.select(D[0].parentNode).data()[0].data.tag;
+        return tagLabels[tag].fontSize || "1em";
+      })
       .style("cursor", "pointer")
       .on("mouseover", function () {
         d3.select(this.parentNode.parentNode)
@@ -254,7 +274,7 @@ onMounted(() => {
     {
       name: (d) => d.bottleneck,
       value: (d) => d["Number of responses"],
-      label: (d) => d["Q2 Bottleneck"].match(/(\[[A-Z][0-9]?.*])(.+)/)[2],
+      label: (d) => tagLabels[d.tag].label,
       title: (d) => d["Q2 Bottleneck"] + ":\n" + d["Bottleneck Description"],
       fill: (d) => d.color,
       clickData: (d) => ({
@@ -302,9 +322,7 @@ onMounted(() => {
     {
       name: (d) => d.investment,
       value: (d) => d["Number of responses"],
-      label: (d) => {
-        return d["Q3 Solution"].match(/(\[\+[A-Z][0-9]?.*])(.+)/)[2];
-      },
+      label: (d) => tagLabels[d.tag].label,
       title: (d) => d["Q3 Solution"] + ":\n" + d["Solution Description"],
       fill: (d) => d.color,
       clickData: (d) => ({
