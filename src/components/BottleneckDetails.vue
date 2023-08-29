@@ -22,11 +22,10 @@ const props = defineProps({
         <div>{{ "Why: " + item.description }}</div>
       </div>
       <div v-else>
-        <h3>{{ index + 1 }}.</h3>
-        <div>{{ "Solution: " + item.title }}</div>
-        <div v-for="(investment, index2) in item.investment?.split(/(?<!scale),/)" v-bind:key="index2">
-          <div>{{ "Investment: " + investment }}</div>
-        </div>
+        <div>{{ index + 1 + ". " + item.title }}</div>
+<!--        <div v-for="(investment, index2) in item.investment?.split(/(?<!scale),/)" v-bind:key="index2">-->
+<!--          <div>{{ "Investment: " + investment }}</div>-->
+<!--        </div>-->
       </div>
     </div>
   </div>
