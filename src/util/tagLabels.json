@@ -466,7 +466,7 @@
     "fontSize": "0.95em"
   },
   "[+X4]": { "label": "Human\nCell/Tissue\nBank", "x": 0, "y": 0 },
-  "[+X5]": { "label": "Lab\nAutomation", "x": 0, "y": 0 },
+  "[+X5]": { "label": "Aged\nAnimals\n/Tissue\nBank", "x": 0, "y": 0 },
   "[+X6]": { "label": "CS /\nSoftware", "x": 0, "y": 0 },
   "[+X7]": { "label": "Gene\nDelivery", "x": 0, "y": 0, "fontSize": "0.65em" },
   "[+X8]": { "label": "AI Tools", "x": 0, "y": 0 },
@@ -484,6 +484,7 @@
     "fontSize": "0.75em"
   },
   "[+X12]": { "label": "Health\nData\nPlatform", "x": 0, "y": 0, "fontSize": "0.75em" },
+  "[+X13]": { "label": "Lab\nAutomation", "x": 0, "y": 0, "fontSize": "0.95em" },
   "[+T]": { "label": "Translation", "x": -145, "y": 4 },
   "[+T1]": { "label": "Regulatory Path", "x": 0, "y": 0 },
   "[+T2]": {
