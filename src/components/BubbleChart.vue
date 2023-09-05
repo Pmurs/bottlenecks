@@ -1,141 +1,261 @@
 <template>
-  <svg class="chart"></svg>
+  <div class="chart-row">
+    <BottleneckDetails :data="moreInfo" class="details" />
+    <div class="chart" />
+  </div>
 </template>
 
 <script setup>
 import * as d3 from "d3";
 import { bottleneckStore } from "@/stores/bottleneckStore";
-import { onMounted } from "vue";
+import { onMounted, ref } from "vue";
+import tagLabels from "@/util/tagLabels.json";
+import BottleneckDetails from "@/components/BottleneckDetails.vue";
 
 const store = bottleneckStore();
 const analysis = store.analysis;
 
+const props = defineProps({
+  chartData: {
+    data: Object,
+    props: Object,
+  },
+});
+
+const moreInfo = ref({
+  title: "",
+  description: "",
+  items: [],
+  isBottleneck: false,
+});
+
 // Copyright 2021 Observable, Inc.
 // Released under the ISC license.
-// https://observablehq.com/@d3/bubble-chart
-function BubbleChart(
+// https://observablehq.com/@d3/pack
+function Pack(
   data,
   {
-    name = ([x]) => x, // alias for label
-    label = name, // given d in data, returns text to display on the bubble
-    value = ([, y]) => y, // given d in data, returns a quantitative size
-    group, // given d in data, returns a categorical value for color
-    title, // given d in data, returns text to show on hover
+    // data is either tabular (array of objects) or hierarchy (nested objects)
+    path, // as an alternative to id and parentId, returns an array identifier, imputing internal nodes
+    id = Array.isArray(data) ? (d) => d.id : null, // if tabular data, given a d in data, returns a unique identifier (string)
+    parentId = Array.isArray(data) ? (d) => d.parentId : null, // if tabular data, given a node d, returns its parent’s identifier
+    children, // if hierarchical data, given a d in data, returns its children
+    value, // given a node d, returns a quantitative value (for area encoding; null for count)
+    clickData, // given a node d, returns the data that should be shown when that node is clicked on
+    sort = (a, b) => d3.descending(a.value, b.value), // how to sort nodes prior to layout
+    label, // given a leaf node d, returns the display name
+    title, // given a node d, returns its hover text
     link, // given a node d, its link (if any)
     linkTarget = "_blank", // the target attribute for links, if any
-    width = 640, // outer width, in pixels
-    height = width, // outer height, in pixels
-    padding = 3, // padding between circles
-    margin = 1, // default margins
+    chartTitle, // the title of the chart
+    width = 1000, // outer width, in pixels
+    height = 1000, // outer height, in pixels
+    margin = 0, // shorthand for margins
     marginTop = margin, // top margin, in pixels
     marginRight = margin, // right margin, in pixels
     marginBottom = margin, // bottom margin, in pixels
     marginLeft = margin, // left margin, in pixels
-    groups, // array of group names (the domain of the color scale)
-    colors = d3.schemeTableau10, // an array of colors (for groups)
-    fill = "#ccc", // a static fill color, if no group channel is specified
-    fillOpacity = 0.7, // the fill opacity of the bubbles
-    stroke, // a static stroke around the bubbles
-    strokeWidth, // the stroke width around the bubbles, if any
-    strokeOpacity, // the stroke opacity around the bubbles, if any
+    padding = 0, // separation between circles
+    fill, // fill for leaf circles
+    fillOpacity, // fill opacity for leaf circles
+    stroke = "#bbb", // stroke for internal circles
+    strokeWidth, // stroke width for internal circles
+    strokeOpacity, // stroke opacity for internal circles
   } = {}
 ) {
-  // Compute the values.
-  const D = d3.map(data, (d) => d);
-  const V = d3.map(data, value);
-  const G = group == null ? null : d3.map(data, group);
-  const I = d3.range(V.length).filter((i) => V[i] > 0);
+  // If id and parentId options are specified, or the path option, use d3.stratify
+  // to convert tabular data to a hierarchy; otherwise we assume that the data is
+  // specified as an object {children} with nested objects (a.k.a. the “flare.json”
+  // format), and use d3.hierarchy.
+  const root =
+    path != null
+      ? d3.stratify().path(path)(data)
+      : id != null || parentId != null
+      ? d3.stratify().id(id).parentId(parentId)(data)
+      : d3.hierarchy(data, children);
 
-  // Unique the groups.
-  if (G && groups === undefined) groups = I.map((i) => G[i]);
-  groups = G && new d3.InternSet(groups);
-
-  // Construct scales.
-  const color = G && d3.scaleOrdinal(groups, colors);
+  // Compute the values of internal nodes by aggregating from the leaves.
+  value == null ? root.count() : root.sum((d) => Math.max(0, value(d)));
 
   // Compute labels and titles.
-  const L = label == null ? null : d3.map(data, label);
-  const T =
-    title === undefined ? L : title == null ? null : d3.map(data, title);
+  const descendants = root.descendants();
+  const leaves = descendants.filter((d) => !d.children);
+  const parents = descendants.filter((d) => d.children && d.data.tag);
+  parents.forEach((d, i) => (d.index = i));
+  leaves.forEach((d, i) => (d.index = i));
+  const PL = label == null ? null : parents.map((d) => label(d.data, d));
+  const L = label == null ? null : leaves.map((d) => label(d.data, d));
+  const T = title == null ? null : descendants.map((d) => title(d.data, d));
 
-  // Compute layout: create a 1-deep hierarchy, and pack it.
-  const root = d3
+  // Sort the leaves (typically by descending value for a pleasing layout).
+  if (sort != null) root.sort(sort);
+
+  // Compute the layout.
+  d3
     .pack()
     .size([width - marginLeft - marginRight, height - marginTop - marginBottom])
-    .padding(padding)(d3.hierarchy({ children: I }).sum((i) => V[i]));
+    .padding(padding)(root);
 
   const svg = d3
     .create("svg")
+    .attr("viewBox", [-marginLeft, -marginTop, width, height])
     .attr("width", width)
     .attr("height", height)
-    .attr("viewBox", [-marginLeft, -marginTop, width, height])
     .attr("style", "max-width: 100%; height: auto; height: intrinsic;")
-    .attr("fill", "currentColor")
-    .attr("font-size", 10)
     .attr("font-family", "sans-serif")
+    .attr("font-size", "1em")
     .attr("text-anchor", "middle");
 
-  const leaf = svg
+  const node = svg
     .selectAll("a")
-    .data(root.leaves())
+    .data(descendants)
     .join("a")
-    .attr(
-      "xlink:href",
-      link == null ? null : (d, i) => link(D[d.data], i, data)
-    )
+    .attr("xlink:href", link == null ? null : (d, i) => link(d.data, d))
     .attr("target", link == null ? null : linkTarget)
     .attr("transform", (d) => `translate(${d.x},${d.y})`);
 
-  leaf
+  node
     .append("circle")
-    .attr("stroke", stroke)
-    .attr("stroke-width", strokeWidth)
-    .attr("stroke-opacity", strokeOpacity)
-    .attr("fill", G ? (d) => color(G[d.data]) : fill == null ? "none" : fill)
-    .attr("fill-opacity", fillOpacity)
-    .attr("r", (d) => d.r);
+    .attr("fill", (d) => fill(d.data) || "#eee")
+    .attr("fill-opacity", (d) => (d.children ? null : fillOpacity))
+    .attr("stroke", (d) => (d.children ? stroke : null))
+    .attr("stroke-width", (d) => (d.children ? strokeWidth : null))
+    .attr("stroke-opacity", (d) => (d.children ? strokeOpacity : null))
+    .attr("r", (d) => d.r)
+    .on("mouseover", function (event, d) {
+      if (!d.children) {
+        d3.select(this).attr("stroke", "#000");
+        d3.select(this).style("cursor", "pointer");
+      }
+    })
+    .on("mouseout", function () {
+      d3.select(this).attr("stroke", null);
+    })
+    .on("click", (event, d) => {
+      console.log(d);
+      if (!d.children) {
+        moreInfo.value = clickData(d.data);
+      }
+    });
 
-  if (T) leaf.append("title").text((d) => T[d.data]);
+  if (T) node.append("title").text((d, i) => T[i]);
 
+  // Append labels to the parent circles
+  if (PL) {
+    // A unique identifier for clip paths (to avoid conflicts).
+    // const uid = `O-${Math.random().toString(16).slice(2)}`;
+
+    const leaf = node.filter(
+      (d) => d.children && d.r > 10 && PL[d.index] != null
+    );
+
+    leaf
+      .append("text")
+      .selectAll("tspan")
+      .data((d) => `${PL[d.index]}`.split(/\n/g))
+      .join("tspan")
+      .attr("x", (d, i, D) => {
+        const tag = d3.select(D[0].parentNode).data()[0].data.tag;
+        return tagLabels[tag].x;
+      })
+      .attr("y", (d, i, D) => {
+        //console.log(i, D);
+        const tag = d3.select(D[0].parentNode).data()[0].data.tag;
+        const y = tagLabels[tag].y;
+        return `${y + i - D.length / 2 + 0.85}em`;
+      })
+      .style("font-size", "2em")
+      //.attr("fill-opacity", (d, i, D) => (i === D.length - 1 ? 0.7 : null))
+      .text((d) => d);
+  }
+
+  // Append labels to the child circles
   if (L) {
     // A unique identifier for clip paths (to avoid conflicts).
     const uid = `O-${Math.random().toString(16).slice(2)}`;
 
-    leaf
-      .append("clipPath")
-      .attr("id", (d) => `${uid}-clip-${d.data}`)
-      .append("circle")
-      .attr("r", (d) => d.r);
+    const leaf = node.filter(
+      (d) => !d.children && d.r > 10 && L[d.index] != null
+    );
+
+    // Make labels clip at the borders of their containing circles
+    // leaf
+    //   .append("clipPath")
+    //   .attr("id", (d) => `${uid}-clip-${d.index}`)
+    //   .append("circle")
+    //   .attr("r", (d) => d.r);
 
     leaf
       .append("text")
       .attr(
         "clip-path",
-        (d) => `url(${new URL(`#${uid}-clip-${d.data}`, location)})`
+        (d) => `url(${new URL(`#${uid}-clip-${d.index}`, location)})`
       )
       .selectAll("tspan")
-      .data((d) => `${L[d.data]}`.split(/\n/g))
+      .data((d) => `${L[d.index]}`.split(/\n/g))
       .join("tspan")
-      .attr("x", 0)
+      .attr("x", (d, i, D) => {
+        const tag = d3.select(D[0].parentNode).data()[0].data.tag;
+        return tagLabels[tag].x;
+      })
       .attr("y", (d, i, D) => `${i - D.length / 2 + 0.85}em`)
-      .attr("fill-opacity", (d, i, D) => (i === D.length - 1 ? 0.7 : null))
+      //.attr("fill-opacity", (d, i, D) => (i === D.length - 1 ? 0.7 : null)) This makes subsequent label lines less dark than the top line
+      .style("font-size", (d, i, D) => {
+        const tag = d3.select(D[0].parentNode).data()[0].data.tag;
+        return tagLabels[tag].fontSize || "1em";
+      })
+      .style("cursor", "pointer")
+      .on("mouseover", function () {
+        d3.select(this.parentNode.parentNode)
+          .selectAll("circle")
+          .attr("stroke", "#000");
+      })
+      .on("mouseout", function () {
+        d3.select(this.parentNode.parentNode)
+          .selectAll("circle")
+          .attr("stroke", null);
+      })
+      .on("click", function (event, d) {
+        if (!d.children) {
+          moreInfo.value = clickData(
+            d3.select(this.parentNode.parentNode).data()[0].data
+          );
+        }
+      })
       .text((d) => d);
   }
 
-  return Object.assign(svg.node(), { scales: { color } });
+  // Add title to chart. Do this last so it draws over the rest of the chart
+  svg
+    .append("text")
+    .attr("x", width / 2)
+    .attr("y", height / 12)
+    .attr("text-anchor", "middle")
+    .style("font-size", "3em")
+    .text(chartTitle);
+
+  return svg.node();
 }
 
-onMounted(() => {
-  const chart = BubbleChart(analysis.bottlenecks, {
-    name: (d) => d.bottleneck,
-    value: (d) => 1,
-    group: (d) => d.tags,
-    title: (d) => d.title,
-    link: (d) => "link",
-    width: 1152,
-  });
-  document.body.appendChild(chart);
+onMounted(function () {
+  const chart = Pack(props.chartData.data, props.chartData.props);
+  document.getElementsByClassName("chart")[0].append(chart);
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+.chart-row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  .details {
+    position: absolute;
+    left: 0;
+    max-width: 15%;
+  }
+
+  .chart {
+    max-width: 50%;
+  }
+}
+</style>
