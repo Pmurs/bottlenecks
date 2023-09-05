@@ -44,6 +44,15 @@ async function parseCSVs() {
     solutions: [],
   };
 
+  const experienceTable = {
+    "<1": "<1",
+    "3-Jan": "1-3",
+    "5-Mar": "3-5",
+    "10-May": "5-10",
+    "20-Oct": "10-20",
+    ">20": ">20",
+  };
+
   await fs
     .createReadStream("../csv/analysis.csv")
     .pipe(csv())
@@ -53,29 +62,38 @@ async function parseCSVs() {
         solutions = [];
 
       rawAnalysis.forEach((item) => {
-        console.log(item)
+        console.log(item);
+        const occupations = item.Occupation.split(",");
+        const experience =
+          experienceTable[
+            item["Years involved in aging R&D, policy or outreach"]
+          ];
         bottlenecks.push({
           title: item["Q2-Bottleneck1-Title"],
           description: item["Q2-Bottleneck1-Why"],
-          bottleneck: item["Q2.1-Bottleneck"],
           tags: item["Q2.1 Tags"].match(/(\[.+\])/g),
+          occupations,
+          experience,
         });
         bottlenecks.push({
           title: item["Q2-Bottleneck2-Title"],
           description: item["Q2-Bottleneck2-Why"],
-          bottleneck: item["Q2.2-Bottleneck"],
           tags: item["Q2.2 Tags"].match(/(\[.+\])/g),
+          occupations,
+          experience,
         });
         bottlenecks.push({
           title: item["Q2-Bottleneck3-Title"],
           description: item["Q2-Bottleneck3-Why"],
-          bottleneck: item["Q2.3-Bottleneck"],
           tags: item["Q2.3 Tags"].match(/(\[.+\])/g),
+          occupations,
+          experience,
         });
         solutions.push({
           title: item["Q3-Solution"],
           tags: item["Q3 Tags"].match(/(\[.+\])/g),
-          investment: item["Investment"],
+          occupations,
+          experience,
         });
       });
 
@@ -116,7 +134,7 @@ async function parseCSVs() {
             ? tagColorOptions[bottleneckGroupIndex].normal
             : tagColorOptions[bottleneckGroupIndex].light,
           "Q2 Bottleneck": item["Q2 Bottleneck"],
-          "Number of responses": item["Number of responses"],
+          "Number of responses": item["# (bottlenecks only)"],
           "Bottleneck Description": item["Bottleneck Description"],
         });
 
@@ -126,7 +144,7 @@ async function parseCSVs() {
             ? tagColorOptions[solutionGroupIndex].normal
             : tagColorOptions[solutionGroupIndex].light,
           "Q3 Solution": item["Q3 Solution"],
-          "Number of responses": item["Number of responses b"],
+          "Number of responses": item["# solutions only"],
           "Solution Description": item["Solution Description"],
         });
 

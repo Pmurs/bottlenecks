@@ -271,7 +271,7 @@
       "color": "#d5a6bd",
       "Q2 Bottleneck": "[F] Funding",
       "Number of responses": "119",
-      "Bottleneck Description": ""
+      "Bottleneck Description": "How funding is insufficient"
     },
     {
       "tag": "[F0]",
@@ -355,7 +355,7 @@
       "color": "#f9cb9c",
       "Q2 Bottleneck": "[H] People",
       "Number of responses": "99",
-      "Bottleneck Description": ""
+      "Bottleneck Description": "Where we lack human resources"
     },
     {
       "tag": "[H0]",
@@ -418,14 +418,14 @@
       "color": "#fce5cd",
       "Q2 Bottleneck": "[H9] Personal/Misc",
       "Number of responses": "18",
-      "Bottleneck Description": ""
+      "Bottleneck Description": "Various personal and miscellaneous issues, e.g. lack of time, family issues, etc."
     },
     {
       "tag": "[X]",
       "color": "#a2c4c9",
       "Q2 Bottleneck": "[X] Tools",
-      "Number of responses": "173",
-      "Bottleneck Description": ""
+      "Number of responses": "174",
+      "Bottleneck Description": "Tools, technologies and resources currently lacking"
     },
     {
       "tag": "[X0]",
@@ -438,7 +438,7 @@
       "tag": "[X1.1]",
       "color": "#d0e0e3",
       "Q2 Bottleneck": "[X1.1] Lack of Predictive Models",
-      "Number of responses": "32",
+      "Number of responses": "33",
       "Bottleneck Description": "Current molel organisms are poorly predictive of results in humans."
     },
     {
@@ -551,7 +551,7 @@
       "color": "#b4a7d6",
       "Q2 Bottleneck": "[T] Translation",
       "Number of responses": "95",
-      "Bottleneck Description": ""
+      "Bottleneck Description": "Regulatory and translational challenges"
     },
     {
       "tag": "[T1]",
@@ -833,7 +833,7 @@
       "color": "#d5a6bd",
       "Q3 Solution": "[+F] Funding",
       "Number of responses": "47",
-      "Solution Description": ""
+      "Solution Description": "How to improve funding"
     },
     {
       "tag": "[+F0]",
@@ -917,7 +917,7 @@
       "color": "#f9cb9c",
       "Q3 Solution": "[+H] People",
       "Number of responses": "18",
-      "Solution Description": ""
+      "Solution Description": "Solutions for human resources"
     },
     {
       "tag": "[+H0]",
@@ -987,7 +987,7 @@
       "color": "#a2c4c9",
       "Q3 Solution": "[+X] Tools",
       "Number of responses": "79",
-      "Solution Description": ""
+      "Solution Description": "Needed tools, technologies and resources"
     },
     {
       "tag": "[+X0]",
@@ -1134,7 +1134,7 @@
       "color": "#b4a7d6",
       "Q3 Solution": "[+T] Translation",
       "Number of responses": "33",
-      "Solution Description": ""
+      "Solution Description": "How to improve translational challenges"
     },
     {
       "tag": "[+T1]",
@@ -1193,9 +1193,9 @@
       "Solution Description": "How can we make them bigger/better/cheaper and longevity oriented."
     },
     {
-      "tag": "[+T8]",
+      "tag": "[+T10]",
       "color": "#d9d2e9",
-      "Q3 Solution": "[+T8] Data Unlocking",
+      "Q3 Solution": "[+T10] Data Unlocking",
       "Number of responses": "1",
       "Solution Description": "Change policies to unlock siloed health/medical data. Require accessibility, standards and interoperability."
     },
