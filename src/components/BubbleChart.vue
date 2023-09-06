@@ -8,7 +8,7 @@
 <script setup>
 import * as d3 from "d3";
 import { bottleneckStore } from "@/stores/bottleneckStore";
-import { onMounted, ref } from "vue";
+import { onMounted, ref, watch } from "vue";
 import tagLabels from "@/util/tagLabels.json";
 import BottleneckDetails from "@/components/BottleneckDetails.vue";
 
@@ -27,6 +27,20 @@ const moreInfo = ref({
   description: "",
   items: [],
   isBottleneck: false,
+});
+
+watch(
+  () => props.chartData,
+  function () {
+    const chart = Pack(props.chartData.data, props.chartData.props);
+    d3.select(".chart").selectAll("svg").remove();
+    document.getElementsByClassName("chart")[0].append(chart);
+  }
+);
+
+onMounted(function () {
+  const chart = Pack(props.chartData.data, props.chartData.props);
+  document.getElementsByClassName("chart")[0].append(chart);
 });
 
 // Copyright 2021 Observable, Inc.
@@ -83,7 +97,6 @@ function Pack(
   const parents = descendants.filter((d) => d.children && d.data.tag);
   parents.forEach((d, i) => (d.index = i));
   leaves.forEach((d, i) => (d.index = i));
-  const PL = label == null ? null : parents.map((d) => label(d.data, d));
   const L = label == null ? null : leaves.map((d) => label(d.data, d));
   const T = title == null ? null : descendants.map((d) => title(d.data, d));
 
@@ -132,42 +145,12 @@ function Pack(
       d3.select(this).attr("stroke", null);
     })
     .on("click", (event, d) => {
-      console.log(d);
       if (!d.children) {
         moreInfo.value = clickData(d.data);
       }
     });
 
   if (T) node.append("title").text((d, i) => T[i]);
-
-  // Append labels to the parent circles
-  if (PL) {
-    // A unique identifier for clip paths (to avoid conflicts).
-    // const uid = `O-${Math.random().toString(16).slice(2)}`;
-
-    const leaf = node.filter(
-      (d) => d.children && d.r > 10 && PL[d.index] != null
-    );
-
-    leaf
-      .append("text")
-      .selectAll("tspan")
-      .data((d) => `${PL[d.index]}`.split(/\n/g))
-      .join("tspan")
-      .attr("x", (d, i, D) => {
-        const tag = d3.select(D[0].parentNode).data()[0].data.tag;
-        return tagLabels[tag].x;
-      })
-      .attr("y", (d, i, D) => {
-        //console.log(i, D);
-        const tag = d3.select(D[0].parentNode).data()[0].data.tag;
-        const y = tagLabels[tag].y;
-        return `${y + i - D.length / 2 + 0.85}em`;
-      })
-      .style("font-size", "2em")
-      //.attr("fill-opacity", (d, i, D) => (i === D.length - 1 ? 0.7 : null))
-      .text((d) => d);
-  }
 
   // Append labels to the child circles
   if (L) {
@@ -201,8 +184,8 @@ function Pack(
       .attr("y", (d, i, D) => `${i - D.length / 2 + 0.85}em`)
       //.attr("fill-opacity", (d, i, D) => (i === D.length - 1 ? 0.7 : null)) This makes subsequent label lines less dark than the top line
       .style("font-size", (d, i, D) => {
-        const tag = d3.select(D[0].parentNode).data()[0].data.tag;
-        return tagLabels[tag].fontSize || "1em";
+        const node = d3.select(D[0].parentNode).data()[0];
+        return `${Math.min(Math.max(Math.log10(node.r) - 0.75, 0.55), 1)}em`;
       })
       .style("cursor", "pointer")
       .on("mouseover", function () {
@@ -225,9 +208,22 @@ function Pack(
       .text((d) => d);
   }
 
+  // Add labels for the parent circles
+  svg
+    .append("g")
+    .style("font-size", "2em")
+    .attr("pointer-events", "none")
+    .selectAll("text")
+    .data(root.descendants().filter((d) => d.parent === root && d.r))
+    .join("text")
+    .text((d) => tagLabels[d.data.tag].label)
+    .attr("x", (d) => d.x)
+    .attr("y", (d) => d.y - 20);
+
   // Add title to chart. Do this last so it draws over the rest of the chart
   svg
     .append("text")
+    .attr("pointer-events", "none")
     .attr("x", width / 2)
     .attr("y", height / 12)
     .attr("text-anchor", "middle")
@@ -236,11 +232,6 @@ function Pack(
 
   return svg.node();
 }
-
-onMounted(function () {
-  const chart = Pack(props.chartData.data, props.chartData.props);
-  document.getElementsByClassName("chart")[0].append(chart);
-});
 </script>
 
 <style scoped>

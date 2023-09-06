@@ -98,6 +98,11 @@ async function parseCSVs() {
       });
 
       bottlenecks = bottlenecks.filter((bottleneck) => bottleneck.tags);
+      const occupations = [
+        ...new Set(bottlenecks.map((item) => item.occupations).flat()),
+      ];
+      console.log(occupations);
+
       solutions = solutions.filter((solution) => solution.tags);
       analysis.bottlenecks = bottlenecks;
       analysis.solutions = solutions;

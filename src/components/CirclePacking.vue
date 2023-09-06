@@ -3,10 +3,14 @@
     <v-select
       v-model="chartSelection"
       :options="chartOptions"
+      :clearable="false"
       class="chartSelect"
     />
   </div>
-  <div class="chart-container">
+  <div
+    class="chart-container"
+    v-if="bottlenecksChartData && solutionsChartData"
+  >
     <BubbleChart
       v-if="chartSelection === 'Bottlenecks' && bottlenecksChartData"
       :chart-data="bottlenecksChartData"
@@ -14,6 +18,13 @@
     <BubbleChart
       v-if="chartSelection === 'Solutions' && solutionsChartData"
       :chart-data="solutionsChartData"
+    />
+    <Filters
+      class="filters"
+      :profession="professionFilter"
+      :experience="experienceFilter"
+      @profession="(value) => onUpdateProfessionFilter(value)"
+      @experience="(value) => onUpdateExperienceFilter(value)"
     />
   </div>
   <div class="url-container">
@@ -30,9 +41,10 @@
 
 <script setup>
 import { bottleneckStore } from "@/stores/bottleneckStore";
-import { onMounted, ref } from "vue";
+import { computed, onMounted, ref } from "vue";
 import tagLabels from "@/util/tagLabels.json";
 import BubbleChart from "@/components/BubbleChart.vue";
+import Filters from "@/components/Filters.vue";
 
 const store = bottleneckStore();
 const analysis = store.analysis;
@@ -41,11 +53,47 @@ const tags = store.tags;
 const chartOptions = ["Bottlenecks", "Solutions"];
 const chartSelection = ref("Bottlenecks");
 
+const professionFilter = ref([]);
+const experienceFilter = ref(["<1", "1-3", "3-5", "5-10", "10-20", ">20"]);
+
 const bottlenecksChartData = ref(null);
 const solutionsChartData = ref(null);
 
-onMounted(() => {
+const onUpdateProfessionFilter = function (profession) {
+  professionFilter.value = profession;
+  generateData();
+};
+
+const onUpdateExperienceFilter = function (experience) {
+  experienceFilter.value = experience;
+  generateData();
+};
+
+const filteredBottlenecks = computed(() => {
   const bottlenecks = analysis.bottlenecks;
+  console.log(professionFilter.value, experienceFilter.value);
+  return bottlenecks.filter((item) => {
+    return (
+      (!experienceFilter.value.length ||
+        experienceFilter.value.includes(item.experience)) &&
+      (!professionFilter.value.length ||
+        item.occupations.some((i) => professionFilter.value.includes(i)))
+    );
+  });
+});
+
+const filteredSolutions = computed(() => {
+  const solutions = analysis.solutions;
+  if (!experienceFilter.value.length) {
+    return solutions;
+  }
+  return solutions.filter((item) => {
+    return experienceFilter.value.includes(item.experience);
+  });
+});
+
+const generateData = function () {
+  const bottlenecks = filteredBottlenecks.value;
   const bTags = tags.bottlenecks;
   const bTagCategories = bTags
     .filter((tag) => tag.tag.match(/\[[A-Z]]/))
@@ -69,6 +117,9 @@ onMounted(() => {
       const parentTag = tag.match(/\[[A-Z]/) + "]";
       const parent = bTagCategories.find((item) => item.tag === parentTag);
       const child = parent.children.find((item) => item.tag === tag);
+      // console.log(
+      //   `Tag: ${tag}, ParentTag: ${parentTag}, Parent: ${parent}, Child: ${child}`
+      // );
       child.bottlenecks.push(item);
     });
   });
@@ -77,7 +128,8 @@ onMounted(() => {
     data: { name: "bottlenecks", children: bTagCategories },
     props: {
       name: (d) => d.bottleneck,
-      value: (d) => d["Number of responses"],
+      value: (d) =>
+        d.children ? d["Number of responses"] : d.bottlenecks?.length,
       label: (d) => tagLabels[d.tag].label,
       title: (d) => d["Q2 Bottleneck"] + ":\n" + d["Bottleneck Description"],
       fill: (d) => d.color,
@@ -92,7 +144,7 @@ onMounted(() => {
     },
   };
 
-  const solutions = analysis.solutions;
+  const solutions = filteredSolutions.value;
   const sTags = tags.solutions;
   const sTagCategories = sTags
     .filter((tag) => tag.tag.match(/\[\+[A-Z]]/))
@@ -124,7 +176,8 @@ onMounted(() => {
     data: { name: "solutions", children: sTagCategories },
     props: {
       name: (d) => d.investment,
-      value: (d) => d["Number of responses"],
+      value: (d) =>
+        d.children ? d["Number of Responses"] : d.solutions?.length,
       label: (d) => tagLabels[d.tag].label,
       title: (d) => d["Q3 Solution"] + ":\n" + d["Solution Description"],
       fill: (d) => d.color,
@@ -138,6 +191,10 @@ onMounted(() => {
       chartTitle: "Solutions",
     },
   };
+};
+
+onMounted(() => {
+  generateData();
 });
 </script>
 
@@ -155,6 +212,11 @@ onMounted(() => {
 .chart-container {
   display: flex;
 
+  .filters {
+    position: absolute;
+    right: 0;
+    max-width: 200px;
+  }
 }
 
 .url-container {

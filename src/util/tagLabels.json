@@ -27,20 +27,20 @@
   },
   "[P6]": { "label": "Indifference", "x": 0, "y": 0, "fontSize": "0.9em" },
   "[P7]": {
-    "label": "Media \nNegativity",
-    "x": 5,
+    "label": "Media\nNegativity",
+    "x": 0,
     "y": 0,
     "fontSize": "0.6em"
   },
   "[C]": { "label": "Community", "x": 250, "y": 0 },
   "[C1]": {
-    "label": "Lack of \nBig Data \nMindset",
+    "label": "Lack of\nBig Data\nMindset",
     "x": 0,
     "y": 0,
     "fontSize": "0.75em"
   },
   "[C2]": {
-    "label": "Ad-hoc Data\n / Protocols",
+    "label": "Ad-hoc Data\n/ Protocols",
     "x": 0,
     "y": 0,
     "fontSize": "0.95em"
@@ -113,7 +113,7 @@
   },
   "[S]": { "label": "Science", "x": -250, "y": 0 },
   "[S1]": { "label": "Validated \nBiomarkers", "x": 0, "y": 0 },
-  "[S2]": { "label": "Aging \nCharacterization", "x": 0, "y": 0 },
+  "[S2]": { "label": "Aging \nCharacter\n-ization", "x": 0, "y": 0 },
   "[S3]": {
     "label": "Longitudinal \nData/Samples",
     "x": 0,
@@ -135,14 +135,24 @@
     "fontSize": "0.9em"
   },
   "[S8]": { "label": "Brain Aging", "x": 0, "y": 0 },
-  "[S9]": { "label": "Aging Mechanisms", "x": 0, "y": 0, "fontSize": "0.75em" },
+  "[S9]": { "label": "Aging\nMechanisms", "x": 0, "y": 0, "fontSize": "0.75em" },
   "[S10]": { "label": "Replacement", "x": 0, "y": 0, "fontSize": "0.9em" },
   "[F]": { "label": "Funding", "x": 0, "y": -5.2 },
   "[F0]": { "label": "Overall Lack\n of Funding", "x": 0, "y": 0 },
   "[F1]": { "label": "Too \nConservative", "x": 0, "y": 0 },
-  "[F2]": { "label": "Funding for\nBasic\nResearch", "x": 0, "y": 0, "fontSize": "0.95em" },
+  "[F2]": {
+    "label": "Funding for\nBasic\nResearch",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.95em"
+  },
   "[F3]": { "label": "Too \nShort-term", "x": 0, "y": 0, "fontSize": "0.85em" },
-  "[F4]": { "label": "Funding for\nStartups", "x": 0, "y": 0, "fontSize": "0.75em" },
+  "[F4]": {
+    "label": "Funding for\nStartups",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.75em"
+  },
   "[F5]": { "label": "Gated", "x": 0, "y": 0 },
   "[F6]": {
     "label": "Funding for\nTranslation",
@@ -151,7 +161,12 @@
     "fontSize": "0.65em"
   },
   "[F7]": { "label": "Inflexible", "x": 0, "y": 0, "fontSize": "0.75em" },
-  "[F8]": { "label": "Funding for\nOutreach", "x": 0, "y": 0, "fontSize": "0.65em" },
+  "[F8]": {
+    "label": "Funding for\nOutreach",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.65em"
+  },
   "[F9]": {
     "label": "Funding for\nClinical/\nLongitudinal",
     "x": 0,
@@ -284,14 +299,14 @@
     "fontSize": "0.65em"
   },
   "[+P1.3]": {
-    "label": "Outreach to\nBiotech/Pharma",
-    "x": 15,
+    "label": "Outreach to\nBiotech/\nPharma",
+    "x": 0,
     "y": 0,
     "fontSize": "0.65em"
   },
   "[+P1.4]": { "label": "Outreach to\nStudents", "x": 0, "y": 0 },
   "[+P1.5]": {
-    "label": "Outreach to\nGov/Institutions",
+    "label": "Outreach\nto Gov/\nInstitutions",
     "x": 0,
     "y": 0,
     "fontSize": "0.65em"
@@ -358,7 +373,7 @@
   },
   "[+S11]": { "label": "Comprehensive Replacement", "x": 0, "y": 0 },
   "[+F]": { "label": "Funding", "x": 230, "y": 0 },
-  "[+F0]": { "label": "Overall More Funding", "x": 0, "y": 0 },
+  "[+F0]": { "label": "Overall More\nFunding", "x": 0, "y": 0 },
   "[+F1]": { "label": "Ambitious/\nExploratory", "x": 0, "y": 0 },
   "[+F2]": {
     "label": "Funding for\nBasic\nResearch",
@@ -367,8 +382,18 @@
     "fontSize": "0.95em"
   },
   "[+F3]": { "label": "Longer-term", "x": 0, "y": 0, "fontSize": "0.95em" },
-  "[+F4]": { "label": "Funding for\nStartups", "x": 0, "y": 0, "fontSize": "0.75em" },
-  "[+F5]": { "label": "Funding for\nOutsiders", "x": 0, "y": 0, "fontSize": "0.50em" },
+  "[+F4]": {
+    "label": "Funding for\nStartups",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.75em"
+  },
+  "[+F5]": {
+    "label": "Funding for\nOutsiders",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.50em"
+  },
   "[+F6]": {
     "label": "Funding\nfor\nTrans-\nlation",
     "x": 0,
@@ -454,7 +479,7 @@
   "[+X1.6]": { "label": "Human\nModels", "x": 0, "y": 0, "fontSize": "0.75em" },
   "[+X1.7]": {
     "label": "Accelerated\nAging\nModels",
-    "x": 5,
+    "x": 0,
     "y": 0,
     "fontSize": "0.55em"
   },
@@ -483,9 +508,19 @@
     "y": 0,
     "fontSize": "0.75em"
   },
-  "[+X12]": { "label": "Health\nData\nPlatform", "x": 0, "y": 0, "fontSize": "0.75em" },
-  "[+X13]": { "label": "Lab\nAutomation", "x": 0, "y": 0, "fontSize": "0.95em" },
-  "[+T]": { "label": "Translation", "x": -145, "y": 4 },
+  "[+X12]": {
+    "label": "Health\nData\nPlatform",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.75em"
+  },
+  "[+X13]": {
+    "label": "Lab\nAutomation",
+    "x": 0,
+    "y": 0,
+    "fontSize": "0.95em"
+  },
+  "[+T]": { "label": "Translation", "x": 0, "y": -1 },
   "[+T1]": { "label": "Regulatory Path", "x": 0, "y": 0 },
   "[+T2]": {
     "label": "Participant\nDatabase",
