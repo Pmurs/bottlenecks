@@ -1,4 +1,16 @@
-<script setup>
+<script setup lang="ts">
+import { computed } from "vue";
+
+const props = defineProps<{
+  profession: Array<String>;
+  experience: Array<String>;
+}>();
+
+const emit = defineEmits<{
+  (e: "profession", profession: Array<string>): void;
+  (e: "experience", experience: Array<string>): void;
+}>();
+
 const professionOptions = [
   "Entrepreneur",
   "Investor",
@@ -14,32 +26,114 @@ const professionOptions = [
 ];
 const experienceOptions = ["<1", "1-3", "3-5", "5-10", "10-20", ">20"];
 
-const props = defineProps({
-  profession: Array,
-  experience: Array,
+const professionToggles = computed(() => {
+  return professionOptions.reduce(
+    (obj, profession) => ({
+      ...obj,
+      [profession]: props.profession.includes(profession),
+    }),
+    {}
+  );
 });
 
-const updateExperience = function (experience) {};
+const experienceToggles = computed(() => {
+  return experienceOptions.reduce(
+    (obj, experience) => ({
+      ...obj,
+      [experience]: props.experience.includes(experience),
+    }),
+    {}
+  );
+});
+
+const toggleProfession = function (profession: string, value: boolean) {
+  const toggleValues = { ...professionToggles.value, [profession]: value };
+
+  emit(
+    "profession",
+    professionOptions.filter((item) => toggleValues[item])
+  );
+};
+const toggleExperience = function (experience: string, value: boolean) {
+  const toggleValues = { ...experienceToggles.value, [experience]: value };
+
+  emit(
+    "experience",
+    experienceOptions.filter((item) => toggleValues[item])
+  );
+};
 </script>
 
 <template>
   <div>
-    <h3>Filters</h3>
-    Profession
-    <v-select
-      multiple
-      :modelValue="props.profession"
-      @update:modelValue="(value) => $emit('profession', value)"
-      :options="professionOptions"
-    />
-    Years in Industry
-    <v-select
-      multiple
-      :modelValue="props.experience"
-      @update:modelValue="(value) => $emit('experience', value)"
-      :options="experienceOptions"
-    />
+    <h3 class="title">Filters</h3>
+    <div class="profession-container">
+      <div class="button-container">
+        <span>Profession</span
+        ><span>
+          <button @click="$emit('profession', [])">X</button>
+          <button @click="$emit('profession', professionOptions)">All</button>
+        </span>
+      </div>
+      <div v-for="option in professionOptions">
+        <v-toggle
+          :value="professionToggles[option]"
+          @change="(value) => toggleProfession(option, value)"
+          :name="option"
+          :title="option"
+          :on-label="option"
+          :off-label="option"
+          class="switch"
+        />
+      </div>
+    </div>
+    <div>
+      <div class="button-container">
+        <span>Years in Industry</span>
+        <span
+          ><button @click="$emit('experience', [])">X</button>
+          <button @click="$emit('experience', experienceOptions)">
+            All
+          </button></span
+        >
+      </div>
+      <div v-for="option in experienceOptions">
+        <v-toggle
+          :value="experienceToggles[option]"
+          @change="(value) => toggleExperience(option, value)"
+          :name="option"
+          :title="option"
+          :on-label="option"
+          :off-label="option"
+          class="switch"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.title {
+  margin-bottom: .5em;
+}
+
+.profession-container {
+  margin-bottom: 1em;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.switch {
+  --toggle-width: 200px;
+  text-overflow: ellipsis;
+
+  :deep(.toggle-label) {
+    padding: 0 1em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+</style>
