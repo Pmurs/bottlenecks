@@ -53,7 +53,19 @@ const tags = store.tags;
 const chartOptions = ["Bottlenecks", "Solutions"];
 const chartSelection = ref("Bottlenecks");
 
-const professionFilter = ref([]);
+const professionFilter = ref([
+  "Entrepreneur",
+  "Investor",
+  "Media",
+  "Academic researcher (postdoc/PhD/MSc/BSc student)",
+  "Biotech researcher",
+  "Other (specify)",
+  "Data scientist/Software engineer",
+  "Principal investigator/Professor",
+  "Executive",
+  "Science communicator",
+  "Mechanical/physical/electrical engineer",
+]);
 const experienceFilter = ref(["<1", "1-3", "3-5", "5-10", "10-20", ">20"]);
 
 const bottlenecksChartData = ref(null);
@@ -71,7 +83,6 @@ const onUpdateExperienceFilter = function (experience) {
 
 const filteredBottlenecks = computed(() => {
   const bottlenecks = analysis.bottlenecks;
-  console.log(professionFilter.value, experienceFilter.value);
   return bottlenecks.filter((item) => {
     return (
       (!experienceFilter.value.length ||
@@ -84,11 +95,11 @@ const filteredBottlenecks = computed(() => {
 
 const filteredSolutions = computed(() => {
   const solutions = analysis.solutions;
-  if (!experienceFilter.value.length) {
-    return solutions;
-  }
   return solutions.filter((item) => {
-    return experienceFilter.value.includes(item.experience);
+    (!experienceFilter.value.length ||
+        experienceFilter.value.includes(item.experience)) &&
+    (!professionFilter.value.length ||
+        item.occupations.some((i) => professionFilter.value.includes(i)))
   });
 });
 
