@@ -2,7 +2,7 @@ import { fileURLToPath, URL } from "node:url";
 
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-import postcssNesting from 'postcss-nesting';
+import postcssNesting from "postcss-nesting";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -15,9 +15,15 @@ export default defineConfig({
   base: "/bottlenecks/",
   css: {
     postcss: {
-      plugins: [
-        postcssNesting
-      ],
+      plugins: [postcssNesting],
+    },
+  },
+  build: {
+    lib: {
+      entry: "./src/main.js",
+      name: "bottlenecks-visualizations",
+      // the proper extensions will be added
+      fileName: "bottlenecks-visualizations",
     },
   },
 });

@@ -9,6 +9,13 @@ import Toggle from "@vueform/toggle";
 import "./assets/main.css";
 import "vue-select/dist/vue-select.css";
 import "@vueform/toggle/themes/default.css";
+import CirclePacking from "@/components/CirclePacking.vue";
+
+import { defineCustomElement } from 'vue'
+
+const BottlenecksVisualizations = defineCustomElement(CirclePacking)
+
+customElements.define('bottlenecks-visualizations', BottlenecksVisualizations)
 
 const app = createApp(App);
 
@@ -18,3 +25,4 @@ app.component("v-select", VueSelect);
 app.component("v-toggle", Toggle);
 
 app.mount("#app");
+

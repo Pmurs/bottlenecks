@@ -1,6 +1,4 @@
 <script setup>
-import { bottleneckStore } from "@/stores/bottleneckStore";
-import BubbleChart from "@/components/BubbleChart.vue";
 import { onMounted, ref } from "vue";
 import CirclePacking from "@/components/CirclePacking.vue";
 

@@ -46,9 +46,8 @@ import tagLabels from "@/util/tagLabels.json";
 import BubbleChart from "@/components/BubbleChart.vue";
 import Filters from "@/components/Filters.vue";
 
-const store = bottleneckStore();
-const analysis = store.analysis;
-const tags = store.tags;
+import analysis from "../util/analysis.json";
+import tags from "../util/tags.json";
 
 const chartOptions = ["Bottlenecks", "Solutions"];
 const chartSelection = ref("Bottlenecks");
