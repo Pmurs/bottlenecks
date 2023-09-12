@@ -18,4 +18,14 @@ export default defineConfig({
       plugins: [postcssNesting],
     },
   },
+  build: {
+    lib: {
+      entry: "./src/main.js",
+      name: "bottlenecks-visualizations",
+      outDir: "public",
+      emptyOutDir: false,
+      // the proper extensions will be added
+      fileName: "bottlenecks-visualizations",
+    },
+  },
 });

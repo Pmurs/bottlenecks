@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build-web-component": "vite build -c vite.web-component.config.js",
     "preview": "vite preview",
     "lint": "eslint bottlenecks --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
