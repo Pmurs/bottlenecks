@@ -43,8 +43,9 @@ jobs:
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add dist
-          git commit -a -m "Add "
+          mv dist/* public
+          git add public
+          git commit -a -m "Add Built Webcomponent Files"
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
