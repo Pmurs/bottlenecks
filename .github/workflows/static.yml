@@ -37,6 +37,19 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm install
+      - name: Build Webcomponent
+        run: npm run build-web-component
+      - name: Commit Changes
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add /dist
+          git commit -a -m "Add "
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
       - name: Build
         run: npm run build
       - name: Setup Pages
