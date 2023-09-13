@@ -41,7 +41,7 @@ jobs:
         run: npm run build-web-component
       - name: Commit Changes
         run: |
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           mv dist/* public
           git add public
