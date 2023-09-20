@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import Toggle from "@vueform/toggle";
+import "@vueform/toggle/themes/default.css";
+
 import { computed } from "vue";
 
 const props = defineProps<{
@@ -76,7 +79,7 @@ const toggleExperience = function (experience: string, value: boolean) {
         </span>
       </div>
       <div v-for="option in professionOptions">
-        <v-toggle
+        <Toggle
           :value="professionToggles[option]"
           @change="(value) => toggleProfession(option, value)"
           :name="option"
@@ -98,7 +101,7 @@ const toggleExperience = function (experience: string, value: boolean) {
         >
       </div>
       <div v-for="option in experienceOptions">
-        <v-toggle
+        <Toggle
           :value="experienceToggles[option]"
           @change="(value) => toggleExperience(option, value)"
           :name="option"
@@ -114,7 +117,7 @@ const toggleExperience = function (experience: string, value: boolean) {
 
 <style scoped>
 .title {
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
 .profession-container {

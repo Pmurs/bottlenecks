@@ -42,6 +42,8 @@
 <script setup>
 import { bottleneckStore } from "@/stores/bottleneckStore";
 import { computed, onMounted, ref } from "vue";
+import VueSelect from "vue-select";
+import "vue-select/dist/vue-select.css";
 import tagLabels from "@/util/tagLabels.json";
 import BubbleChart from "@/components/BubbleChart.vue";
 import Filters from "@/components/Filters.vue";

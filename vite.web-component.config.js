@@ -6,7 +6,16 @@ import postcssNesting from "postcss-nesting";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: (tag) =>
+            ["bottlenecks-visualizations", "v-select", "Toggle"].includes(tag),
+        },
+      },
+    }),
+  ],
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
@@ -22,8 +31,6 @@ export default defineConfig({
     lib: {
       entry: "./src/main.js",
       name: "bottlenecks-visualizations",
-      outDir: "public",
-      emptyOutDir: false,
       // the proper extensions will be added
       fileName: "bottlenecks-visualizations",
     },
