@@ -22458,7 +22458,7 @@ const or = (e, t) => {
     n[i] = o;
   return n;
 }, y1 = /* @__PURE__ */ or(m1, [["__scopeId", "data-v-87f44d78"]]);
-const v1 = (e) => (Qo("data-v-1e7d46f0"), e = e(), qo(), e), b1 = { class: "chart-row" }, w1 = /* @__PURE__ */ v1(() => /* @__PURE__ */ Y("div", { class: "chart" }, null, -1)), x1 = {
+const v1 = (e) => (Qo("data-v-97db4765"), e = e(), qo(), e), b1 = { class: "chart-row" }, w1 = /* @__PURE__ */ v1(() => /* @__PURE__ */ Y("div", { class: "chart" }, null, -1)), x1 = {
   __name: "BubbleChart",
   props: {
     chartData: {
@@ -22584,7 +22584,7 @@ const v1 = (e) => (Qo("data-v-1e7d46f0"), e = e(), qo(), e), b1 = { class: "char
       w1
     ]));
   }
-}, Vc = /* @__PURE__ */ or(x1, [["__scopeId", "data-v-1e7d46f0"]]);
+}, Vc = /* @__PURE__ */ or(x1, [["__scopeId", "data-v-97db4765"]]);
 const Ws = (e) => (Qo("data-v-47de52bd"), e = e(), qo(), e), S1 = /* @__PURE__ */ Ws(() => /* @__PURE__ */ Y("h3", { class: "title" }, "Filters", -1)), _1 = { class: "profession-container" }, P1 = { class: "button-container" }, E1 = /* @__PURE__ */ Ws(() => /* @__PURE__ */ Y("span", null, "Profession", -1)), k1 = ["value", "onChange", "name", "title", "on-label", "off-label"], N1 = { class: "button-container" }, D1 = /* @__PURE__ */ Ws(() => /* @__PURE__ */ Y("span", null, "Years in Industry", -1)), C1 = ["value", "onChange", "name", "title", "on-label", "off-label"], A1 = /* @__PURE__ */ Ti({
   __name: "Filters",
   props: {
@@ -22684,7 +22684,7 @@ const Ws = (e) => (Qo("data-v-47de52bd"), e = e(), qo(), e), S1 = /* @__PURE__ *
   }
 });
 const O1 = /* @__PURE__ */ or(A1, [["__scopeId", "data-v-47de52bd"]]);
-const T1 = (e) => (Qo("data-v-33f00bc3"), e = e(), qo(), e), B1 = { class: "chartSelect-container" }, M1 = {
+const T1 = (e) => (Qo("data-v-0f2bfd5d"), e = e(), qo(), e), B1 = { class: "chartSelect-container" }, M1 = {
   key: 0,
   class: "chart-container"
 }, I1 = /* @__PURE__ */ T1(() => /* @__PURE__ */ Y("div", { class: "url-container" }, [
@@ -22714,9 +22714,7 @@ const T1 = (e) => (Qo("data-v-33f00bc3"), e = e(), qo(), e), B1 = { class: "char
       i.value = p, d();
     }, c = function(p) {
       o.value = p, d();
-    }, l = xe(() => ns.bottlenecks.filter((h) => (!o.value.length || o.value.includes(h.experience)) && (!i.value.length || h.occupations.some((m) => i.value.includes(m))))), u = xe(() => ns.solutions.filter((h) => {
-      (!o.value.length || o.value.includes(h.experience)) && (!i.value.length || h.occupations.some((m) => i.value.includes(m)));
-    })), d = function() {
+    }, l = xe(() => ns.bottlenecks.filter((h) => (!o.value.length || o.value.includes(h.experience)) && (!i.value.length || h.occupations.some((m) => i.value.includes(m))))), u = xe(() => ns.solutions.filter((h) => (!o.value.length || o.value.includes(h.experience)) && (!i.value.length || h.occupations.some((m) => i.value.includes(m))))), d = function() {
       const p = l.value, h = is.bottlenecks, m = h.filter((b) => b.tag.match(/\[[A-Z]]/)).map((b) => ({
         ...b,
         children: h.filter(
@@ -22769,7 +22767,7 @@ const T1 = (e) => (Qo("data-v-33f00bc3"), e = e(), qo(), e), B1 = { class: "char
           name: (b) => b.investment,
           value: (b) => {
             var x;
-            return b.children ? b["Number of Responses"] : (x = b.solutions) == null ? void 0 : x.length;
+            return b.children ? b["Number of responses"] : (x = b.solutions) == null ? void 0 : x.length;
           },
           label: (b) => No[b.tag].label,
           title: (b) => b["Q3 Solution"] + `:
@@ -22819,7 +22817,7 @@ const T1 = (e) => (Qo("data-v-33f00bc3"), e = e(), qo(), e), B1 = { class: "char
       I1
     ], 64));
   }
-}, sd = /* @__PURE__ */ or(F1, [["__scopeId", "data-v-33f00bc3"]]), $1 = { key: 0 }, X1 = {
+}, sd = /* @__PURE__ */ or(F1, [["__scopeId", "data-v-0f2bfd5d"]]), $1 = { key: 0 }, X1 = {
   __name: "HomeView",
   setup(e) {
     const t = Ye(!1);
