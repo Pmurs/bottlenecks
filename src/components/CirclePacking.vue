@@ -97,10 +97,12 @@ const filteredBottlenecks = computed(() => {
 const filteredSolutions = computed(() => {
   const solutions = analysis.solutions;
   return solutions.filter((item) => {
-    (!experienceFilter.value.length ||
+    return (
+      (!experienceFilter.value.length ||
         experienceFilter.value.includes(item.experience)) &&
-    (!professionFilter.value.length ||
+      (!professionFilter.value.length ||
         item.occupations.some((i) => professionFilter.value.includes(i)))
+    );
   });
 });
 
@@ -129,9 +131,6 @@ const generateData = function () {
       const parentTag = tag.match(/\[[A-Z]/) + "]";
       const parent = bTagCategories.find((item) => item.tag === parentTag);
       const child = parent.children.find((item) => item.tag === tag);
-      // console.log(
-      //   `Tag: ${tag}, ParentTag: ${parentTag}, Parent: ${parent}, Child: ${child}`
-      // );
       child.bottlenecks.push(item);
     });
   });
@@ -188,8 +187,9 @@ const generateData = function () {
     data: { name: "solutions", children: sTagCategories },
     props: {
       name: (d) => d.investment,
-      value: (d) =>
-        d.children ? d["Number of Responses"] : d.solutions?.length,
+      value: (d) => {
+        return d.children ? d["Number of responses"] : d.solutions?.length;
+      },
       label: (d) => tagLabels[d.tag].label,
       title: (d) => d["Q3 Solution"] + ":\n" + d["Solution Description"],
       fill: (d) => d.color,

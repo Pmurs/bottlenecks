@@ -134,7 +134,9 @@ function Pack(
     .attr("stroke", (d) => (d.children ? stroke : null))
     .attr("stroke-width", (d) => (d.children ? strokeWidth : null))
     .attr("stroke-opacity", (d) => (d.children ? strokeOpacity : null))
-    .attr("r", (d) => d.r)
+    .attr("r", (d) => {
+      return d.r;
+    })
     .on("mouseover", function (event, d) {
       if (!d.children) {
         d3.select(this).attr("stroke", "#000");
