@@ -63,8 +63,8 @@ import { vOnClickOutside } from "@vueuse/components";
 
 import { computed, ref, watch } from "vue";
 
-const isOpen = ref(true);
 const { width } = useWindowSize();
+const isOpen = ref(width.value >= 768);
 
 const props = defineProps<{
   profession: Array<String>;
@@ -132,7 +132,10 @@ const toggleVisible = function () {
   isOpen.value = !isOpen.value;
 };
 const closeFilters = function () {
-  isOpen.value = false;
+  console.log(width.value);
+  if (width.value < 768) {
+    isOpen.value = false;
+  }
 };
 
 watch(width, (newWidth, prevWidth) => {
@@ -151,7 +154,7 @@ watch(width, (newWidth, prevWidth) => {
   margin-right: -2rem;
   padding: 1rem;
   background: lightgray;
-
+  z-index: 1;
   max-width: 236px;
   height: 100vh;
 
@@ -221,6 +224,12 @@ watch(width, (newWidth, prevWidth) => {
     height: 100vh;
     margin-right: unset;
     padding: unset;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .filters-container {
+    background: gray;
   }
 }
 </style>
