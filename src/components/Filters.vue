@@ -1,8 +1,70 @@
+<template>
+  <Transition>
+    <div
+      class="filters-container"
+      :class="{ open: isOpen, closed: !isOpen }"
+      @click="isOpen = true"
+      v-on-click-outside="closeFilters"
+    >
+      <h3 class="title">Filters</h3>
+      <div class="profession-container">
+        <div class="button-container">
+          <span>Profession</span
+          ><span>
+            <button class="btn" @click="$emit('profession', [])">X</button>
+            <button class="btn" @click="$emit('profession', professionOptions)">
+              All
+            </button>
+          </span>
+        </div>
+        <div v-for="option in professionOptions">
+          <Toggle
+            :value="professionToggles[option]"
+            @change="(value) => toggleProfession(option, value)"
+            :name="option"
+            :title="option"
+            :on-label="option"
+            :off-label="option"
+            class="switch"
+          />
+        </div>
+      </div>
+      <div>
+        <div class="button-container">
+          <span>Years in Industry</span>
+          <span
+            ><button class="btn" @click="$emit('experience', [])">X</button>
+            <button class="btn" @click="$emit('experience', experienceOptions)">
+              All
+            </button></span
+          >
+        </div>
+        <div v-for="option in experienceOptions">
+          <Toggle
+            :value="experienceToggles[option]"
+            @change="(value) => toggleExperience(option, value)"
+            :name="option"
+            :title="option"
+            :on-label="option"
+            :off-label="option"
+            class="switch"
+          />
+        </div>
+      </div>
+    </div>
+  </Transition>
+</template>
+
 <script setup lang="ts">
 import Toggle from "@vueform/toggle";
 import "@vueform/toggle/themes/default.css";
+import { useWindowSize } from "@vueuse/core";
+import { vOnClickOutside } from "@vueuse/components";
 
-import { computed } from "vue";
+import { computed, ref, watch } from "vue";
+
+const isOpen = ref(true);
+const { width } = useWindowSize();
 
 const props = defineProps<{
   profession: Array<String>;
@@ -15,17 +77,17 @@ const emit = defineEmits<{
 }>();
 
 const professionOptions = [
-  "Entrepreneur",
-  "Investor",
-  "Media",
   "Academic researcher (postdoc/PhD/MSc/BSc student)",
   "Biotech researcher",
-  "Other (specify)",
   "Data scientist/Software engineer",
-  "Principal investigator/Professor",
+  "Entrepreneur",
   "Executive",
-  "Science communicator",
+  "Investor",
   "Mechanical/physical/electrical engineer",
+  "Media",
+  "Principal investigator/Professor",
+  "Science communicator",
+  "Other (specify)",
 ];
 const experienceOptions = ["<1", "1-3", "3-5", "5-10", "10-20", ">20"];
 
@@ -65,57 +127,54 @@ const toggleExperience = function (experience: string, value: boolean) {
     experienceOptions.filter((item) => toggleValues[item])
   );
 };
+
+const toggleVisible = function () {
+  isOpen.value = !isOpen.value;
+};
+const closeFilters = function () {
+  isOpen.value = false;
+};
+
+watch(width, (newWidth, prevWidth) => {
+  if (prevWidth >= 768 && newWidth < 768) {
+    isOpen.value = false;
+  } else if (prevWidth < 768 && newWidth >= 768) {
+    isOpen.value = true;
+  }
+});
 </script>
-
-<template>
-  <div>
-    <h3 class="title">Filters</h3>
-    <div class="profession-container">
-      <div class="button-container">
-        <span>Profession</span
-        ><span>
-          <button @click="$emit('profession', [])">X</button>
-          <button @click="$emit('profession', professionOptions)">All</button>
-        </span>
-      </div>
-      <div v-for="option in professionOptions">
-        <Toggle
-          :value="professionToggles[option]"
-          @change="(value) => toggleProfession(option, value)"
-          :name="option"
-          :title="option"
-          :on-label="option"
-          :off-label="option"
-          class="switch"
-        />
-      </div>
-    </div>
-    <div>
-      <div class="button-container">
-        <span>Years in Industry</span>
-        <span
-          ><button @click="$emit('experience', [])">X</button>
-          <button @click="$emit('experience', experienceOptions)">
-            All
-          </button></span
-        >
-      </div>
-      <div v-for="option in experienceOptions">
-        <Toggle
-          :value="experienceToggles[option]"
-          @change="(value) => toggleExperience(option, value)"
-          :name="option"
-          :title="option"
-          :on-label="option"
-          :off-label="option"
-          class="switch"
-        />
-      </div>
-    </div>
-  </div>
-</template>
-
 <style scoped>
+.filters-container {
+  position: absolute;
+  right: 0;
+  top: -6rem;
+  margin-right: -2rem;
+  padding: 1rem;
+  background: lightgray;
+
+  max-width: 236px;
+  height: 100vh;
+
+  &.closed {
+    min-width: 1em;
+    max-width: 1em;
+    background: #10b981;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+
+    & :not(:first-child) {
+      display: none;
+    }
+
+    .title {
+      padding-top: 5em;
+      writing-mode: vertical-lr;
+      text-orientation: upright;
+    }
+  }
+}
+
 .title {
   margin-bottom: 0.5em;
 }
@@ -127,6 +186,18 @@ const toggleExperience = function (experience: string, value: boolean) {
 .button-container {
   display: flex;
   justify-content: space-between;
+
+  .btn {
+    border-radius: 0;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:last-of-type {
+      margin-left: 0.5em;
+    }
+  }
 }
 
 .switch {
@@ -137,6 +208,19 @@ const toggleExperience = function (experience: string, value: boolean) {
     padding: 0 1em;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .filters-container {
+    position: absolute;
+    right: 0;
+
+    max-width: 200px;
+    background: transparent;
+    height: 100vh;
+    margin-right: unset;
+    padding: unset;
   }
 }
 </style>

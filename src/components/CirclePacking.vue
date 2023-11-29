@@ -223,12 +223,6 @@ onMounted(() => {
 
 .chart-container {
   display: flex;
-
-  .filters {
-    position: absolute;
-    right: 0;
-    max-width: 200px;
-  }
 }
 
 .url-container {
