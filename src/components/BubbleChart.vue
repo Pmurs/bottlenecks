@@ -239,16 +239,23 @@ function Pack(
 <style scoped>
 .chart-row {
   display: flex;
+  flex-direction: column-reverse;
   justify-content: center;
   width: 100%;
-  .details {
-    position: absolute;
-    left: 0;
-    max-width: 15%;
-  }
+}
 
-  .chart {
-    max-width: 50%;
+@media screen and (min-width: 768px) {
+  .chart-row {
+    flex-direction: row;
+    .details {
+      position: absolute;
+      left: 0;
+      max-width: 15%;
+    }
+
+    .chart {
+      max-width: 50%;
+    }
   }
 }
 </style>
