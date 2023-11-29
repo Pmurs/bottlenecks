@@ -22848,7 +22848,7 @@ function Z1() {
   };
 }
 Z1();
-const la = (e) => (Jo("data-v-de1eb762"), e = e(), Zo(), e), ew = /* @__PURE__ */ la(() => /* @__PURE__ */ Y("h3", { class: "title" }, "Filters", -1)), tw = { class: "profession-container" }, nw = { class: "button-container" }, iw = /* @__PURE__ */ la(() => /* @__PURE__ */ Y("span", null, "Profession", -1)), ow = ["value", "onChange", "name", "title", "on-label", "off-label"], rw = { class: "button-container" }, sw = /* @__PURE__ */ la(() => /* @__PURE__ */ Y("span", null, "Years in Industry", -1)), aw = ["value", "onChange", "name", "title", "on-label", "off-label"], cw = /* @__PURE__ */ $i({
+const la = (e) => (Jo("data-v-1c453f28"), e = e(), Zo(), e), ew = /* @__PURE__ */ la(() => /* @__PURE__ */ Y("h3", { class: "title" }, "Filters", -1)), tw = { class: "profession-container" }, nw = { class: "button-container" }, iw = /* @__PURE__ */ la(() => /* @__PURE__ */ Y("span", null, "Profession", -1)), ow = ["value", "onChange", "name", "title", "on-label", "off-label"], rw = { class: "button-container" }, sw = /* @__PURE__ */ la(() => /* @__PURE__ */ Y("span", null, "Years in Industry", -1)), aw = ["value", "onChange", "name", "title", "on-label", "off-label"], cw = /* @__PURE__ */ $i({
   __name: "Filters",
   props: {
     profession: {},
@@ -22856,7 +22856,7 @@ const la = (e) => (Jo("data-v-de1eb762"), e = e(), Zo(), e), ew = /* @__PURE__ *
   },
   emits: ["profession", "experience"],
   setup(e, { emit: t }) {
-    const n = e, i = Pe(!0), { width: o } = K1(), r = [
+    const n = e, { width: i } = K1(), o = Pe(i.value >= 768), r = [
       "Academic researcher (postdoc/PhD/MSc/BSc student)",
       "Biotech researcher",
       "Data scientist/Software engineer",
@@ -22893,15 +22893,15 @@ const la = (e) => (Jo("data-v-de1eb762"), e = e(), Zo(), e), ew = /* @__PURE__ *
         s.filter((w) => m[w])
       );
     }, d = function() {
-      i.value = !1;
+      console.log(i.value), i.value < 768 && (o.value = !1);
     };
-    return Qe(o, (p, f) => {
-      f >= 768 && p < 768 ? i.value = !1 : f < 768 && p >= 768 && (i.value = !0);
+    return Qe(i, (p, f) => {
+      f >= 768 && p < 768 ? o.value = !1 : f < 768 && p >= 768 && (o.value = !0);
     }), (p, f) => (le(), Tt(or, null, {
       default: Xs(() => [
         Xn((le(), be("div", {
-          class: mt(["filters-container", { open: i.value, closed: !i.value }]),
-          onClick: f[4] || (f[4] = (m) => i.value = !0)
+          class: mt(["filters-container", { open: o.value, closed: !o.value }]),
+          onClick: f[4] || (f[4] = (m) => o.value = !0)
         }, [
           ew,
           Y("div", tw, [
@@ -22964,7 +22964,7 @@ const la = (e) => (Jo("data-v-de1eb762"), e = e(), Zo(), e), ew = /* @__PURE__ *
     }));
   }
 });
-const lw = /* @__PURE__ */ dr(cw, [["__scopeId", "data-v-de1eb762"]]);
+const lw = /* @__PURE__ */ dr(cw, [["__scopeId", "data-v-1c453f28"]]);
 const uw = (e) => (Jo("data-v-e0174cba"), e = e(), Zo(), e), dw = { class: "chartSelect-container" }, pw = {
   key: 0,
   class: "chart-container"
