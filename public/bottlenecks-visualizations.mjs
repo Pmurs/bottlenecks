@@ -22458,7 +22458,7 @@ const or = (e, t) => {
     n[i] = o;
   return n;
 }, y1 = /* @__PURE__ */ or(m1, [["__scopeId", "data-v-87f44d78"]]);
-const v1 = (e) => (Qo("data-v-97db4765"), e = e(), qo(), e), b1 = { class: "chart-row" }, w1 = /* @__PURE__ */ v1(() => /* @__PURE__ */ Y("div", { class: "chart" }, null, -1)), x1 = {
+const v1 = (e) => (Qo("data-v-5deebb24"), e = e(), qo(), e), b1 = { class: "chart-row" }, w1 = /* @__PURE__ */ v1(() => /* @__PURE__ */ Y("div", { class: "chart" }, null, -1)), x1 = {
   __name: "BubbleChart",
   props: {
     chartData: {
@@ -22584,7 +22584,7 @@ const v1 = (e) => (Qo("data-v-97db4765"), e = e(), qo(), e), b1 = { class: "char
       w1
     ]));
   }
-}, Vc = /* @__PURE__ */ or(x1, [["__scopeId", "data-v-97db4765"]]);
+}, Vc = /* @__PURE__ */ or(x1, [["__scopeId", "data-v-5deebb24"]]);
 const Ws = (e) => (Qo("data-v-47de52bd"), e = e(), qo(), e), S1 = /* @__PURE__ */ Ws(() => /* @__PURE__ */ Y("h3", { class: "title" }, "Filters", -1)), _1 = { class: "profession-container" }, P1 = { class: "button-container" }, E1 = /* @__PURE__ */ Ws(() => /* @__PURE__ */ Y("span", null, "Profession", -1)), k1 = ["value", "onChange", "name", "title", "on-label", "off-label"], N1 = { class: "button-container" }, D1 = /* @__PURE__ */ Ws(() => /* @__PURE__ */ Y("span", null, "Years in Industry", -1)), C1 = ["value", "onChange", "name", "title", "on-label", "off-label"], A1 = /* @__PURE__ */ Ti({
   __name: "Filters",
   props: {
