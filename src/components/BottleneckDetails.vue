@@ -29,7 +29,7 @@ const props = defineProps({
           <!--          <div>{{ "Investment: " + investment }}</div>-->
           <!--        </div>-->
         </div>
-        <div>Tags:</div>
+        <div><strong>Tags:</strong></div>
         <ul
           class="tags-list"
           v-for="(tag, index) in item.tags"
@@ -40,9 +40,21 @@ const props = defineProps({
       </li>
     </ol>
   </div>
+  <div v-else>
+    <p class="help">Choose to view Bottlenecks or Solutions using the dropdown</p>
+    <p class="help">Click on a bubble to see all the responses tagged to that bottleneck.</p>
+    <p class="help">
+      Use the filters on the right to narrow the results by profession and
+      experience.
+    </p>
+  </div>
 </template>
 
 <style scoped>
+.help {
+  margin-bottom: 1em;
+}
+
 .answers {
   margin-bottom: 2em;
 }
