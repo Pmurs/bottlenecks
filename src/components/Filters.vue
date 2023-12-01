@@ -214,6 +214,12 @@ watch(width, (newWidth, prevWidth) => {
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .filters-container {
+    background: gray;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .filters-container {
     position: absolute;
@@ -224,12 +230,6 @@ watch(width, (newWidth, prevWidth) => {
     height: 100vh;
     margin-right: unset;
     padding: unset;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .filters-container {
-    background: gray;
   }
 }
 </style>
