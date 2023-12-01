@@ -153,10 +153,9 @@ watch(width, (newWidth, prevWidth) => {
 </script>
 <style scoped>
 .filters-container {
-  position: sticky;
+  position: fixed;
   right: 0;
   top: 0;
-  margin-right: -2rem;
   padding: 1rem;
   background: lightgray;
   z-index: 1;
@@ -234,6 +233,10 @@ watch(width, (newWidth, prevWidth) => {
 }
 
 @media screen and (min-width: 768px) {
+  .filters-wrapper {
+    position: unset;
+  }
+
   .filters-container {
     position: absolute;
     right: 0;

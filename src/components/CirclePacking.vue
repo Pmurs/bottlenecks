@@ -14,7 +14,6 @@
       :chart-data="solutionsChartData"
     />
     <Filters
-      class="filters"
       :profession="professionFilter"
       :experience="experienceFilter"
       @profession="(value) => onUpdateProfessionFilter(value)"
@@ -236,7 +235,7 @@ onMounted(() => {
   display: flex;
 
   .bubble-chart {
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
 }
 

@@ -55,7 +55,10 @@ const props = defineProps({
   padding-top: 2em;
   display: flex;
   justify-content: center;
-  padding-right: 2rem;
+}
+
+.answers-container {
+  padding-right: 1.5rem;
 }
 
 .tag-title {
