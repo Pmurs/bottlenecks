@@ -1,12 +1,5 @@
 <template>
-  <div class="chartSelect-container">
-    <v-select
-      v-model="chartSelection"
-      :options="chartOptions"
-      :clearable="false"
-      class="chartSelect"
-    />
-  </div>
+  <LogoHeader class="logo-header" />
   <div
     class="chart-container"
     v-if="bottlenecksChartData && solutionsChartData"
@@ -25,17 +18,18 @@
       :experience="experienceFilter"
       @profession="(value) => onUpdateProfessionFilter(value)"
       @experience="(value) => onUpdateExperienceFilter(value)"
-    />
-  </div>
-  <div class="url-container">
-    Full data
-    <strong>
-      <a
-        href="https://docs.google.com/spreadsheets/d/1aomCkAlaHNbNBEPjLeDbwLr3TazAxhU4f9idJQvbL2s/edit?usp=sharing"
-        target="_blank"
-        >here</a
-      >
-    </strong>
+    >
+      <template v-slot:select>
+        <div class="chartSelect-container">
+          <v-select
+            v-model="chartSelection"
+            :options="chartOptions"
+            :clearable="false"
+            class="chartSelect"
+          />
+        </div>
+      </template>
+    </Filters>
   </div>
 </template>
 
@@ -47,6 +41,7 @@ import "vue-select/dist/vue-select.css";
 import tagLabels from "@/util/tagLabels.json";
 import BubbleChart from "@/components/BubbleChart.vue";
 import Filters from "@/components/Filters.vue";
+import LogoHeader from "@/components/LogoHeader.vue";
 
 import analysis from "../util/analysis.json";
 import tags from "../util/tags.json";
@@ -113,13 +108,19 @@ const generateData = function () {
     .filter((tag) => tag.tag.match(/\[[A-Z]]/))
     .map((item) => ({
       ...item,
+      name: item.tag,
       children: bTags
         .filter(
           (tag) =>
             tag.tag.match(/\[[A-Z][0-9].*]/) &&
             tag.tag.substring(0, 2) === item.tag.substring(0, 2)
         )
-        .map((subItem) => ({ ...subItem, size: 0, bottlenecks: [] })),
+        .map((subItem) => ({
+          ...subItem,
+          name: subItem.tag,
+          size: 0,
+          bottlenecks: [],
+        })),
     }));
 
   bottlenecks.forEach((item) => {
@@ -211,6 +212,10 @@ onMounted(() => {
 </script>
 
 <style scoped>
+.logo-header {
+  //position: absolute;
+}
+
 .chartSelect-container {
   display: flex;
   justify-content: center;
@@ -225,8 +230,32 @@ onMounted(() => {
   display: flex;
 }
 
-.url-container {
-  text-align: center;
-  margin-bottom: 3em;
+@media (prefers-color-scheme: dark) {
+  .chartSelect {
+    :deep(.vs__dropdown-toggle) {
+      background: #1a282d;
+
+      .vs__selected {
+        color: white;
+      }
+
+      .vs__open-indicator {
+        fill: white;
+      }
+    }
+    :deep(.vs__dropdown-menu) {
+      background: #0f1a1c;
+
+      .vs__dropdown-option {
+        color: white;
+        background: #0f1a1c;
+      }
+
+      .vs__dropdown-option--selected,
+      .vs__dropdown-option--highlight {
+        background: #1a282d;
+      }
+    }
+  }
 }
 </style>

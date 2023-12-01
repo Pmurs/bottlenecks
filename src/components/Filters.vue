@@ -6,6 +6,8 @@
       @click="isOpen = true"
       v-on-click-outside="closeFilters"
     >
+      <Guide class="guide" />
+      <slot name="select"></slot>
       <h3 class="title">Filters</h3>
       <div class="profession-container">
         <div class="button-container">
@@ -51,6 +53,7 @@
           />
         </div>
       </div>
+      <DataUrl />
     </div>
   </Transition>
 </template>
@@ -62,6 +65,8 @@ import { useWindowSize } from "@vueuse/core";
 import { vOnClickOutside } from "@vueuse/components";
 
 import { computed, ref, watch } from "vue";
+import Guide from "./Guide.vue";
+import DataUrl from "./DataUrl.vue";
 
 const { width } = useWindowSize();
 const isOpen = ref(width.value >= 768);
@@ -150,7 +155,7 @@ watch(width, (newWidth, prevWidth) => {
 .filters-container {
   position: absolute;
   right: 0;
-  top: -6rem;
+  top: -2rem;
   margin-right: -2rem;
   padding: 1rem;
   background: lightgray;
@@ -175,6 +180,10 @@ watch(width, (newWidth, prevWidth) => {
       writing-mode: vertical-lr;
       text-orientation: upright;
     }
+  }
+
+  .guide {
+    display: none;
   }
 }
 
@@ -216,7 +225,7 @@ watch(width, (newWidth, prevWidth) => {
 
 @media (prefers-color-scheme: dark) {
   .filters-container {
-    background: gray;
+    background: #0b1416;
   }
 }
 
@@ -230,6 +239,10 @@ watch(width, (newWidth, prevWidth) => {
     height: 100vh;
     margin-right: unset;
     padding: unset;
+
+    .guide {
+      display: inline-block;
+    }
   }
 }
 </style>

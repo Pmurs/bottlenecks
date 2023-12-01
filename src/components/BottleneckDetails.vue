@@ -1,5 +1,6 @@
 <script setup>
 import tagLabels from "@/util/tagLabels.json";
+import Guide from "@/components/Guide.vue";
 
 const props = defineProps({
   data: {
@@ -12,51 +13,65 @@ const props = defineProps({
 </script>
 
 <template>
-  <div v-if="data?.items?.length">
-    <h1>{{ data.title.split("]")[1] }}</h1>
-    <h2>{{ data.description }}</h2>
-    <div>Count: {{ data.items.length }}</div>
-    <div class="answers">Answers:</div>
-    <ol class="answers-list">
-      <li v-for="(item, index) in data.items" v-bind:key="index" class="answer">
-        <div v-if="data.isBottleneck">
-          <div>{{ "Bottleneck: " + item.title }}</div>
-          <div v-html="'Why: ' + item.description"></div>
-        </div>
-        <div v-else>
-          <div>{{ item.title }}</div>
-          <!--        <div v-for="(investment, index2) in item.investment?.split(/(?<!scale),/)" v-bind:key="index2">-->
-          <!--          <div>{{ "Investment: " + investment }}</div>-->
-          <!--        </div>-->
-        </div>
-        <div><strong>Tags:</strong></div>
-        <ul
-          class="tags-list"
-          v-for="(tag, index) in item.tags"
+  <div class="bottleneck-details">
+    <div v-if="data?.items?.length" class="answers-container">
+      <h3 class="tag-title">{{ data.title.split("]")[1] }}</h3>
+      <h4 class="description">{{ data.description }}</h4>
+      <div class="count">Count: {{ data.items.length }}</div>
+      <h4 class="answers">Answers:</h4>
+      <ol class="answers-list">
+        <li
+          v-for="(item, index) in data.items"
           v-bind:key="index"
+          class="answer"
         >
-          <li>{{ tag + " " + tagLabels[tag].label }}</li>
-        </ul>
-      </li>
-    </ol>
-  </div>
-  <div v-else>
-    <p class="help">Choose to view Bottlenecks or Solutions using the dropdown</p>
-    <p class="help">Click on a bubble to see all the responses tagged to that bottleneck.</p>
-    <p class="help">
-      Use the filters on the right to narrow the results by profession and
-      experience.
-    </p>
+          <div v-if="data.isBottleneck">
+            <div>{{ "Bottleneck: " + item.title }}</div>
+            <div v-html="'Why: ' + item.description"></div>
+          </div>
+          <div v-else>
+            <div>{{ item.title }}</div>
+            <!--        <div v-for="(investment, index2) in item.investment?.split(/(?<!scale),/)" v-bind:key="index2">-->
+            <!--          <div>{{ "Investment: " + investment }}</div>-->
+            <!--        </div>-->
+          </div>
+          <ul
+            class="tags-list"
+            v-for="(tag, index) in item.tags"
+            v-bind:key="index"
+          >
+            <li>{{ tag + " " + tagLabels[tag].label }}</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+    <Guide v-else class="guide" />
   </div>
 </template>
 
 <style scoped>
-.help {
+.bottleneck-details {
+  font-family: "Gill Sans MT", "sans-serif";
+  font-size: 12px;
+  padding-top: 2em;
+}
+
+.tag-title {
+  font-weight: bold;
   margin-bottom: 1em;
+  font-size: 1.5em;
+}
+
+.description {
+  font-weight: bold;
+}
+
+.count {
+  margin-bottom: 2em;
 }
 
 .answers {
-  margin-bottom: 2em;
+  font-weight: bold;
 }
 
 .answers-list {
@@ -79,6 +94,12 @@ const props = defineProps({
         text-indent: -5px;
       }
     }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .guide {
+    display: none;
   }
 }
 </style>
