@@ -51,7 +51,6 @@ const props = defineProps({
 
 <style scoped>
 .bottleneck-details {
-  font-family: "Gill Sans MT", "sans-serif";
   font-size: 12px;
   padding-top: 2em;
 }

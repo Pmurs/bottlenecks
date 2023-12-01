@@ -17,7 +17,6 @@ export default {
 
 <style scoped>
 .guide-container {
-  font-family: "Gill Sans MT", "sans-serif";
   font-size: .75em;
   margin-bottom: 1em;
 

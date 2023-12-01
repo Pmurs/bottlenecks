@@ -21,6 +21,7 @@ export default {
   margin-top: -2rem;
   margin-left: -2rem;
   padding-left: 0.5rem;
+  margin-bottom: 2em;
 
   .title {
     display: flex;
@@ -43,6 +44,7 @@ export default {
     margin-top: unset;
     margin-left: unset;
     padding-left: unset;
+    margin-bottom: unset;
 
     .title {
       font-size: 2em;
