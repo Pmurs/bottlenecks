@@ -24,7 +24,7 @@ const props = defineProps({
           <div v-html="'Why: ' + item.description"></div>
         </div>
         <div v-else>
-          <div>{{ index + 1 + ". " + item.title }}</div>
+          <div>{{ item.title }}</div>
           <!--        <div v-for="(investment, index2) in item.investment?.split(/(?<!scale),/)" v-bind:key="index2">-->
           <!--          <div>{{ "Investment: " + investment }}</div>-->
           <!--        </div>-->
