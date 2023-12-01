@@ -2,7 +2,7 @@
   <div class="title-container">
     <h1 class="title">
       <img
-        src="./src/assets/lbfLogo.png"
+        src="/src/assets/lbfLogo.png"
         alt="LBF Logo"
         class="lbf-logo"
       />Longevity Bottlenecks
