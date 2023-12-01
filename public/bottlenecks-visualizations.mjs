@@ -22848,7 +22848,7 @@ function Z1() {
   };
 }
 Z1();
-const la = (e) => (Jo("data-v-1c453f28"), e = e(), Zo(), e), ew = /* @__PURE__ */ la(() => /* @__PURE__ */ Y("h3", { class: "title" }, "Filters", -1)), tw = { class: "profession-container" }, nw = { class: "button-container" }, iw = /* @__PURE__ */ la(() => /* @__PURE__ */ Y("span", null, "Profession", -1)), ow = ["value", "onChange", "name", "title", "on-label", "off-label"], rw = { class: "button-container" }, sw = /* @__PURE__ */ la(() => /* @__PURE__ */ Y("span", null, "Years in Industry", -1)), aw = ["value", "onChange", "name", "title", "on-label", "off-label"], cw = /* @__PURE__ */ $i({
+const la = (e) => (Jo("data-v-508cc920"), e = e(), Zo(), e), ew = /* @__PURE__ */ la(() => /* @__PURE__ */ Y("h3", { class: "title" }, "Filters", -1)), tw = { class: "profession-container" }, nw = { class: "button-container" }, iw = /* @__PURE__ */ la(() => /* @__PURE__ */ Y("span", null, "Profession", -1)), ow = ["value", "onChange", "name", "title", "on-label", "off-label"], rw = { class: "button-container" }, sw = /* @__PURE__ */ la(() => /* @__PURE__ */ Y("span", null, "Years in Industry", -1)), aw = ["value", "onChange", "name", "title", "on-label", "off-label"], cw = /* @__PURE__ */ $i({
   __name: "Filters",
   props: {
     profession: {},
@@ -22964,7 +22964,7 @@ const la = (e) => (Jo("data-v-1c453f28"), e = e(), Zo(), e), ew = /* @__PURE__ *
     }));
   }
 });
-const lw = /* @__PURE__ */ dr(cw, [["__scopeId", "data-v-1c453f28"]]);
+const lw = /* @__PURE__ */ dr(cw, [["__scopeId", "data-v-508cc920"]]);
 const uw = (e) => (Jo("data-v-e0174cba"), e = e(), Zo(), e), dw = { class: "chartSelect-container" }, pw = {
   key: 0,
   class: "chart-container"
