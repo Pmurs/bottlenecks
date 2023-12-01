@@ -5,10 +5,11 @@
     v-if="bottlenecksChartData && solutionsChartData"
   >
     <BubbleChart
+        class="bubble-chart"
       v-if="chartSelection === 'Bottlenecks' && bottlenecksChartData"
       :chart-data="bottlenecksChartData"
     />
-    <BubbleChart
+    <BubbleChart class="bubble-chart"
       v-if="chartSelection === 'Solutions' && solutionsChartData"
       :chart-data="solutionsChartData"
     />
@@ -21,6 +22,7 @@
     >
       <template v-slot:select>
         <div class="chartSelect-container">
+          <h3 class="title">Chart Type</h3>
           <v-select
             v-model="chartSelection"
             :options="chartOptions"
@@ -218,8 +220,12 @@ onMounted(() => {
 
 .chartSelect-container {
   display: flex;
-  justify-content: center;
-  margin-bottom: 2em;
+  flex-direction: column;
+  margin-bottom: 1em;
+
+  .title {
+    margin-bottom: 0.5em;
+  }
 
   .chartSelect {
     width: 200px;
@@ -228,6 +234,18 @@ onMounted(() => {
 
 .chart-container {
   display: flex;
+
+  .bubble-chart {
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .chart-container {
+    .bubble-chart {
+      margin-top: unset;
+    }
+  }
 }
 
 @media (prefers-color-scheme: dark) {

@@ -53,6 +53,9 @@ const props = defineProps({
 .bottleneck-details {
   font-size: 12px;
   padding-top: 2em;
+  display: flex;
+  justify-content: center;
+  padding-right: 2rem;
 }
 
 .tag-title {
@@ -96,7 +99,15 @@ const props = defineProps({
   }
 }
 
+.guide {
+  width: max-content;
+}
+
 @media screen and (min-width: 768px) {
+  .bottleneck-details {
+    padding-right: unset;
+  }
+
   .guide {
     display: none;
   }

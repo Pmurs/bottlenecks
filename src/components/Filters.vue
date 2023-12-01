@@ -53,7 +53,7 @@
           />
         </div>
       </div>
-      <DataUrl />
+      <DataUrl class="data-url" />
     </div>
   </Transition>
 </template>
@@ -153,9 +153,9 @@ watch(width, (newWidth, prevWidth) => {
 </script>
 <style scoped>
 .filters-container {
-  position: absolute;
+  position: sticky;
   right: 0;
-  top: -2rem;
+  top: 0;
   margin-right: -2rem;
   padding: 1rem;
   background: lightgray;
@@ -176,7 +176,7 @@ watch(width, (newWidth, prevWidth) => {
     }
 
     .title {
-      padding-top: 5em;
+      padding-top: 6rem;
       writing-mode: vertical-lr;
       text-orientation: upright;
     }
@@ -184,6 +184,10 @@ watch(width, (newWidth, prevWidth) => {
 
   .guide {
     display: none;
+  }
+
+  .data-url {
+    margin-top: 1em;
   }
 }
 
@@ -213,7 +217,7 @@ watch(width, (newWidth, prevWidth) => {
 }
 
 .switch {
-  --toggle-width: 200px;
+  --toggle-width: 190px;
   text-overflow: ellipsis;
 
   :deep(.toggle-label) {
@@ -234,7 +238,7 @@ watch(width, (newWidth, prevWidth) => {
     position: absolute;
     right: 0;
 
-    max-width: 200px;
+    max-width: 190px;
     background: transparent;
     height: 100vh;
     margin-right: unset;

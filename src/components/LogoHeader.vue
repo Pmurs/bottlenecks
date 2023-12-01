@@ -18,7 +18,8 @@ export default {
 
 <style scoped>
 .title-container {
-  margin-top: -2rem;
+  position: absolute;
+  /*margin-top: -2rem;*/
   margin-left: -2rem;
   padding-left: 0.5rem;
   margin-bottom: 2em;
