@@ -15,7 +15,7 @@ const props = defineProps({
 <template>
   <div class="bottleneck-details">
     <div v-if="data?.items?.length" class="answers-container">
-      <h3 class="tag-title">{{ data.title.split("]")[1] }}</h3>
+      <h3 class="tag-title">{{ data.title }}</h3>
       <h4 class="description">{{ data.description }}</h4>
       <div class="count">Count: {{ data.items.length }}</div>
       <h4 class="answers">Answers:</h4>
