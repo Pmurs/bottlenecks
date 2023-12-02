@@ -23002,7 +23002,7 @@ function xP(A, e, t, n, i, o) {
   return tA(), dA("div", DP, QP);
 }
 const SP = /* @__PURE__ */ Dt(bP, [["render", xP], ["__scopeId", "data-v-2581b603"]]);
-const IP = (A) => (Pt("data-v-1b2e91e0"), A = A(), bt(), A), kP = {
+const IP = (A) => (Pt("data-v-5a176d8f"), A = A(), bt(), A), kP = {
   key: 0,
   class: "chart-container"
 }, _P = { class: "chartSelect-container" }, MP = /* @__PURE__ */ IP(() => /* @__PURE__ */ K("h3", { class: "title" }, "Chart Type", -1)), NP = {
@@ -23067,9 +23067,10 @@ const IP = (A) => (Pt("data-v-1b2e91e0"), A = A(), bt(), A), kP = {
       };
       const y = l.value, k = dr.solutions, _ = k.filter((v) => v.tag.match(/\[\+[A-Z]]/)).map((v) => ({
         ...v,
+        name: v.tag,
         children: k.filter(
           (B) => B.tag.match(/\[\+[A-Z][0-9].*]/) && B.tag.substring(0, 3) === v.tag.substring(0, 3)
-        ).map((B) => ({ ...B, solutions: [] }))
+        ).map((B) => ({ ...B, name: B.tag, solutions: [] }))
       }));
       y.forEach((v) => {
         const B = v.tags.filter(($) => $.match(/\[\+[A-Z]/));
@@ -23139,7 +23140,7 @@ const IP = (A) => (Pt("data-v-1b2e91e0"), A = A(), bt(), A), kP = {
       ])) : Ge("", !0)
     ], 64));
   }
-}, Bu = /* @__PURE__ */ Dt(NP, [["__scopeId", "data-v-1b2e91e0"]]), FP = { key: 0 }, TP = {
+}, Bu = /* @__PURE__ */ Dt(NP, [["__scopeId", "data-v-5a176d8f"]]), FP = { key: 0 }, TP = {
   __name: "HomeView",
   setup(A) {
     const e = DA(!1);
