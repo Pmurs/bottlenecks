@@ -110,10 +110,11 @@ function Pack(
 
   const node = svg
     .selectAll("a")
-    .data(
-      descendants.filter((d) => d.children),
-      (d) => d.data.name
-    )
+    // .data(
+    //   descendants.filter((d) => d.children),
+    //   (d) => d.data.name
+    // )
+    .data(descendants, (d) => d.data.name)
     .join("a")
     .attr("xlink:href", link == null ? null : (d, i) => link(d.data, d))
     .attr("target", link == null ? null : linkTarget);
@@ -149,53 +150,52 @@ function Pack(
         moreInfo.value = clickData(d.data);
       }
     });
-
-  node
-    .filter((d) => d.children && d.data.tag)
-    .selectAll("a")
-    .append("a")
-    .data(
-      (d) => d.children,
-      (d) => d.data.name
-    )
-    .join("a")
-    .attr("xlink:href", link == null ? null : (d, i) => link(d.data, d))
-    .attr("target", link == null ? null : linkTarget);
-
-  node
-    .selectAll("a")
-    .append("circle")
-    .attr("fill", (d) => fill(d.data) || "#eee")
-    .attr("fill-opacity", (d) => (d.children ? null : fillOpacity))
-    .attr("stroke", (d) => (d.children ? stroke : null))
-    .attr("stroke-width", (d) => (d.children ? strokeWidth : null))
-    .attr("stroke-opacity", (d) => (d.children ? strokeOpacity : null))
-    .attr("r", (d) => {
-      return d.r;
-    })
-    .attr("cx", (d) => d.x)
-    .attr("cy", (d) => d.y)
-    .on("mouseover", function (event, d) {
-      if (!d.children) {
-        d3.select(this).attr("stroke", "#000");
-        d3.select(this).style("cursor", "pointer");
-      }
-    })
-    .on("mouseout", function () {
-      d3.select(this).attr("stroke", null);
-    })
-    .on("click", (event, d) => {
-      if (!d.children) {
-        moreInfo.value = clickData(d.data);
-      }
-    });
+  //
+  // node
+  //   .filter((d) => d.children && d.data.tag)
+  //   .selectAll("a")
+  //   .append("a")
+  //   .data(
+  //     (d) => d.children,
+  //     (d) => d.data.name
+  //   )
+  //   .join("a")
+  //   .attr("xlink:href", link == null ? null : (d, i) => link(d.data, d))
+  //   .attr("target", link == null ? null : linkTarget);
+  //
+  // node
+  //   .selectAll("a")
+  //   .append("circle")
+  //   .attr("fill", (d) => fill(d.data) || "#eee")
+  //   .attr("fill-opacity", (d) => (d.children ? null : fillOpacity))
+  //   .attr("stroke", (d) => (d.children ? stroke : null))
+  //   .attr("stroke-width", (d) => (d.children ? strokeWidth : null))
+  //   .attr("stroke-opacity", (d) => (d.children ? strokeOpacity : null))
+  //   .attr("r", (d) => {
+  //     return d.r;
+  //   })
+  //   .attr("cx", (d) => d.x)
+  //   .attr("cy", (d) => d.y)
+  //   .on("mouseover", function (event, d) {
+  //     if (!d.children) {
+  //       d3.select(this).attr("stroke", "#000");
+  //       d3.select(this).style("cursor", "pointer");
+  //     }
+  //   })
+  //   .on("mouseout", function () {
+  //     d3.select(this).attr("stroke", null);
+  //   })
+  //   .on("click", (event, d) => {
+  //     if (!d.children) {
+  //       moreInfo.value = clickData(d.data);
+  //     }
+  //   });
 
   // A unique identifier for clip paths (to avoid conflicts).
   const uid = `O-${Math.random().toString(16).slice(2)}`;
 
   // Create Labels for Circles
   node
-    .selectAll("a")
     .filter((d) => !d.children && d.r > 10 && L[d.index] != null)
     .append("text")
     .attr(
@@ -241,33 +241,32 @@ function Pack(
     .text((d) => d);
 
   if (T) node.append("title").text((d, i) => T[i]);
-
-  node
-    .filter((d) => d.parent === root && d.r)
-    .append("text")
-    .style("font-size", "2em")
-    .attr("class", "parentLabel")
-    .attr("pointer-events", "none")
-    .text((d) => {
-      //      console.log(d);
-      return tagLabels[d.data.tag].label;
-    })
-    .attr("transform", (d) => `translate(${d.x},${d.y - 20})`);
+  //
+  // node
+  //   .filter((d) => d.parent === root && d.r)
+  //   .append("text")
+  //   .style("font-size", "2em")
+  //   .attr("class", "parentLabel")
+  //   .attr("pointer-events", "none")
+  //   .text((d) => {
+  //     //      console.log(d);
+  //     return tagLabels[d.data.tag].label;
+  //   })
+  //   .attr("transform", (d) => `translate(${d.x},${d.y - 20})`);
 
   // Add labels for the parent circles
-  // svg
-  //   .append("g")
-  //   .style("font-size", "2em")
-  //   .attr("pointer-events", "none")
-  //   .style("width", "100%")
-  //   .style("height", "100%")
-  //   .selectAll("text")
-  //   .data(root.descendants().filter((d) => d.parent === root && d.r))
-  //   .join("text")
-  //   .text((d) => tagLabels[d.data.tag].label)
-  //   .attr("transform", (d) => `translate(${d.x},${d.y - 20})`);
-  // .attr("x", (d) => d.x)
-  // .attr("y", (d) => d.y - 20);
+  svg
+    .append("g")
+    .style("font-size", "2em")
+    .attr("pointer-events", "none")
+    .style("width", "100%")
+    .style("height", "100%")
+    .selectAll("text")
+    .data(parents, (d) => d.data.name)
+    .join("text")
+    .text((d) => tagLabels[d.data.tag].label)
+    .attr("transform", (d) => `translate(${d.x},${d.y - 20})`)
+    .attr("class", "parentLabel");
 
   // Add title to chart. Do this last so it draws over the rest of the chart
   svg
@@ -387,14 +386,16 @@ function updatePack(
     .attr("cy", (d) => d.y);
 
   // transition parent labels
-  node
-      .select(".parentLabel")
-      .transition()
-      .duration(750)
-      .attr("transform", (d) => {
-        return `translate(${d.x},${d.y - 20})`;
-      })
-      .style("opacity", (d) => (d.r ? 100 : 0));
+  svg
+    .selectAll("g")
+    .selectAll(".parentLabel")
+    .data(descendants, (d) => d.data.name)
+    .transition()
+    .duration(750)
+    .attr("transform", (d) => {
+      return `translate(${d.x},${d.y - 20})`;
+    })
+    .style("opacity", (d) => (d.r ? 100 : 0));
 
   // transition label wrapper
   node
