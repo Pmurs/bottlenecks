@@ -5,11 +5,12 @@
     v-if="bottlenecksChartData && solutionsChartData"
   >
     <BubbleChart
-        class="bubble-chart"
+      class="bubble-chart"
       v-if="chartSelection === 'Bottlenecks' && bottlenecksChartData"
       :chart-data="bottlenecksChartData"
     />
-    <BubbleChart class="bubble-chart"
+    <BubbleChart
+      class="bubble-chart"
       v-if="chartSelection === 'Solutions' && solutionsChartData"
       :chart-data="solutionsChartData"
     />
@@ -163,13 +164,14 @@ const generateData = function () {
     .filter((tag) => tag.tag.match(/\[\+[A-Z]]/))
     .map((item) => ({
       ...item,
+      name: item.tag,
       children: sTags
         .filter(
           (tag) =>
             tag.tag.match(/\[\+[A-Z][0-9].*]/) &&
             tag.tag.substring(0, 3) === item.tag.substring(0, 3)
         )
-        .map((subItem) => ({ ...subItem, solutions: [] })),
+        .map((subItem) => ({ ...subItem, name: subItem.tag, solutions: [] })),
     }));
 
   solutions.forEach((item) => {
