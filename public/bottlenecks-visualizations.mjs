@@ -22376,7 +22376,7 @@ function xB(A, e, t, n, i, o) {
   return tA(), dA("div", PB, QB);
 }
 const mu = /* @__PURE__ */ Dt(BB, [["render", xB], ["__scopeId", "data-v-93094cc2"]]);
-const SB = (A) => (Pt("data-v-26ebf869"), A = A(), bt(), A), IB = { class: "bottleneck-details" }, kB = {
+const SB = (A) => (Pt("data-v-c449ef91"), A = A(), bt(), A), IB = { class: "bottleneck-details" }, kB = {
   key: 0,
   class: "answers-container"
 }, _B = { class: "tag-title" }, MB = { class: "description" }, NB = { class: "count" }, FB = /* @__PURE__ */ SB(() => /* @__PURE__ */ J("h4", { class: "answers" }, "Answers:", -1)), TB = { class: "answers-list" }, HB = { key: 0 }, OB = ["innerHTML"], LB = { key: 1 }, XB = {
@@ -22394,7 +22394,7 @@ const SB = (A) => (Pt("data-v-26ebf869"), A = A(), bt(), A), IB = { class: "bott
       var n, i;
       return tA(), dA("div", IB, [
         (i = (n = A.data) == null ? void 0 : n.items) != null && i.length ? (tA(), dA("div", kB, [
-          J("h3", _B, Le(A.data.title.split("]")[1]), 1),
+          J("h3", _B, Le(A.data.title), 1),
           J("h4", MB, Le(A.data.description), 1),
           J("div", NB, "Count: " + Le(A.data.items.length), 1),
           FB,
@@ -22426,7 +22426,7 @@ const SB = (A) => (Pt("data-v-26ebf869"), A = A(), bt(), A), IB = { class: "bott
       ]);
     };
   }
-}, zB = /* @__PURE__ */ Dt(XB, [["__scopeId", "data-v-26ebf869"]]);
+}, zB = /* @__PURE__ */ Dt(XB, [["__scopeId", "data-v-c449ef91"]]);
 const RB = (A) => (Pt("data-v-45e7a0dd"), A = A(), bt(), A), VB = { class: "chart-row" }, UB = /* @__PURE__ */ RB(() => /* @__PURE__ */ J("div", { class: "chart" }, null, -1)), jB = {
   __name: "BubbleChart",
   props: {
