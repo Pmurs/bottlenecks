@@ -110,19 +110,10 @@ function Pack(
 
   const node = svg
     .selectAll("a")
-    // .data(
-    //   descendants.filter((d) => d.children),
-    //   (d) => d.data.name
-    // )
     .data(descendants, (d) => d.data.name)
     .join("a")
     .attr("xlink:href", link == null ? null : (d, i) => link(d.data, d))
     .attr("target", link == null ? null : linkTarget);
-  // .attr("transform", (d) => {
-  //   return `translate(${d.x},${d.y})`;
-  // });;
-
-  console.log(node);
 
   node
     .append("circle")
@@ -150,46 +141,6 @@ function Pack(
         moreInfo.value = clickData(d.data);
       }
     });
-  //
-  // node
-  //   .filter((d) => d.children && d.data.tag)
-  //   .selectAll("a")
-  //   .append("a")
-  //   .data(
-  //     (d) => d.children,
-  //     (d) => d.data.name
-  //   )
-  //   .join("a")
-  //   .attr("xlink:href", link == null ? null : (d, i) => link(d.data, d))
-  //   .attr("target", link == null ? null : linkTarget);
-  //
-  // node
-  //   .selectAll("a")
-  //   .append("circle")
-  //   .attr("fill", (d) => fill(d.data) || "#eee")
-  //   .attr("fill-opacity", (d) => (d.children ? null : fillOpacity))
-  //   .attr("stroke", (d) => (d.children ? stroke : null))
-  //   .attr("stroke-width", (d) => (d.children ? strokeWidth : null))
-  //   .attr("stroke-opacity", (d) => (d.children ? strokeOpacity : null))
-  //   .attr("r", (d) => {
-  //     return d.r;
-  //   })
-  //   .attr("cx", (d) => d.x)
-  //   .attr("cy", (d) => d.y)
-  //   .on("mouseover", function (event, d) {
-  //     if (!d.children) {
-  //       d3.select(this).attr("stroke", "#000");
-  //       d3.select(this).style("cursor", "pointer");
-  //     }
-  //   })
-  //   .on("mouseout", function () {
-  //     d3.select(this).attr("stroke", null);
-  //   })
-  //   .on("click", (event, d) => {
-  //     if (!d.children) {
-  //       moreInfo.value = clickData(d.data);
-  //     }
-  //   });
 
   // A unique identifier for clip paths (to avoid conflicts).
   const uid = `O-${Math.random().toString(16).slice(2)}`;
@@ -241,18 +192,6 @@ function Pack(
     .text((d) => d);
 
   if (T) node.append("title").text((d, i) => T[i]);
-  //
-  // node
-  //   .filter((d) => d.parent === root && d.r)
-  //   .append("text")
-  //   .style("font-size", "2em")
-  //   .attr("class", "parentLabel")
-  //   .attr("pointer-events", "none")
-  //   .text((d) => {
-  //     //      console.log(d);
-  //     return tagLabels[d.data.tag].label;
-  //   })
-  //   .attr("transform", (d) => `translate(${d.x},${d.y - 20})`);
 
   // Add labels for the parent circles
   svg
@@ -294,9 +233,6 @@ function Pack(
       chartTitle,
     });
 
-  // Call the update function with the initial data
-  // svg.update(data);
-  //
   //   const zoomPoint = { x: width / 2, y: height / 2 };
   //
   // // Add zoom behavior
