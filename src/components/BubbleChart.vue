@@ -160,7 +160,9 @@ function Pack(
 
   // Create Labels for Circles
   node
-    .filter((d) => !d.children && d.r > 10 && L[d.index] != null)
+    .filter((d) => {
+      return !d.children && L[d.index] != null;
+    })
     .append("text")
     .attr(
       "clip-path",
@@ -171,18 +173,26 @@ function Pack(
     .attr("transform", (d) => `translate(${d.x},${d.y})`)
     .selectAll("tspan")
     .data((d) => {
-      return `${L[d.index]}`.split(/\n/g);
+      return `${L[d.index]}`
+        .split(/\n/g)
+        .map((text, labelIndex, labelItems) => ({
+          ...d,
+          text,
+          labelIndex,
+          labelLength: labelItems.length,
+        }));
     })
     .join("tspan")
-    .attr("x", (d, i, D) => {
-      const tag = d3.select(D[0].parentNode).data()[0].data.tag;
+    .attr("x", (d) => {
+      const tag = d.data.tag;
       return tagLabels[tag].x;
     })
-    .attr("y", (d, i, D) => `${i - D.length / 2 + 0.85}em`)
+    .attr("y", (d) => `${d.labelIndex - d.labelLength / 2 + 0.85}em`)
     //.attr("fill-opacity", (d, i, D) => (i === D.length - 1 ? 0.7 : null)) This makes subsequent label lines less dark than the top line
     .style("font-size", (d, i, D) => {
-      const node = d3.select(D[0].parentNode).data()[0];
-      return `${Math.min(Math.max(Math.log10(node.r) - 0.75, 0.55), 1)}em`;
+      return d.r === 0
+        ? 0
+        : `${Math.min(Math.max(Math.log10(d.r) - 0.75, 0.55), 1)}em`;
     })
     .style("cursor", "pointer")
     .on("mouseover", function () {
@@ -202,7 +212,7 @@ function Pack(
         clickNode.value = data.name;
       }
     })
-    .text((d) => d);
+    .text((d) => d.text);
 
   if (T) node.append("title").text((d, i) => T[i]);
 
@@ -218,7 +228,8 @@ function Pack(
     .join("text")
     .text((d) => tagLabels[d.data.tag].label)
     .attr("transform", (d) => `translate(${d.x},${d.y - 20})`)
-    .attr("class", "parentLabel");
+    .attr("class", "parentLabel")
+    .style("opacity", (d) => (d.r ? 100 : 0));
 
   // Add title to chart. Do this last so it draws over the rest of the chart
   svg
@@ -334,18 +345,6 @@ function updatePack(
     .attr("cx", (d) => d.x)
     .attr("cy", (d) => d.y);
 
-  // transition parent labels
-  svg
-    .selectAll("g")
-    .selectAll(".parentLabel")
-    .data(descendants, (d) => d.data.name)
-    .transition()
-    .duration(750)
-    .attr("transform", (d) => {
-      return `translate(${d.x},${d.y - 20})`;
-    })
-    .style("opacity", (d) => (d.r ? 100 : 0));
-
   // transition label wrapper
   node
     .select(".childLabel")
@@ -358,21 +357,34 @@ function updatePack(
 
   // transition label segments
   node
-    .select("tspan")
+    .select(".childLabel")
+    .selectAll("tspan")
     .transition()
     .duration(750)
     .attr("x", (d) => {
       const tag = d.data.tag;
       return tagLabels[tag].x;
     })
-    // .attr("y", (d, x) => {
-    //   console.log(d, x, L[d.index]);
-    //   //`${i - D.length / 2 + 0.85}em`;
-    // })
+    .attr("y", (d) => {
+      console.log(d, d.labelIndex, d.labelLength);
+      return `${d.labelIndex - d.labelLength / 2 + 0.85}em`;
+    })
     .style(
       "font-size",
       (d) => `${Math.min(Math.max(Math.log10(d.r) - 0.75, 0.55), 1)}em`
     );
+
+  // transition parent labels
+  svg
+    .selectAll("g")
+    .selectAll(".parentLabel")
+    .data(descendants, (d) => d.data.name)
+    .transition()
+    .duration(750)
+    .attr("transform", (d) => {
+      return `translate(${d.x},${d.y - 20})`;
+    })
+    .style("opacity", (d) => (d.r ? 100 : 0));
 }
 </script>
 
