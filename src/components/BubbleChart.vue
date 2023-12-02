@@ -30,10 +30,13 @@ const moreInfo = ref({
   isBottleneck: false,
 });
 
+const clickNode = ref("");
+
 watch(
   () => props.chartData,
   function () {
     chart.value.update(props.chartData.data);
+    chart.value.clickFunction(clickNode.value);
   }
 );
 
@@ -140,7 +143,17 @@ function Pack(
       if (!d.children) {
         moreInfo.value = clickData(d.data);
       }
+      clickNode.value = d.data.name;
     });
+
+  // need to expose click function so that we can use it on our last-clicked node when filters are updated
+  svg.clickFunction = (clickNodeName) => {
+    if (!clickNodeName) {
+      return;
+    }
+    const clickNode = node.filter((d) => d.data.name === clickNodeName);
+    moreInfo.value = clickData(clickNode["_groups"][0][0].__data__.data);
+  };
 
   // A unique identifier for clip paths (to avoid conflicts).
   const uid = `O-${Math.random().toString(16).slice(2)}`;
@@ -184,9 +197,9 @@ function Pack(
     })
     .on("click", function (event, d) {
       if (!d.children) {
-        moreInfo.value = clickData(
-          d3.select(this.parentNode.parentNode).data()[0].data
-        );
+        const data = d3.select(this.parentNode.parentNode).data()[0].data;
+        moreInfo.value = clickData(data);
+        clickNode.value = data.name;
       }
     })
     .text((d) => d);
