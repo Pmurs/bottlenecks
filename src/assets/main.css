@@ -14,6 +14,35 @@ a,
   transition: 0.4s;
 }
 
+button {
+  border-radius: 999px;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  background: hsla(160, 100%, 37%, 1);
+  border: 2px solid #10b981;
+  line-height: 1.25rem;
+  color: white;
+  box-shadow: none;
+  transition: transform 300ms ease-out;
+}
+
+button:hover {
+  background: #064a34;
+  box-shadow: 0px 5px 15px
+    hsl(160.11834319526628deg 84.07960199004975% 45% / 0.5);
+  transform: translateY(-1px);
+}
+
+button:active {
+  background: hsl(160.11834319526628deg 84.07960199004975% 29.411764705882348%);
+  border: 2px solid
+    hsl(160.11834319526628deg 84.07960199004975% 29.411764705882348%);
+}
+
+.button:disabled {
+  background-color: hsl(160.11834319526628deg 15% 39.411764705882355%);
+}
+
 @media (hover: hover) {
   a:hover {
     background-color: hsla(160, 100%, 37%, 0.2);

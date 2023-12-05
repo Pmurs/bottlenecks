@@ -257,7 +257,7 @@ onMounted(() => {
   }
 
   .chartSelect {
-    width: 200px;
+    width: 100%;
   }
 }
 
