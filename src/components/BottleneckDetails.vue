@@ -14,12 +14,12 @@ const props = defineProps({
 
 <template>
   <div class="bottleneck-details">
-    <div v-if="data?.items?.length" class="answers-container">
+    <div v-if="data?.count > 0" class="answers-container">
       <h3 class="tag-title">{{ data.title }}</h3>
       <h4 class="description">{{ data.description }}</h4>
-      <div class="count">Count: {{ data.items.length }}</div>
-      <h4 class="answers">Answers:</h4>
-      <ol class="answers-list">
+      <div class="count">Count: {{ data.count }}</div>
+      <h4 class="answers" v-if="data?.items?.length">Answers:</h4>
+      <ol class="answers-list" v-if="data?.items?.length">
         <li
           v-for="(item, index) in data.items"
           v-bind:key="index"
@@ -63,7 +63,7 @@ const props = defineProps({
 
 .tag-title {
   font-weight: bold;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   font-size: 1.5em;
 }
 

@@ -4,16 +4,26 @@
     class="chart-container"
     v-if="bottlenecksChartData && solutionsChartData"
   >
-    <BubbleChart
-      class="bubble-chart"
-      v-if="chartSelection === 'Bottlenecks' && bottlenecksChartData"
-      :chart-data="bottlenecksChartData"
-    />
-    <BubbleChart
-      class="bubble-chart"
-      v-if="chartSelection === 'Solutions' && solutionsChartData"
-      :chart-data="solutionsChartData"
-    />
+    <div v-if="chartTypeSelection === 'Bubble'" class="bubble-chart">
+      <BubbleChart
+        v-if="chartDataSelection === 'Bottlenecks' && bottlenecksChartData"
+        :chart-data="bottlenecksChartData"
+      />
+      <BubbleChart
+        v-if="chartDataSelection === 'Solutions' && solutionsChartData"
+        :chart-data="solutionsChartData"
+      />
+    </div>
+    <div v-else class="bubble-chart">
+      <BarChart
+        v-if="chartDataSelection === 'Bottlenecks' && bottlenecksChartData"
+        :chart-data="bottlenecksChartData"
+      />
+      <BarChart
+        v-if="chartDataSelection === 'Solutions' && solutionsChartData"
+        :chart-data="solutionsChartData"
+      />
+    </div>
     <Filters
       :profession="professionFilter"
       :experience="experienceFilter"
@@ -24,8 +34,17 @@
         <div class="chartSelect-container">
           <h3 class="title">Chart Type</h3>
           <v-select
-            v-model="chartSelection"
-            :options="chartOptions"
+            v-model="chartTypeSelection"
+            :options="chartTypeOptions"
+            :clearable="false"
+            class="chartSelect"
+          />
+        </div>
+        <div class="chartSelect-container">
+          <h3 class="title">Chart Data</h3>
+          <v-select
+            v-model="chartDataSelection"
+            :options="chartDataOptions"
             :clearable="false"
             class="chartSelect"
           />
@@ -47,9 +66,13 @@ import LogoHeader from "@/components/LogoHeader.vue";
 
 import analysis from "../util/analysis.json";
 import tags from "../util/tags.json";
+import BarChart from "@/components/BarChart.vue";
 
-const chartOptions = ["Bottlenecks", "Solutions"];
-const chartSelection = ref("Bottlenecks");
+const chartDataOptions = ["Bottlenecks", "Solutions"];
+const chartDataSelection = ref("Bottlenecks");
+
+const chartTypeOptions = ["Bubble", "Bar"];
+const chartTypeSelection = ref("Bubble");
 
 const professionFilter = ref([
   "Entrepreneur",
@@ -143,16 +166,20 @@ const generateData = function () {
     props: {
       name: (d) => d.bottleneck,
       value: (d) =>
-        d.children ? d["Number of responses"] : d.bottlenecks?.length,
+        // Set value for parent nodes to 0 because their final value will be the sum of their child nodes
+        d.children ? 0 : d.bottlenecks?.length,
       label: (d) => tagLabels[d.tag].label,
       title: (d) => d["Q2 Bottleneck"] + ":\n" + d["Bottleneck Description"],
       fill: (d) => d.color,
-      clickData: (d) => ({
-        title: d["Q2 Bottleneck"],
-        description: d["Bottleneck Description"],
-        items: d.bottlenecks,
-        isBottleneck: true,
-      }),
+      clickData: (d) => {
+        return {
+          title: d.data["Q2 Bottleneck"],
+          description: d.data["Bottleneck Description"],
+          count: d.value,
+          items: d.data.bottlenecks,
+          isBottleneck: true,
+        };
+      },
       width: 1152,
       chartTitle: "Bottlenecks",
     },
@@ -192,7 +219,7 @@ const generateData = function () {
     props: {
       name: (d) => d.investment,
       value: (d) => {
-        return d.children ? d["Number of responses"] : d.solutions?.length;
+        return d.children ? 0 : d.solutions?.length;
       },
       label: (d) => tagLabels[d.tag].label,
       title: (d) => d["Q3 Solution"] + ":\n" + d["Solution Description"],
@@ -200,6 +227,7 @@ const generateData = function () {
       clickData: (d) => ({
         title: d["Q3 Solution"],
         description: d["Solution Description"],
+        count: d.children ? d["Number of responses"] : d.solutions?.length,
         items: d.solutions,
         isBottleneck: false,
       }),
@@ -238,6 +266,7 @@ onMounted(() => {
 
   .bubble-chart {
     margin-top: 3rem;
+    width: 100%;
   }
 }
 

@@ -5,7 +5,7 @@
       1) Choose Bottlenecks or Solutions graph using the dropdown
     </p>
     <p class="help">2) Filter based on profession/experience</p>
-    <p class="help">3) Click on a bubble to see individual answers</p>
+    <p class="help">3) Click on a bubble or bar to see individual answers</p>
   </div>
 </template>
 

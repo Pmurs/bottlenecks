@@ -170,7 +170,7 @@ watch(width, (newWidth, prevWidth) => {
     justify-content: center;
     cursor: pointer;
 
-    & :not(:nth-child(3)) {
+    & :not(:nth-child(4)) {
       display: none;
     }
 
