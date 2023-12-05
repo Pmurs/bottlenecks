@@ -13,8 +13,18 @@
         <div class="button-container">
           <span>Profession</span
           ><span>
-            <button class="btn" @click="$emit('profession', [])">X</button>
-            <button class="btn" @click="$emit('profession', professionOptions)">
+            <button
+              class="btn"
+              title="Remove all"
+              @click="$emit('profession', [])"
+            >
+              X
+            </button>
+            <button
+              class="btn"
+              title="Select all"
+              @click="$emit('profession', professionOptions)"
+            >
               All
             </button>
           </span>
@@ -35,8 +45,18 @@
         <div class="button-container">
           <span>Years in Industry</span>
           <span
-            ><button class="btn" @click="$emit('experience', [])">X</button>
-            <button class="btn" @click="$emit('experience', experienceOptions)">
+            ><button
+              class="btn"
+              title="Remove all"
+              @click="$emit('experience', [])"
+            >
+              X
+            </button>
+            <button
+              class="btn"
+              title="Select all"
+              @click="$emit('experience', experienceOptions)"
+            >
               All
             </button></span
           >
@@ -201,10 +221,9 @@ watch(width, (newWidth, prevWidth) => {
 .button-container {
   display: flex;
   justify-content: space-between;
+  margin-bottom: var(--margin-small);
 
   .btn {
-    border-radius: 0;
-
     &:hover {
       cursor: pointer;
     }
@@ -216,7 +235,8 @@ watch(width, (newWidth, prevWidth) => {
 }
 
 .switch {
-  --toggle-width: 190px;
+  margin-bottom: var(--margin-small);
+  --toggle-width: 200px;
   text-overflow: ellipsis;
 
   :deep(.toggle-label) {
@@ -250,6 +270,10 @@ watch(width, (newWidth, prevWidth) => {
     .guide {
       display: inline-block;
     }
+  }
+
+  .switch {
+    --toggle-width: 190px;
   }
 }
 </style>
