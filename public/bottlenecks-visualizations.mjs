@@ -23772,7 +23772,7 @@ const rb = (A) => (Ct("data-v-a7d50596"), A = A(), xt(), A), sb = { class: "char
     ]));
   }
 }, Sc = /* @__PURE__ */ Ze(cb, [["__scopeId", "data-v-a7d50596"]]);
-const rd = (A) => (Ct("data-v-3d8c7a2c"), A = A(), xt(), A), lb = {
+const rd = (A) => (Ct("data-v-5ae71ae1"), A = A(), xt(), A), lb = {
   key: 0,
   class: "chart-container"
 }, ub = {
@@ -23944,7 +23944,7 @@ const rd = (A) => (Ct("data-v-3d8c7a2c"), A = A(), xt(), A), lb = {
       ])) : Ae("", !0)
     ], 64));
   }
-}, sd = /* @__PURE__ */ Ze(mb, [["__scopeId", "data-v-3d8c7a2c"]]), vb = { key: 0 }, wb = {
+}, sd = /* @__PURE__ */ Ze(mb, [["__scopeId", "data-v-5ae71ae1"]]), vb = { key: 0 }, wb = {
   __name: "HomeView",
   setup(A) {
     const e = BA(!1);
