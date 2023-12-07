@@ -218,17 +218,17 @@ const generateData = function () {
     data: { name: "solutions", children: sTagCategories },
     props: {
       name: (d) => d.investment,
-      value: (d) => {
-        return d.children ? 0 : d.solutions?.length;
-      },
+      value: (d) =>
+        // Set value for parent nodes to 0 because their final value will be the sum of their child nodes
+        d.children ? 0 : d.solutions?.length,
       label: (d) => tagLabels[d.tag].label,
       title: (d) => d["Q3 Solution"] + ":\n" + d["Solution Description"],
       fill: (d) => d.color,
       clickData: (d) => ({
-        title: d["Q3 Solution"],
-        description: d["Solution Description"],
-        count: d.children ? d["Number of responses"] : d.solutions?.length,
-        items: d.solutions,
+        title: d.data["Q3 Solution"],
+        description: d.data["Solution Description"],
+        count: d.value,
+        items: d.data.solutions,
         isBottleneck: false,
       }),
       width: 1152,
