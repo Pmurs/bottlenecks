@@ -37,15 +37,15 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm install
-      - name: Build Webcomponent
-        run: npm run build-web-component
+      - name: Build
+        run: npm run build
       - name: Commit Changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           mv dist/* public
           git add public
-          git commit -a -m "Add Built Webcomponent Files"
+          git commit -a -m "Add Built Files"
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
